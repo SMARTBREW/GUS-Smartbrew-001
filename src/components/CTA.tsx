@@ -21,7 +21,7 @@ const CTA = () => {
             {/* Call to Action Button */}
             <div className="flex justify-center lg:justify-start">
               <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
-                <Heart className="h-4 w-4" />
+                <span className="text-lg">♥︎</span>
                 <span>Donate</span>
               </button>
             </div>

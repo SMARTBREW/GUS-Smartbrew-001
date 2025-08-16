@@ -281,7 +281,7 @@ const Programs = () => {
                 </div>
                 
                 <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center space-x-2 group-hover:shadow-lg text-sm">
-                  <DollarSign className="h-3 w-3" />
+                  <span className="text-lg">♥︎</span>
                   <span>Donate Now</span>
                 </button>
               </div>
@@ -373,7 +373,7 @@ const Programs = () => {
               {/* Donate Button */}
               <div className="text-center">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-lg font-medium text-lg transition-all duration-200 inline-flex items-center space-x-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  <DollarSign className="h-6 w-6" />
+                  <span className="text-lg">♥︎</span>
                   <span>Donate to This Program</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>

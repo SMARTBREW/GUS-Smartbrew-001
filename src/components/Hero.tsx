@@ -60,20 +60,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
-      >
-        <ChevronLeft className="h-6 w-6 text-gray-700" />
-      </button>
-      
-      <button 
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
-      >
-        <ChevronRight className="h-6 w-6 text-gray-700" />
-      </button>
+
 
       {/* Content overlaid on the image */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -95,7 +82,7 @@ const Hero = () => {
             {/* Call to Action Button */}
             <div className="flex justify-center lg:justify-start">
               <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
-                <Heart className="h-4 w-4" />
+                <span className="text-lg">♥︎</span>
                 <span>Donate</span>
               </button>
             </div>
