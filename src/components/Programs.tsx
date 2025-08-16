@@ -231,11 +231,11 @@ const Programs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
             <span className="text-gray-800">Our </span>
             <span className="text-red-600">Programs</span>
           </h1>
-                      <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                      <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
               Discover our comprehensive programs designed to transform communities across India. 
               Click on any program to learn more and support our initiatives.
             </p>
@@ -256,14 +256,14 @@ const Programs = () => {
                   className="w-full h-48 object-cover rounded-t-2xl"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white text-gray-700 shadow-sm">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-gray-700 shadow-sm">
                     {program.category}
                   </span>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors duration-200">
+                <h3 className="text-lg sm:text-xl font-normal text-gray-800 mb-3 group-hover:text-red-600 transition-colors duration-200">
                   {program.title}
                 </h3>
                 
@@ -273,14 +273,14 @@ const Programs = () => {
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-sm text-gray-500">
-                    Budget: <span className="font-semibold text-gray-700">{program.budget}</span>
+                    Budget: <span className="font-medium text-gray-700">{program.budget}</span>
                   </div>
-                                  <button className="text-red-600 hover:text-red-700 font-semibold transition-colors duration-200">
+                                  <button className="text-red-600 hover:text-red-700 font-medium transition-colors duration-200">
                   Learn More →
                 </button>
                 </div>
                 
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition-all duration-200 inline-flex items-center justify-center space-x-2 group-hover:shadow-lg text-sm">
+                <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center space-x-2 group-hover:shadow-lg text-sm">
                   <DollarSign className="h-3 w-3" />
                   <span>Donate Now</span>
                 </button>
@@ -308,7 +308,7 @@ const Programs = () => {
                 <X className="h-6 w-6 text-gray-600" />
               </button>
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-600 text-white">
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-600 text-white">
                   {selectedProgram.category}
                 </span>
               </div>
@@ -320,7 +320,7 @@ const Programs = () => {
                 {selectedProgram.icon}
               </div>
               
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
                 {selectedProgram.title}
               </h2>
               
@@ -332,7 +332,7 @@ const Programs = () => {
               <div className="grid grid-cols-3 gap-6 mb-8">
                 {Object.entries(selectedProgram.stats).map(([key, value]: [string, any]) => (
                   <div key={key} className="text-center bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-red-600">
+                    <div className="text-xl sm:text-2xl font-normal text-red-600">
                       {value}
                     </div>
                     <div className="text-sm text-gray-500 capitalize">
@@ -344,7 +344,7 @@ const Programs = () => {
 
               {/* Features */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Key Features</h3>
+                <h3 className="text-lg sm:text-xl font-normal text-gray-800 mb-4">Key Features</h3>
                 <ul className="space-y-3">
                   {selectedProgram.features.map((feature: string, index: number) => (
                     <li key={index} className="flex items-center space-x-3">
@@ -359,11 +359,11 @@ const Programs = () => {
               <div className="bg-red-50 rounded-lg p-6 mb-8">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="text-lg font-bold text-gray-800 mb-1">Program Budget</h4>
+                    <h4 className="text-lg font-normal text-gray-800 mb-1">Program Budget</h4>
                     <p className="text-gray-600">Total funding required for this program</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-red-600">
+                    <div className="text-2xl sm:text-3xl font-normal text-red-600">
                       {selectedProgram.budget}
                     </div>
                   </div>
@@ -372,7 +372,7 @@ const Programs = () => {
 
               {/* Donate Button */}
               <div className="text-center">
-                <button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-200 inline-flex items-center space-x-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-lg font-medium text-lg transition-all duration-200 inline-flex items-center space-x-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   <DollarSign className="h-6 w-6" />
                   <span>Donate to This Program</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />

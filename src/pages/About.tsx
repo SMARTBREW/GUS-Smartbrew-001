@@ -12,11 +12,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
               <span className="text-gray-800">About </span>
               <span className="text-red-600">G.U.S.</span>
             </h1>
-                          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
             GraminUthanSamiti was established in the year 1979 in the Kumaon hills. This Himalayan region 
             has witnessed a high level of migration due to unavailability of the employment option. Hence in 
             order to provide people with the employment and Livelihood, a need was felt to make community 
@@ -32,19 +32,19 @@ const About = () => {
            <div className="mb-16">
              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                <div>
-                 <div className="text-3xl font-bold text-gray-800 mb-2">1979</div>
+                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">1979</div>
                  <div className="text-gray-600">Established</div>
                </div>
                <div>
-                 <div className="text-3xl font-bold text-gray-800 mb-2">2407/1982-83</div>
+                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">2407/1982-83</div>
                  <div className="text-gray-600">Registration</div>
                </div>
                <div>
-                 <div className="text-3xl font-bold text-gray-800 mb-2">150+</div>
+                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">150+</div>
                  <div className="text-gray-600">Villages Served</div>
                </div>
                <div>
-                 <div className="text-3xl font-bold text-gray-800 mb-2">80%</div>
+                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">80%</div>
                  <div className="text-gray-600">Women Workers</div>
                </div>
              </div>
@@ -53,16 +53,16 @@ const About = () => {
                      {/* Mission and Vision */}
 			<div className="mb-16">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Mission & Approach</h2>
+					            <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Mission & Approach</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 						<div className="bg-gray-50 rounded-2xl p-8 shadow">
-							<h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+							            <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Our Mission</h3>
 							<p className="text-lg text-gray-600 leading-relaxed">
 								G.U.S. takes a holistic approach to Development Work, focusing on the people's ecological, social, cultural and economic needs. We help the local people identify their problems and work together, mobilising local resources to achieve their goals and take control of their lives.
 							</p>
 						</div>
 						<div className="bg-gray-50 rounded-2xl p-8 shadow">
-							<h3 className="text-2xl font-bold text-gray-800 mb-4">Our Method of Rural Awakening</h3>
+							            <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Our Method of Rural Awakening</h3>
 							<p className="text-lg text-gray-600 leading-relaxed">
 								G.U.S.'s method of rural awakening is to support Village and Women's Groups. These organisations bring villagers of every sector together to discuss their problems and work collectively. We only conduct programs in villages where the women have formed Women's Groups and meet on a regular monthly basis to discuss the practical problems of their villages and lifestyles.
 							</p>
@@ -74,10 +74,10 @@ const About = () => {
                      {/* Geographic Coverage */}
            <div className="mb-16">
              <div className="max-w-4xl mx-auto">
-               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Geographic Coverage</h2>
+               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Geographic Coverage</h2>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                  <div>
-                   <h3 className="text-2xl font-bold text-gray-800 mb-4">Location</h3>
+                   <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Location</h3>
                    <p className="text-lg text-gray-600 leading-relaxed mb-4">
                      The majority of the 150-odd villages are situated at a height of 2000–2500 meters in the upper reaches of the river valleys of the Northern Kumaon Himalaya.
                    </p>
@@ -86,7 +86,7 @@ const About = () => {
                    </p>
                  </div>
                  <div>
-                   <h3 className="text-2xl font-bold text-gray-800 mb-4">Challenges</h3>
+                   <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Challenges</h3>
                    <ul className="space-y-3 text-lg text-gray-600">
                      <li className="flex items-center space-x-3">
                        <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
@@ -114,15 +114,15 @@ const About = () => {
 
           {/* Financial Information */}
           <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white mb-16">
-            <h2 className="text-3xl font-bold mb-6">Financial Information</h2>
+            <h2 className="text-2xl sm:text-3xl font-normal mb-6">Financial Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Current Annual Budget</h3>
-                <p className="text-2xl font-bold mb-2">₹30 Lakh Rupees</p>
+                <h3 className="text-lg sm:text-xl font-normal mb-4">Current Annual Budget</h3>
+                                 <p className="text-2xl font-normal mb-2">₹30 Lakh Rupees</p>
                 <p className="text-gray-200">($75,000 approximately)</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">Major Supporters</h3>
+                <h3 className="text-lg sm:text-xl font-normal mb-4">Major Supporters</h3>
                 <ul className="space-y-1 text-gray-200">
                   <li>• Uttarkhand Neva Sivi (India)</li>
                   <li>• CAPART (India)</li>

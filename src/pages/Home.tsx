@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import CTA from '../components/CTA';
 import Impact from '../components/Impact';
-import Stories from '../components/Stories';
 import Footer from '../components/Footer';
 
 const Home = () => {

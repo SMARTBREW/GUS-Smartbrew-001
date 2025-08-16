@@ -39,7 +39,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative h-[80vh] bg-white overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full">
         <div 
@@ -76,25 +76,25 @@ const Hero = () => {
       </button>
 
       {/* Content overlaid on the image */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight drop-shadow-lg">
               <span className="block">Working for the Better</span>
               <span className="block">Future of Mother</span>
               <span className="block">and Child</span>
             </h1>
             
-            <div className="mb-8">
-              <p className="text-lg sm:text-xl text-white leading-relaxed drop-shadow-lg">
+            <div className="mb-6">
+              <p className="text-lg sm:text-xl text-white leading-relaxed drop-shadow-lg font-light">
                 SERVING RURAL COMMUNITIES SINCE 1979 | 150+ VILLAGES | HOLISTIC DEVELOPMENT
               </p>
             </div>
 
             {/* Call to Action Button */}
             <div className="flex justify-center lg:justify-start">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-all duration-200 inline-flex items-center space-x-2">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
                 <Heart className="h-4 w-4" />
                 <span>Donate</span>
               </button>

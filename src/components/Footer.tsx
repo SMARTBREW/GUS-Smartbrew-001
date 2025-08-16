@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <Heart className="h-8 w-8 text-gray-300" />
-              <div className="text-xl font-bold">
+              <div className="text-xl font-normal">
                 <span className="text-gray-300">G.U.S.</span>
                 <span className="text-gray-400 text-sm block -mt-1">Gramin Utthan Samity</span>
               </div>
@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Quick Links</h3>
+            <h3 className="text-lg font-normal mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Programs */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Our Programs</h3>
+            <h3 className="text-lg font-normal mb-6 text-white">Our Programs</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
@@ -101,7 +101,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Contact Us</h3>
+            <h3 className="text-lg font-normal mb-6 text-white">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-gray-300 mt-1 flex-shrink-0" />

@@ -54,7 +54,7 @@ const Impact = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Side - Statistics */}
           <div>
-            <h2 className="text-5xl sm:text-6xl font-bold mb-16 text-center lg:text-left">
+            <h2 className="text-5xl sm:text-6xl font-normal mb-16 text-center lg:text-left">
               <span className="text-gray-800">OUR </span>
               <span className="text-red-600">IMPACT</span>
             </h2>
@@ -68,8 +68,8 @@ const Impact = () => {
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">VILLAGES</h3>
-                <p className="text-4xl font-bold text-gray-800">{counters.villages}+</p>
+                <h3 className="text-lg font-normal text-gray-800 mb-2">VILLAGES</h3>
+                <p className="text-4xl font-normal text-gray-800">{counters.villages}+</p>
               </div>
 
               {/* Beneficiaries */}
@@ -79,8 +79,8 @@ const Impact = () => {
                     <Heart className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">BENEFICIARIES</h3>
-                <p className="text-4xl font-bold text-gray-800">{formatNumber(counters.beneficiaries)}</p>
+                <h3 className="text-lg font-normal text-gray-800 mb-2">BENEFICIARIES</h3>
+                <p className="text-4xl font-normal text-gray-800">{formatNumber(counters.beneficiaries)}</p>
               </div>
 
               {/* Health Centers */}
@@ -90,8 +90,8 @@ const Impact = () => {
                     <Heart className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">HEALTH CENTERS</h3>
-                <p className="text-4xl font-bold text-gray-800">{counters.healthCenters}</p>
+                <h3 className="text-lg font-normal text-gray-800 mb-2">HEALTH CENTERS</h3>
+                <p className="text-4xl font-normal text-gray-800">{counters.healthCenters}</p>
               </div>
 
               {/* Women Workers */}
@@ -101,8 +101,8 @@ const Impact = () => {
                     <Users className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">WOMEN WORKERS</h3>
-                <p className="text-4xl font-bold text-gray-800">{counters.womenWorkers}%</p>
+                <h3 className="text-lg font-normal text-gray-800 mb-2">WOMEN WORKERS</h3>
+                <p className="text-4xl font-normal text-gray-800">{counters.womenWorkers}%</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ const Impact = () => {
                     />
                   </svg>
                 </div>
-                <p className="font-bold text-xl">Gramin Utthan Samity</p>
+                <p className="font-normal text-xl">Gramin Utthan Samity</p>
                 <p className="text-sm opacity-90">Established 1979</p>
               </div>
             </div>
@@ -155,7 +155,7 @@ const Impact = () => {
                  <div className="grid lg:grid-cols-2 gap-16 items-start mt-20">
            {/* Left Side - Our Mission */}
            <div className="text-center lg:text-left">
-             <h3 className="text-4xl font-bold mb-6">
+             <h3 className="text-4xl font-normal mb-6">
                <span className="text-gray-700">OUR </span>
                <span className="text-red-600">MISSION</span>
              </h3>
@@ -166,7 +166,7 @@ const Impact = () => {
 
            {/* Right Side - Our Vision */}
            <div className="text-center lg:text-left">
-             <h3 className="text-4xl font-bold mb-6">
+             <h3 className="text-4xl font-normal mb-6">
                <span className="text-gray-700">OUR </span>
                <span className="text-red-600">VISION</span>
              </h3>

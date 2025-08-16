@@ -2,15 +2,15 @@ import React from 'react';
 
 const Team = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#f0e9d3] via-white to-white">
+         <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-4">
             <span className="text-black">Meet The </span>
-            <span className="text-[#f5cd4c]">Team</span>
+                         <span className="text-red-600">Team</span>
           </h1>
-          <div className="w-24 h-1 bg-[#f5cd4c] mx-auto"></div>
+                     <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
 
         {/* Founder Profile */}
@@ -26,20 +26,20 @@ const Team = () => {
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#f5cd4c] rounded-full opacity-50"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#f5cd4c] rounded-full opacity-50"></div>
+                             <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-600 rounded-full opacity-50"></div>
+               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-600 rounded-full opacity-50"></div>
             </div>
           </div>
 
           {/* Right Side - Text */}
           <div className="order-1 lg:order-2">
             <div className="mb-6">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
+                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-gray-800 mb-2">
                 KADIRI RAGHU VAMSI
               </h2>
               <div className="flex items-center">
                 <div className="w-px h-8 bg-gray-400 mr-4"></div>
-                <span className="text-2xl font-bold text-[#f5cd4c]">FOUNDER</span>
+                                 <span className="text-xl sm:text-2xl font-normal text-red-600">FOUNDER</span>
               </div>
             </div>
             
@@ -65,12 +65,12 @@ const Team = () => {
 
             {/* Key Achievements */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-[#f5cd4c]/20 rounded-lg p-4">
-                <h4 className="font-bold text-[#f5cd4c] mb-1">Awards & Recognition</h4>
+                             <div className="bg-red-600/20 rounded-lg p-4">
+                 <h4 className="font-normal text-red-600 mb-1">Awards & Recognition</h4>
                 <p className="text-sm text-gray-600">India's Noble Chakra Award 2019</p>
               </div>
-              <div className="bg-[#f5cd4c]/20 rounded-lg p-4">
-                <h4 className="font-bold text-[#f5cd4c] mb-1">Leadership</h4>
+                             <div className="bg-red-600/20 rounded-lg p-4">
+                 <h4 className="font-normal text-red-600 mb-1">Leadership</h4>
                 <p className="text-sm text-gray-600">Leading Social Entrepreneur</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Team = () => {
                    className="w-full h-full object-cover grayscale"
                  />
                </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Raaga Vaishnavi</h4>
+                               <h4 className="text-lg sm:text-xl font-normal text-gray-800 mb-1">Raaga Vaishnavi</h4>
                <p className="text-gray-600">Co-Founder</p>
              </div>
              
@@ -101,7 +101,7 @@ const Team = () => {
                    className="w-full h-full object-cover grayscale"
                  />
                </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Valaboju Manas Chandra</h4>
+                               <h4 className="text-lg sm:text-xl font-normal text-gray-800 mb-1">Valaboju Manas Chandra</h4>
                <p className="text-gray-600">Chief Operations Officer</p>
              </div>
              
@@ -113,7 +113,7 @@ const Team = () => {
                    className="w-full h-full object-cover grayscale"
                  />
                </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Srikar Samudrala</h4>
+                               <h4 className="text-lg sm:text-xl font-normal text-gray-800 mb-1">Srikar Samudrala</h4>
                <p className="text-gray-600">Director & Chief CSR Officer</p>
              </div>
              
@@ -126,19 +126,19 @@ const Team = () => {
                    className="w-full h-full object-cover grayscale"
                  />
                </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Team Member</h4>
-               <p className="text-gray-600">Position</p>
-             </div>
-             
-             <div className="text-center">
-               <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 shadow-lg">
-                 <img 
-                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-                   alt="Team Member"
-                   className="w-full h-full object-cover grayscale"
-                 />
-               </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Team Member</h4>
+                               <h4 className="text-lg sm:text-xl font-normal text-gray-800 mb-1">Team Member</h4>
+                <p className="text-gray-600">Position</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Team Member"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                </div>
+                <h4 className="text-lg sm:text-xl font-normal text-gray-800 mb-1">Team Member</h4>
                <p className="text-gray-600">Position</p>
              </div>
              
@@ -150,7 +150,7 @@ const Team = () => {
                    className="w-full h-full object-cover grayscale"
                  />
                </div>
-               <h4 className="text-xl font-bold text-gray-800 mb-1">Team Member</h4>
+                               <h4 className="text-xl font-normal text-gray-800 mb-1">Team Member</h4>
                <p className="text-gray-600">Position</p>
              </div>
            </div>
@@ -159,15 +159,15 @@ const Team = () => {
          {/* Our Mentors */}
          <div className="mt-20">
            <div className="text-center mb-12">
-                           <h3 className="text-4xl font-bold mb-4">
+                           <h3 className="text-3xl sm:text-4xl font-normal mb-4">
                 <span className="text-black">OUR </span>
-                <span className="text-[#f5cd4c]">MENTORS</span>
+                                 <span className="text-red-600">MENTORS</span>
               </h3>
-              <div className="w-24 h-1 bg-[#f5cd4c] mx-auto mb-6"></div>
+                             <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 We are being mentored by the presidential awardee, women activists and governmental servants
               </p>
-              <button className="mt-6 text-[#f5cd4c] hover:text-[#e6c23a] font-semibold transition-colors duration-200">
+                             <button className="mt-6 text-red-600 hover:text-red-700 font-medium transition-colors duration-200">
                 Read More
               </button>
            </div>

@@ -22,9 +22,9 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex items-center space-x-1">
               <Heart className="h-8 w-8 text-red-600" />
-              <div className="text-xl font-bold">
+              <div className="text-2xl font-normal">
                 <span className="text-gray-800">G.U.S.</span>
-                <span className="text-gray-600 text-sm block -mt-1">Gramin Utthan Samity</span>
+                <span className="text-gray-600 text-base block -mt-1 font-light">Gramin Utthan Samity</span>
               </div>
             </div>
           </Link>
@@ -35,7 +35,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`transition-colors duration-200 font-medium ${
+                className={`transition-colors duration-200 font-light ${
                   location.pathname === item.href 
                     ? 'text-red-600 border-b-2 border-red-600' 
                     : 'text-gray-600 hover:text-red-600 hover:border-b-2 hover:border-red-300'
@@ -48,7 +48,7 @@ const Header = () => {
 
           {/* Donate Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-sm hover:shadow-md">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 shadow-sm hover:shadow-md">
               Donate
             </button>
             

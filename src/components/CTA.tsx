@@ -8,19 +8,19 @@ const CTA = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - What We Do content */}
           <div className="text-center lg:text-left">
-            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-5xl lg:text-6xl font-normal text-gray-900 mb-8 leading-tight">
               What We Do
             </h2>
             
             <div className="max-w-lg mb-10">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed font-light">
                 Educate Girls works with the government, community and village-based volunteers and mentors to ensure every girl in the remotest parts of India is included, educated and empowered with choices and voices.
               </p>
             </div>
 
             {/* Call to Action Button */}
             <div className="flex justify-center lg:justify-start">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-all duration-200 inline-flex items-center space-x-2">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
                 <Heart className="h-4 w-4" />
                 <span>Donate</span>
               </button>
