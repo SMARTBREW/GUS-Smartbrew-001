@@ -25,6 +25,8 @@ const Header = () => {
       href: '#',
       hasDropdown: true,
       dropdownItems: [
+        { name: 'Programs', href: '/programs' },
+        { name: 'Stories', href: '/stories' },
         { name: 'Vidya', href: '/vidya' },
         { name: 'Pragati', href: '/pragati' },
       ]
@@ -41,8 +43,8 @@ const Header = () => {
       ]
     },
     { name: 'PARTNERSHIPS', href: '/partnerships', hasDropdown: false },
-    { name: 'JOIN OUR TEAM', href: '/join-team', hasDropdown: false },
-    { name: 'DIB', href: '/dib', hasDropdown: false },
+    // { names: 'JOIN OUR TEAM', href: '/internship', hasDropdown: false },
+    { name: 'TEAM', href: '/team', hasDropdown: false },
     { name: 'CONTACT US', href: '/contact', hasDropdown: false },
   ];
 
