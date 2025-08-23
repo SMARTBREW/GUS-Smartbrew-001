@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart, ChevronDown, Square } from 'lucide-react';
+import { Menu, X, Heart, ChevronDown, Square, AlertTriangle } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +29,7 @@ const Header = () => {
         { name: 'Stories', href: '/stories' },
         { name: 'Vidya', href: '/vidya' },
         { name: 'Pragati', href: '/pragati' },
+        { name: 'Emergency Response', href: '/emergency-appeal', isEmergency: true },
       ]
     },
     {
@@ -93,16 +94,20 @@ const Header = () => {
                     <div className="py-1 relative">
                       {/* Continuous red line from navigation button through dropdown */}
                       <div className="absolute left-0 -top-8 w-1 bg-red-600 h-[calc(100%+2rem)]"></div>
-                      {item.dropdownItems.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.href}
-                          className="block px-4 py-3 text-sm text-gray-800 hover:bg-gray-50 transition-colors duration-200 font-bold uppercase tracking-wide pl-8"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
+                                             {item.dropdownItems.map((dropdownItem) => (
+                         <Link
+                           key={dropdownItem.name}
+                           to={dropdownItem.href}
+                           className={`block px-4 py-3 text-sm transition-colors duration-200 font-bold uppercase tracking-wide pl-8 ${
+                             dropdownItem.isEmergency 
+                               ? 'text-red-600 hover:bg-red-50' 
+                               : 'text-gray-800 hover:bg-gray-50'
+                           }`}
+                           onClick={() => setActiveDropdown(null)}
+                         >
+                           {dropdownItem.name}
+                         </Link>
+                       ))}
                     </div>
                   </div>
                 )}
@@ -135,6 +140,17 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {/* Emergency Appeal Link for Mobile */}
+              <Link
+                to="/emergency-appeal"
+                className="block px-3 py-3 rounded-md bg-red-600 text-white font-bold text-sm uppercase tracking-wide font-['Outfit'] text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="flex items-center justify-center space-x-2">
+                  <AlertTriangle className="h-4 w-4" />
+                  <span>EMERGENCY APPEAL</span>
+                </div>
+              </Link>
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
@@ -158,16 +174,20 @@ const Header = () => {
                                      {/* Mobile Dropdown */}
                    {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
                      <div className="ml-4 mt-1 space-y-1">
-                       {item.dropdownItems.map((dropdownItem) => (
-                         <Link
-                           key={dropdownItem.name}
-                           to={dropdownItem.href}
-                           className="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-md transition-colors duration-200"
-                           onClick={() => setIsMenuOpen(false)}
-                         >
-                           {dropdownItem.name}
-                         </Link>
-                       ))}
+                                               {item.dropdownItems.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
+                              dropdownItem.isEmergency 
+                                ? 'text-red-600 hover:bg-red-50 font-semibold' 
+                                : 'text-gray-600 hover:text-red-600 hover:bg-red-50'
+                            }`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
                      </div>
                    )}
                 </div>

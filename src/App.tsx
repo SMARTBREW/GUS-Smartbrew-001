@@ -18,6 +18,7 @@ import PartnershipsPage from './pages/Partnerships';
 import ReportsPage from './pages/Reports';
 import ResearchPage from './pages/Research';
 import PoliciesPage from './pages/Policies';
+import EmergencyAppealPage from './pages/EmergencyAppeal';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/research" element={<ResearchPage />} />
           <Route path="/policies" element={<PoliciesPage />} />
+          <Route path="/emergency-appeal" element={<EmergencyAppealPage />} />
         </Routes>
       </div>
     </Router>
