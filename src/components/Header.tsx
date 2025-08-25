@@ -15,9 +15,9 @@ const Header = () => {
       dropdownItems: [
         { name: 'About Us', href: '/about' },
         { name: 'Vision, Mission, Goal', href: '/vision' },
-        { name: 'Leadership Board', href: '/leadership' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Recognition', href: '/recognition' },
+        // { name: 'Leadership Board', href: '/leadership' },
+        // { name: 'Partners', href: '/partners' },
+        // { name: 'Recognition', href: '/recognition' },
       ]
     },
     {
@@ -27,26 +27,26 @@ const Header = () => {
       dropdownItems: [
         { name: 'Programs', href: '/programs' },
         { name: 'Stories', href: '/stories' },
-        { name: 'Vidya', href: '/vidya' },
-        { name: 'Pragati', href: '/pragati' },
+        // { name: 'Vidya', href: '/vidya' },
+        // { name: 'Pragati', href: '/pragati' },
         { name: 'Emergency Response', href: '/emergency-appeal', isEmergency: true },
       ]
     },
-    {
-      name: 'RESOURCES',
-      href: '#',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Information Desk', href: '/info-desk' },
-        { name: 'Reports', href: '/reports' },
-        { name: 'Research and Publications', href: '/research' },
-        { name: 'Policies', href: '/policies' },
-      ]
-    },
-    { name: 'PARTNERSHIPS', href: '/partnerships', hasDropdown: false },
+    // {
+    //   name: 'RESOURCES',
+    //   href: '#',
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     // { name: 'Information Desk', href: '/info-desk' },
+    //     { name: 'Reports', href: '/reports' },
+    //     // { name: 'Research and Publications', href: '/research' },
+    //     { name: 'Policies', href: '/policies' },
+    //   ]
+    // },
+    { name: 'Reports', href: '/reports', hasDropdown: false },
     // { names: 'JOIN OUR TEAM', href: '/internship', hasDropdown: false },
     { name: 'TEAM', href: '/team', hasDropdown: false },
-    { name: 'CONTACT US', href: '/contact', hasDropdown: false },
+    { name: 'CONTACT', href: '/contact', hasDropdown: false },
   ];
 
   const handleDropdownToggle = (itemName: string) => {
@@ -71,22 +71,33 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 ml-8">
             {navigationItems.map((item) => (
-                            <div key={item.name} className="relative">
-                                  <button
-                    onClick={() => item.hasDropdown ? handleDropdownToggle(item.name) : null}
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <button
+                    onClick={() => handleDropdownToggle(item.name)}
                     className={`flex items-center space-x-1 transition-colors duration-200 font-bold text-xs uppercase tracking-wide py-2 font-['Outfit'] relative ${
                       location.pathname === item.href 
                         ? 'text-red-600' 
                         : 'text-gray-700 hover:text-red-600'
                     }`}
                   >
-                  <span>{item.name}</span>
-                  {item.hasDropdown && (
+                    <span>{item.name}</span>
                     <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`flex items-center space-x-1 transition-colors duration-200 font-bold text-xs uppercase tracking-wide py-2 font-['Outfit'] relative ${
+                      location.pathname === item.href 
+                        ? 'text-red-600' 
+                        : 'text-gray-700 hover:text-red-600'
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                  </Link>
+                )}
 
                 {/* Dropdown Menu */}
                 {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
@@ -153,23 +164,35 @@ const Header = () => {
               </Link>
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <button
-                    onClick={() => item.hasDropdown ? handleDropdownToggle(item.name) : null}
-                    className={`w-full text-left px-3 py-2 rounded-md transition-colors duration-200 font-bold text-sm uppercase tracking-wide font-['Outfit'] ${
-                      location.pathname === item.href 
-                        ? 'text-red-600 bg-red-50' 
-                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>{item.name}</span>
-                      {item.hasDropdown && (
+                  {item.hasDropdown ? (
+                    <button
+                      onClick={() => handleDropdownToggle(item.name)}
+                      className={`w-full text-left px-3 py-2 rounded-md transition-colors duration-200 font-bold text-sm uppercase tracking-wide font-['Outfit'] ${
+                        location.pathname === item.href 
+                          ? 'text-red-600 bg-red-50' 
+                          : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span>{item.name}</span>
                         <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
-                      )}
-                    </div>
-                  </button>
+                      </div>
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`w-full text-left px-3 py-2 rounded-md transition-colors duration-200 font-bold text-sm uppercase tracking-wide font-['Outfit'] ${
+                        location.pathname === item.href 
+                          ? 'text-red-600 bg-red-50' 
+                          : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
                   
                                      {/* Mobile Dropdown */}
                    {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (

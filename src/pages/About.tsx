@@ -110,20 +110,13 @@ const About = () => {
              </div>
            </div>
 
-
-
           {/* Financial Information */}
-          <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white mb-16">
-            <h2 className="text-2xl sm:text-3xl font-normal mb-6">Financial Information</h2>
+          <div className="bg-gradient-to-br from-gray-300 to-gray-300 rounded-3xl p-8 text-black mb-16">
+            <h2 className="text-2xl sm:text-3xl font-normal mb-6">Key Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg sm:text-xl font-normal mb-4">Current Annual Budget</h3>
-                                 <p className="text-2xl font-normal mb-2">₹30 Lakh Rupees</p>
-                <p className="text-gray-200">($75,000 approximately)</p>
-              </div>
-              <div>
                 <h3 className="text-lg sm:text-xl font-normal mb-4">Major Supporters</h3>
-                <ul className="space-y-1 text-gray-200">
+                <ul className="space-y-1 text-black">
                   <li>• Uttarkhand Neva Sivi (India)</li>
                   <li>• CAPART (India)</li>
                   <li>• Terre des Hommes (Germany)</li>
@@ -131,6 +124,16 @@ const About = () => {
                   <li>• World Bank</li>
                 </ul>
               </div>
+                             <div>
+                 <h3 className="text-lg sm:text-xl font-normal mb-4">Core Focus Areas</h3>
+                 <ul className="space-y-1 text-black">
+                   <li>• Healthcare & Nutrition</li>
+                   <li>• Education & Literacy</li>
+                   <li>• Women's Empowerment</li>
+                   <li>• Environmental Conservation</li>
+                   <li>• Livelihood Development</li>
+                 </ul>
+               </div>
             </div>
           </div>
         </div>

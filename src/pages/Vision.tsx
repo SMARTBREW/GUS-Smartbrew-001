@@ -23,13 +23,22 @@ const VisionPage = () => {
           {/* Vision Section */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white mb-8">
-                <h2 className="text-2xl sm:text-3xl font-normal mb-4">Our Vision</h2>
-                <p className="text-lg leading-relaxed">
-                  To create self-sustaining, empowered rural communities where every individual has access to 
-                  opportunities for growth, education, and dignified livelihoods while preserving the rich 
-                  cultural heritage and natural resources of the Kumaon region.
-                </p>
+              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Vision</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="bg-gray-50 rounded-2xl p-8 shadow">
+                  <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Future We Envision</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    To create self-sustaining, empowered rural communities where every individual has access to 
+                    opportunities for growth, education, and dignified livelihoods while preserving the rich 
+                    cultural heritage and natural resources of the Kumaon region.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-2xl p-8 shadow">
+                  <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Community Empowerment</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    We envision empowered communities where every individual has access to opportunities for growth, education, and dignified livelihoods while preserving the rich cultural heritage and natural resources of the Kumaon region.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -69,7 +78,7 @@ const VisionPage = () => {
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Goals</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">👥</span>
                   </div>
                   <h3 className="text-xl font-normal text-gray-800 mb-3">Women Leadership</h3>
@@ -78,7 +87,7 @@ const VisionPage = () => {
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🌱</span>
                   </div>
                   <h3 className="text-xl font-normal text-gray-800 mb-3">Livelihood Creation</h3>
@@ -87,7 +96,7 @@ const VisionPage = () => {
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🏔️</span>
                   </div>
                   <h3 className="text-xl font-normal text-gray-800 mb-3">Resource Conservation</h3>

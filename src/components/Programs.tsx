@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BookOpen, Heart, Leaf, Users, Target, ArrowRight, Calendar, MapPin, Users2, X, DollarSign } from 'lucide-react';
-import GetInvolved from './GetInvolved';
 
-const Programs = () => {
+interface ProgramsProps {
+  preview?: boolean;
+}
+
+const Programs = ({ preview = false }: ProgramsProps) => {
+  const navigate = useNavigate();
   const [selectedProgram, setSelectedProgram] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -216,6 +221,9 @@ const Programs = () => {
     }
   ];
 
+  // Show only 3 programs if preview mode, otherwise show all
+  const displayPrograms = preview ? programs.slice(0, 3) : programs;
+
   const openModal = (program: any) => {
     setSelectedProgram(program);
     setIsModalOpen(true);
@@ -227,7 +235,7 @@ const Programs = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className={`${preview ? 'bg-gray-50' : 'bg-white'} py-20`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -235,15 +243,15 @@ const Programs = () => {
             <span className="text-gray-800">Our </span>
             <span className="text-red-600">Programs</span>
           </h1>
-                      <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
-              Discover our comprehensive programs designed to transform communities across India. 
-              Click on any program to learn more and support our initiatives.
-            </p>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
+            Discover our comprehensive programs designed to transform communities across India. 
+            Click on any program to learn more and support our initiatives.
+          </p>
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programs.map((program) => (
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${preview ? '3' : '3'} gap-8`}>
+          {displayPrograms.map((program) => (
             <div 
               key={program.id}
               onClick={() => openModal(program)}
@@ -275,9 +283,9 @@ const Programs = () => {
                   <div className="text-sm text-gray-500">
                     Budget: <span className="font-medium text-gray-700">{program.budget}</span>
                   </div>
-                                  <button className="text-red-600 hover:text-red-700 font-medium transition-colors duration-200">
-                  Learn More →
-                </button>
+                  <button className="text-red-600 hover:text-red-700 font-medium transition-colors duration-200">
+                    Learn More →
+                  </button>
                 </div>
                 
                 <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center space-x-2 group-hover:shadow-lg text-sm">
@@ -288,6 +296,20 @@ const Programs = () => {
             </div>
           ))}
         </div>
+
+        {/* View More Button - Only show in preview mode */}
+        {preview && (
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => navigate('/programs')}
+              className="bg-white hover:bg-gray-50 text-red-600 border-2 border-red-600 px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center space-x-2 hover:shadow-lg"
+            >
+              <span>View More Programs</span>
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </button>
+          </div>
+        )}
+
       </div>
 
       {/* Program Details Modal */}
@@ -320,7 +342,7 @@ const Programs = () => {
                 {selectedProgram.icon}
               </div>
               
-                              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
+              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
                 {selectedProgram.title}
               </h2>
               

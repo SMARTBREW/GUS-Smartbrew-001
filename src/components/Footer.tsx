@@ -139,15 +139,15 @@ const Footer = () => {
           © {new Date().getFullYear()} Gramin Utthan Samity (G.U.S.). All rights reserved.
          </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                Cookie Policy
-              </a>
+              </Link>
+              <Link to="/terms-of-use" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                Terms of Use
+              </Link>
+              <Link to="/refund-policy" className="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                Refund Policy
+              </Link>
             </div>
           </div>
         </div>
