@@ -10,7 +10,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   className = ""
 }) => {
   return (
-    <div className={`bg-gray-50 rounded-3xl p-8 shadow-sm ${className}`}>
+    <div className={`bg-white rounded-3xl p-8 shadow-sm ${className}`}>
       <h2 className="text-3xl font-normal text-gray-800 mb-8 text-center">{title}</h2>
       <form className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
