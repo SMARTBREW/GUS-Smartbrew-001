@@ -12,6 +12,7 @@ import ContactPage from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import RefundPolicy from './pages/RefundPolicy';
+import CertificatesPage from './pages/Certificates';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/emergency-appeal" element={<EmergencyAppealPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
