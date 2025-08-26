@@ -1,49 +1,66 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Download, FileText, Eye } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 const Certificates = () => {
   const certificates = [
     {
       name: '12A Certificate',
       filename: '12A Certificate.pdf',
-      description: 'Tax exemption certificate under Section 12A of Income Tax Act'
+      description: 'Tax exemption certificate under Section 12A of Income Tax Act',
+      isPan: false
     },
     {
       name: '80G Certificate',
       filename: '80G Certificate.pdf',
-      description: 'Tax deduction certificate under Section 80G of Income Tax Act'
+      description: 'Tax deduction certificate under Section 80G of Income Tax Act',
+      isPan: false
     },
     {
       name: 'CSR Certificate',
       filename: 'CSR Certificate.PDF',
-      description: 'Corporate Social Responsibility certificate'
+      description: 'Corporate Social Responsibility certificate',
+      isPan: false
     },
     {
       name: 'FCRA Certificate',
       filename: 'FCRA Certificate.pdf',
-      description: 'Foreign Contribution Regulation Act certificate'
+      description: 'Foreign Contribution Regulation Act certificate',
+      isPan: false
     },
     {
       name: 'GUS PAN Certificate',
       filename: 'GUS-PAN.pdf',
-      description: 'Permanent Account Number certificate'
+      description: 'Permanent Account Number certificate',
+      isPan: true
     },
     {
       name: 'GUS Registration',
       filename: 'GUS-Registration.pdf',
-      description: 'Organization registration certificate'
+      description: 'Organization registration certificate',
+      isPan: false
     }
   ];
 
-  const handleDownload = (filename: string) => {
-    const link = document.createElement('a');
-    link.href = `/certificates/${filename}`;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const getIframeSrc = (certificate: any) => {
+    const baseUrl = `/certificates/${certificate.filename}#toolbar=0&navpanes=0&scrollbar=0`;
+    if (certificate.isPan) {
+      return `${baseUrl}&view=FitV&page=1&zoom=100&scrollbar=1&navpanes=1`;
+    }
+    return baseUrl;
+  };
+
+  const getIframeStyle = (certificate: any) => {
+    if (certificate.isPan) {
+      return {
+        transform: 'rotate(270deg) scale(1.2)',
+        transformOrigin: 'center center',
+        width: '100%',
+        height: '100%'
+      };
+    }
+    return {};
   };
 
   return (
@@ -78,24 +95,16 @@ const Certificates = () => {
                 </div>
                 <div className="h-96">
                   <iframe
-                    src={`/certificates/${certificate.filename}#toolbar=0&navpanes=0&scrollbar=0`}
+                    src={getIframeSrc(certificate)}
                     className="w-full h-full"
                     title={certificate.name}
+                    style={getIframeStyle(certificate)}
                   />
                 </div>
                 <div className="p-4 bg-gray-50 border-t">
-                  <div className="flex justify-between items-center">
-                    <p className="text-sm text-gray-600">
-                      {certificate.description}
-                    </p>
-                    <button
-                      onClick={() => handleDownload(certificate.filename)}
-                      className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-1"
-                    >
-                      <Download className="h-4 w-4" />
-                      <span>Download</span>
-                    </button>
-                  </div>
+                  <p className="text-sm text-gray-600 text-center">
+                    {certificate.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -112,24 +121,16 @@ const Certificates = () => {
                 </div>
                 <div className="h-96">
                   <iframe
-                    src={`/certificates/${certificate.filename}#toolbar=0&navpanes=0&scrollbar=0`}
+                    src={getIframeSrc(certificate)}
                     className="w-full h-full"
                     title={certificate.name}
+                    style={getIframeStyle(certificate)}
                   />
                 </div>
                 <div className="p-4 bg-gray-50 border-t">
-                  <div className="flex justify-between items-center">
-                    <p className="text-sm text-gray-600">
-                      {certificate.description}
-                    </p>
-                    <button
-                      onClick={() => handleDownload(certificate.filename)}
-                      className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-1"
-                    >
-                      <Download className="h-4 w-4" />
-                      <span>Download</span>
-                    </button>
-                  </div>
+                  <p className="text-sm text-gray-600 text-center">
+                    {certificate.description}
+                  </p>
                 </div>
               </div>
             ))}

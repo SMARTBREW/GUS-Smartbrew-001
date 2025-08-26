@@ -110,6 +110,76 @@ const About = () => {
              </div>
            </div>
 
+          {/* Community Testimonials */}
+          <div className="mb-16">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Community Impact Stories</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Historical Impact Story */}
+                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">1989</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-normal text-gray-800">Khatta Village Transformation</h3>
+                      <p className="text-red-600">Historical Milestone</p>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl p-6 mb-6">
+                    <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
+                      "G.U.S. in 1989 built houses in the Khatta Gram Sabha of Khatta Thok. These eight houses were constructed for the most economically disadvantaged and vulnerable sections of society. Around 40,000 people were impacted by this initiative."
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed italic">
+                      "Before these houses, we did not have proper homes; we lived in small, makeshift huts. Under the guidance of the Gram Pradhan and G.U.S., we were provided a colony of eight houses for poor families."
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-red-600">8</div>
+                      <div className="text-sm text-gray-600">Houses Built</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-red-600">40K</div>
+                      <div className="text-sm text-gray-600">People Impacted</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Leadership Recognition */}
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">UJ</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-normal text-gray-800">Umesh Joshi</h3>
+                      <p className="text-gray-600">Secretary & Coordinator</p>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl p-6 mb-6">
+                    <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
+                      "The president of G.U.S., Umesh Joshi, personally visited the shop and distributed ration to the local people. All the attendees expressed their gratitude to the founder and secretary of the Gramin Utthan Samity (G.U.S.), Umesh Joshi, for acting like a friend and continuously helping for the last 10–15 days."
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed italic">
+                      "Under his guidance, relief materials were delivered across not only the Kapkot constituency but also various places in the Bageshwar district, with the involvement of Nagar Panchayat presidents, former MLAs, workers of different political parties, and local residents."
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-gray-600">58</div>
+                      <div className="text-sm text-gray-600">Families Helped</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-gray-600">15</div>
+                      <div className="text-sm text-gray-600">Days Support</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Financial Information */}
           <div className="bg-gradient-to-br from-gray-300 to-gray-300 rounded-3xl p-8 text-black mb-16">
             <h2 className="text-2xl sm:text-3xl font-normal mb-6">Key Information</h2>

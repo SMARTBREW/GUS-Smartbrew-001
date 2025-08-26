@@ -7,19 +7,19 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      image: "/img/Screenshot (274).png"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "/img/Screenshot (276).png"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "/img/Screenshot (278).png"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "/6.jpeg"
     }
   ];
 
@@ -60,8 +60,6 @@ const Hero = () => {
         </div>
       </div>
 
-
-
       {/* Content overlaid on the image */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
@@ -88,10 +86,35 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Empty space or additional content */}
-          <div className="relative">
-            {/* This space can be used for additional content or left empty */}
-          </div>
+          {/* Right side - Impact Statistics */}
+          {/* <div className="relative">
+            <div className="bg-white bg-opacity-95 rounded-2xl p-6 shadow-lg">
+              <h3 className="text-xl font-normal text-gray-800 mb-4 text-center">Our Impact</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">40K+</div>
+                  <div className="text-sm text-gray-600">People Impacted</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">58</div>
+                  <div className="text-sm text-gray-600">Families Helped</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">8</div>
+                  <div className="text-sm text-gray-600">Houses Built</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">44</div>
+                  <div className="text-sm text-gray-600">Years Service</div>
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-red-50 rounded-xl">
+                <p className="text-sm text-gray-700 italic text-center">
+                  "G.U.S. in 1989 built houses for the most economically disadvantaged and vulnerable sections of society. Around 40,000 people were impacted by this initiative."
+                </p>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
 

@@ -213,6 +213,86 @@ const ReportsPage = () => {
             </div>
           </div>
 
+          {/* Case Studies */}
+          <div className="mb-16">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Documented Case Studies</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Emergency Relief Case Study */}
+                <div className="bg-white rounded-3xl p-8 shadow-lg">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-red-600 font-bold">📋</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-normal text-gray-800">Emergency Relief Distribution</h3>
+                      <p className="text-sm text-gray-600">Kapkot Constituency, Bageshwar District</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-gray-50 rounded-xl p-4">
+                      <h4 className="font-normal text-gray-800 mb-2">Project Overview</h4>
+                      <p className="text-sm text-gray-600">
+                        Emergency relief distribution program conducted under the leadership of G.U.S., providing ration and job guarantee support to vulnerable families in the Kapkot constituency.
+                      </p>
+                    </div>
+                    <div className="bg-red-50 rounded-xl p-4">
+                      <h4 className="font-normal text-red-600 mb-2">Key Achievements</h4>
+                      <ul className="space-y-1 text-sm text-gray-600">
+                        <li>• Ration distributed to 58 families</li>
+                        <li>• Job guarantee program implemented</li>
+                        <li>• Personal leadership involvement by Umesh Joshi</li>
+                        <li>• Multi-stakeholder collaboration achieved</li>
+                      </ul>
+                    </div>
+                    <div className="bg-blue-50 rounded-xl p-4">
+                      <h4 className="font-normal text-blue-600 mb-2">Community Impact</h4>
+                      <p className="text-sm text-gray-600">
+                        Relief materials delivered across Kapkot constituency and various places in Bageshwar district, involving Nagar Panchayat presidents, former MLAs, and local residents.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Historical Housing Case Study */}
+                <div className="bg-white rounded-3xl p-8 shadow-lg">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-red-600 font-bold">🏠</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-normal text-gray-800">Khatta Village Housing Project</h3>
+                      <p className="text-sm text-gray-600">1989 - Historical Milestone</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-gray-50 rounded-xl p-4">
+                      <h4 className="font-normal text-gray-800 mb-2">Project Overview</h4>
+                      <p className="text-sm text-gray-600">
+                        Construction of eight houses in Khatta Gram Sabha of Khatta Thok for the most economically disadvantaged and vulnerable sections of society.
+                      </p>
+                    </div>
+                    <div className="bg-red-50 rounded-xl p-4">
+                      <h4 className="font-normal text-red-600 mb-2">Key Achievements</h4>
+                      <ul className="space-y-1 text-sm text-gray-600">
+                        <li>• 8 houses constructed for vulnerable families</li>
+                        <li>• 40,000 people directly impacted</li>
+                        <li>• Temple and community facilities built</li>
+                        <li>• Sustainable community development model</li>
+                      </ul>
+                    </div>
+                    <div className="bg-green-50 rounded-xl p-4">
+                      <h4 className="font-normal text-green-600 mb-2">Long-term Impact</h4>
+                      <p className="text-sm text-gray-600">
+                        Transformation from makeshift huts to proper homes, enabling dignified living and community development through integrated programs including employment, healthcare, and education.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Report Request */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">

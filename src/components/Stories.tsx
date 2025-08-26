@@ -16,6 +16,66 @@ const Stories = () => {
             </p>
         </div>
 
+        {/* Real Testimonials Section */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Community Testimonials</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Emergency Relief Story */}
+            <div className="bg-white rounded-2xl p-8 shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-red-600 font-bold text-lg">GUS</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-normal text-gray-800">Emergency Relief in Kapkot</h4>
+                  <p className="text-sm text-gray-600">Recent Community Support</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-6 mb-4">
+                <p className="text-lg text-gray-700 leading-relaxed italic">
+                  "Under the leadership of G.U.S., Kapkot, a job guarantee program was successfully conducted, and ration was distributed to 58 families. The president of G.U.S., Umesh Joshi, personally visited the shop and distributed ration to the local people."
+                </p>
+              </div>
+              <div className="bg-red-50 rounded-xl p-4">
+                <h5 className="font-normal text-red-600 mb-2">Impact:</h5>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Ration distributed to 58 families</li>
+                  <li>• Job guarantee program implemented</li>
+                  <li>• Personal leadership involvement</li>
+                  <li>• Multi-stakeholder collaboration</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Historical Housing Story */}
+            <div className="bg-white rounded-2xl p-8 shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-red-600 font-bold text-lg">1989</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-normal text-gray-800">Khatta Village Transformation</h4>
+                  <p className="text-sm text-gray-600">Historical Impact Story</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-6 mb-4">
+                <p className="text-lg text-gray-700 leading-relaxed italic">
+                  "G.U.S. in 1989 built houses in the Khatta Gram Sabha of Khatta Thok. These eight houses were constructed for the most economically disadvantaged and vulnerable sections of society. Around 40,000 people were impacted by this initiative."
+                </p>
+              </div>
+              <div className="bg-red-50 rounded-xl p-4">
+                <h5 className="font-normal text-red-600 mb-2">Transformation:</h5>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• 8 houses constructed for vulnerable families</li>
+                  <li>• 40,000 people impacted</li>
+                  <li>• Temple and community facilities built</li>
+                  <li>• Sustainable community development</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Village Stories */}
         <div className="mb-16">
                       <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Village Success Stories</h3>
