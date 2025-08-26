@@ -19,7 +19,7 @@ const Hero = () => {
     },
     {
       id: 4,
-      image: "/6.jpeg"
+      image: "/img/img1.jpg"
     }
   ];
 
@@ -39,7 +39,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[80vh] bg-white overflow-hidden">
+    <section className="relative h-[80vh] bg-gray-900 overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full">
         <div 
@@ -51,10 +51,12 @@ const Hero = () => {
               <img 
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
+                style={{ objectPosition: index === 2 || index === 3 ? 'center 30%' : 'center' }}
+                loading="lazy"
               />
               {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
             </div>
           ))}
         </div>
@@ -62,59 +64,26 @@ const Hero = () => {
 
       {/* Content overlaid on the image */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight drop-shadow-lg">
-              <span className="block">Working for the Better</span>
-              <span className="block">Future of Mother</span>
-              <span className="block">and Child</span>
-            </h1>
-            
-            <div className="mb-6">
-              <p className="text-lg sm:text-xl text-white leading-relaxed drop-shadow-lg font-light">
-                SERVING RURAL COMMUNITIES SINCE 1979 | 150+ VILLAGES | HOLISTIC DEVELOPMENT
-              </p>
-            </div>
-
-            {/* Call to Action Button */}
-            <div className="flex justify-center lg:justify-start">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
-                <span className="text-lg">♥︎</span>
-                <span>Donate</span>
-              </button>
-            </div>
+        <div className="text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight drop-shadow-lg">
+            <span className="block">Working for the Better</span>
+            <span className="block">Future of Mother</span>
+            <span className="block">and Child</span>
+          </h1>
+          
+          <div className="mb-6">
+            <p className="text-lg sm:text-xl text-white leading-relaxed drop-shadow-lg font-light">
+              SERVING RURAL COMMUNITIES SINCE 1979 | 150+ VILLAGES | HOLISTIC DEVELOPMENT
+            </p>
           </div>
 
-          {/* Right side - Impact Statistics */}
-          {/* <div className="relative">
-            <div className="bg-white bg-opacity-95 rounded-2xl p-6 shadow-lg">
-              <h3 className="text-xl font-normal text-gray-800 mb-4 text-center">Our Impact</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">40K+</div>
-                  <div className="text-sm text-gray-600">People Impacted</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">58</div>
-                  <div className="text-sm text-gray-600">Families Helped</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">8</div>
-                  <div className="text-sm text-gray-600">Houses Built</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">44</div>
-                  <div className="text-sm text-gray-600">Years Service</div>
-                </div>
-              </div>
-              <div className="mt-4 p-3 bg-red-50 rounded-xl">
-                <p className="text-sm text-gray-700 italic text-center">
-                  "G.U.S. in 1989 built houses for the most economically disadvantaged and vulnerable sections of society. Around 40,000 people were impacted by this initiative."
-                </p>
-              </div>
-            </div>
-          </div> */}
+          {/* Call to Action Button */}
+          <div className="flex justify-center lg:justify-start">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
+              <span className="text-lg">♥︎</span>
+              <span>Donate</span>
+            </button>
+          </div>
         </div>
       </div>
 
