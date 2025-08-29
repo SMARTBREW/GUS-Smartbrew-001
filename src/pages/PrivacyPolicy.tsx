@@ -152,7 +152,7 @@ const PrivacyPolicy = () => {
                   <span className="text-gray-700">7) CONTACT INFORMATION</span>
                 </h2>
                 <p className="mb-4">
-                  If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us at info@gus.org.in. We will promptly rectify any information found to be incorrect. You can also speak to us at +91 [Phone Number] (Monday to Friday 10:00 hrs – 17:30 hrs IST).
+                  If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us at contact@gusindia.org. We will promptly rectify any information found to be incorrect. You can also speak to us at +91 [Phone Number] (Monday to Friday 10:00 hrs – 17:30 hrs IST).
                 </p>
               </section>
             </div>

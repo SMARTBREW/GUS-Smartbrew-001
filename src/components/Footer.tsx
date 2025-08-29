@@ -128,6 +128,13 @@ const Footer = () => {
                   (05963) 3043
                 </a>
               </div>
+              
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-gray-300 flex-shrink-0" />
+                <a href="mailto:contact@gusindia.org" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm">
+                  contact@gusindia.org
+                </a>
+              </div>
             </div>
           </div>
         </div>

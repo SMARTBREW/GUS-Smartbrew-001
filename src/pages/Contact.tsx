@@ -67,8 +67,8 @@ const Contact = () => {
                 <Mail className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Email Us</h3>
-              <p className="text-gray-600">info@graminutthan.org</p>
-              <p className="text-gray-600">support@graminutthan.org</p>
+              <p className="text-gray-600">contact@gusindia.org</p>
+              <p className="text-gray-600">contact@gusindia.org</p>
             </div>
 
             {/* Phone */}

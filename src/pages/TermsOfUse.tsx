@@ -202,7 +202,7 @@ const TermsOfUse = () => {
                   You agree that we may, with or without cause, immediately terminate your account and access to our Site and Services without prior notice. Without limiting the foregoing, the following may lead to the termination by GUS of a user's use of the Site and the Services: (a) breaches or violations of the Terms of Use or other incorporated documents, policies or guidelines; (b) requests by law enforcement or other government agencies; (c) a request by you (self-initiated account deletions); or (d) unexpected technical issues or problems. Termination of your GUS account includes (without liability to GUS): (i) removal of access to all offerings within the Site and the Services, (ii) possible barring you from further use of our Site and Services, and (iii) revoking all password(s) and usernames issued to or chosen by you. Furthermore, you agree that all terminations shall be made in our sole discretion and that we shall not be liable to you nor to any third-party for any termination of your account or access to our Site and Services.
                 </p>
                 <p className="mb-4">
-                  You may terminate the Terms of Use at any time by closing your account, discontinuing your use of the Site, and providing GUS with a notice of termination mailed to info@gus.org.in
+                  You may terminate the Terms of Use at any time by closing your account, discontinuing your use of the Site, and providing GUS with a notice of termination mailed to contact@gusindia.org
                 </p>
                 <p className="mb-4">
                   Any termination of access or of the Terms of Use shall not affect the respective rights and obligations (including without limitation, payment obligations) of the user arising before the date of termination.
@@ -237,7 +237,7 @@ const TermsOfUse = () => {
                   <li>A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorised to act on the copyright owner's behalf.</li>
                 </ul>
                 <p className="mb-4">
-                  Please send notices to GUS and mail at info@gus.org.in
+                  Please send notices to GUS and mail at contact@gusindia.org
                 </p>
                 <p className="mb-4">
                   We reserve the right to remove content alleged to be infringing without prior notice and at our sole discretion.
@@ -258,7 +258,7 @@ const TermsOfUse = () => {
                   <span className="text-gray-700">15) RESOLUTION OF DISPUTES</span>
                 </h2>
                 <p className="mb-4">
-                  In the event a dispute arises between you and GUS, please contact us at info@gus.org.in and should you have a dispute with one or more user or an outside party, you release GUS (and GUS's officers, directors, agents, subsidiaries, joint ventures and employees) from any and all claims, demands and damages (actual and consequential) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of or in any way connected with such dispute.
+                  In the event a dispute arises between you and GUS, please contact us at contact@gusindia.org and should you have a dispute with one or more user or an outside party, you release GUS (and GUS's officers, directors, agents, subsidiaries, joint ventures and employees) from any and all claims, demands and damages (actual and consequential) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of or in any way connected with such dispute.
                 </p>
               </section>
 
@@ -285,7 +285,7 @@ const TermsOfUse = () => {
                   <span className="text-gray-700">18) CONTACT INFORMATION</span>
                 </h2>
                 <p className="mb-4">
-                  If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us at info@gus.org.in. We will promptly rectify any information found to be incorrect. You can also speak to us at +91 [Phone Number] (Monday to Friday 10:00 hrs – 17:30 hrs IST).
+                  If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us at contact@gusindia.org. We will promptly rectify any information found to be incorrect. You can also speak to us at +91 [Phone Number] (Monday to Friday 10:00 hrs – 17:30 hrs IST).
                 </p>
               </section>
 

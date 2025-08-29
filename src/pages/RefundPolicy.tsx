@@ -44,7 +44,7 @@ const RefundPolicy = () => {
                   <span className="text-gray-700">2. ERROR CORRECTION & REFUND REQUESTS</span>
                 </h2>
                 <p className="mb-4">
-                  If donor feels that, he/she made an error in donation amount/purpose or any other parameter, kindly let GUS know about such error within 2 working days by email to info@gus.org.in, we shall address any such request in 7-10 working days.
+                  If donor feels that, he/she made an error in donation amount/purpose or any other parameter, kindly let GUS know about such error within 2 working days by email to contact@gusindia.org, we shall address any such request in 7-10 working days.
                 </p>
               </section>
 
@@ -62,7 +62,7 @@ const RefundPolicy = () => {
                   <span className="text-gray-700">4. REGULAR DONATION CANCELLATION</span>
                 </h2>
                 <p className="mb-4">
-                  In case a donation is registered under regular donation program the donor may intimate us at info@gus.org.in to stop the donation from the next debit cycle. GUS on a best effort basis will execute the request and intimate the donor about the same.
+                  In case a donation is registered under regular donation program the donor may intimate us at contact@gusindia.org to stop the donation from the next debit cycle. GUS on a best effort basis will execute the request and intimate the donor about the same.
                 </p>
               </section>
 
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
                   <span className="text-gray-700">6. CONTACT INFORMATION</span>
                 </h2>
                 <p className="mb-4">
-                  For any other information on online donations kindly write to info@gus.org.in or call us on +91 [Phone Number].
+                  For any other information on online donations kindly write to contact@gusindia.org or call us on +91 [Phone Number].
                 </p>
               </section>
 

@@ -3,47 +3,80 @@ import { Heart } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <div className="py-20 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - What We Do content */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-5xl lg:text-6xl font-normal text-gray-900 mb-8 leading-tight">
-              What We Do
-            </h2>
-            
-            <div className="max-w-lg mb-10">
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
-                Educate Girls works with the government, community and village-based volunteers and mentors to ensure every girl in the remotest parts of India is included, educated and empowered with choices and voices.
+    <>
+      {/* What We Do Section - White Background */}
+      <section className="bg-white py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
+          <span className="text-gray-800">What </span>
+          <span className="text-red-600">We Do</span>
+        </h2>
+        <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
+          We work tirelessly to create positive change in rural communities through education, healthcare, and sustainable development programs.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Image Section */}
+        <div className="order-2 lg:order-1">
+          <div className="relative">
+            <img 
+              src="/img/gus1.jpg" 
+              alt="Gramin Utthan Samity Community Event - Children and adults celebrating achievements with certificates and medals"
+              className="w-full h-80 lg:h-[600px] object-cover rounded-2xl shadow-lg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          </div>
+        </div>
+        
+        {/* Content Section */}
+        <div className="order-1 lg:order-2 lg:pt-8">
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
+                Community <span className="text-red-600">Empowerment</span>
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our work focuses on empowering rural communities through comprehensive development programs. 
+                We believe in the potential of every individual and work to create opportunities for growth and success.
               </p>
             </div>
-
-            {/* Call to Action Button */}
-            <div className="flex justify-center lg:justify-start">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
-                <span className="text-lg">♥︎</span>
-                <span>Donate</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Right side - Image with minimal red accent like original */}
-          <div className="relative">
-            {/* Small red accent - positioned to peek from behind image like original */}
-           
             
-            {/* Image container */}
-            <div className="relative z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Children learning together"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg"
-              />
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
+                Education & <span className="text-red-600">Development</span>
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We provide quality education, skill development, and leadership training to children and youth. 
+                Our programs help create confident, capable individuals who can lead their communities forward.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
+                Sustainable <span className="text-red-600">Impact</span>
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Through our holistic approach, we create lasting positive change in communities. 
+                Our programs are designed to be sustainable and create long-term benefits for generations to come.
+              </p>
+            </div>
+            
+            <div className="pt-2">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <span>Learn More About Our Work</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+      </section>
+    </>
   );
 };
 

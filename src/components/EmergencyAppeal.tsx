@@ -28,7 +28,7 @@ const EmergencyAppeal = () => {
     ],
     contactInfo: {
       phone: "+91-98765-43210",
-      email: "emergency@graminutthan.org",
+      email: "contact@gusindia.org",
       address: "Gramin Utthan Samity, Emergency Response Unit"
     }
   };
