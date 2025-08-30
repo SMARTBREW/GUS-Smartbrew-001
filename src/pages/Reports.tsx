@@ -1,29 +1,31 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PageLayout from '../components/PageLayout';
+import PageHero from '../components/PageHero';
+import SubsectionTitle from '../components/SubsectionTitle';
+import InfoCard from '../components/InfoCard';
+import SEOHead from '../components/SEOHead';
 
 const ReportsPage = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <PageLayout>
+      <SEOHead
+        title="Reports & Publications - Gramin Utthan Samiti Impact"
+        description="Access comprehensive reports, impact assessments, and publications documenting Gramin Utthan Samiti's rural development work in Uttarakhand. Transparency in NGO operations and results."
+        keywords="NGO reports, impact assessment, annual reports, rural development reports, Gramin Utthan Samiti publications, NGO transparency, Uttarakhand development"
+        canonicalUrl="/reports"
+      />
+      <PageHero 
+        title="Reports & Publications"
+        subtitle="Access our comprehensive reports, impact assessments, and publications documenting our work in rural development."
+      />
       
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
-              <span className="text-gray-800">Reports & </span>
-              <span className="text-red-600">Publications</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
-              Access our comprehensive reports, impact assessments, and publications documenting our work in rural development.
-            </p>
-          </div>
 
           {/* Report Categories */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Report Categories</h2>
+              <SubsectionTitle title="Report Categories" />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Annual Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
@@ -309,11 +311,9 @@ const ReportsPage = () => {
               </div>
             </div>
           </div>
-        </div>
+                </div>
       </section>
-      
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

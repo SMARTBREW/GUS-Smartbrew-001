@@ -5,12 +5,50 @@ import CTA from '../components/CTA';
 import Impact from '../components/Impact';
 import Programs from '../components/Programs';
 import Testimonials from '../components/Testimonials';
-import ContactForm from '../components/ContactForm';
+import LocationMap from '../components/LocationMap';
+import SEOHead from '../components/SEOHead';
 import Footer from '../components/Footer';
 
 const Home = () => {
+  // Homepage structured data for SEO
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Gramin Utthan Samiti",
+    "alternateName": "G.U.S.",
+    "description": "Leading rural development NGO in Uttarakhand since 1979. Empowering women, transforming villages, and creating sustainable livelihoods in 150+ communities across Kumaon hills.",
+    "foundingDate": "1979",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kapkote",
+      "addressLocality": "Bageshwar", 
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263679",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-5963-3043",
+      "email": "contact@gusindia.org",
+      "contactType": "customer service"
+    },
+    "url": "https://gusindia.org",
+    "logo": "https://gusindia.org/logo.png",
+    "mission": "To create self-sustaining rural communities through women empowerment, education, and integrated village development.",
+    "keywords": ["Rural Development", "Women Empowerment", "NGO Uttarakhand", "Village Development", "Education", "Sustainable Development"],
+    "areaServed": ["Uttarakhand", "Kumaon", "Bageshwar", "Chamoli"],
+    "knowsAbout": ["Rural Development", "Women Empowerment", "Education", "Healthcare", "Sustainable Agriculture", "Community Development"]
+  };
+
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Gramin Utthan Samiti - Rural Development NGO Uttarakhand"
+        description="Leading rural development NGO in Uttarakhand since 1979. Empowering women, transforming villages, and creating sustainable livelihoods. Donate to support 150+ communities in Kumaon hills."
+        keywords="NGO Uttarakhand, rural development, women empowerment, donate NGO, village development, Gramin Utthan Samiti, Kumaon hills, Bageshwar NGO"
+        canonicalUrl="/"
+        structuredData={homePageSchema}
+      />
       <Header />
       
       {/* Hero Section - White Background */}
@@ -36,21 +74,9 @@ const Home = () => {
         <Testimonials />
       </section>
 
-      {/* Contact Section - Gray Background */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-normal text-gray-800 mb-4">
-              Get in <span className="text-red-600">Touch</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have questions about our programs or want to get involved? We'd love to hear from you.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <ContactForm title="Send us a Message" />
-          </div>
-        </div>
+      {/* Google Map Section */}
+      <section className="py-16 bg-gray-50">
+        <LocationMap />
       </section>
       
       <Footer />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Heart, Phone, MapPin, Clock, Users, DollarSign, ArrowRight, Camera, Image, Globe, Shield, BookOpen } from 'lucide-react';
 import DonateButton from './DonateButton';
+import { DESIGN_SYSTEM } from '../styles/designSystem';
 
 const EmergencyAppeal = () => {
   const [donationAmount, setDonationAmount] = useState('');
@@ -120,30 +121,35 @@ const EmergencyAppeal = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute bottom-8 left-8">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className={`${DESIGN_SYSTEM.typography.heroTitle} text-white leading-tight`}>
             {emergencyData.title}
           </h1>
         </div>
       </div>
 
       {/* Content Section - Description and Donate Button */}
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 text-center">
-          {emergencyData.subtitle}
-        </h2>
-        <p className="text-lg leading-relaxed text-gray-700 mb-8 text-center">
-          {emergencyData.description}
-        </p>
-        <div className="text-center">
-          <DonateButton 
-            text="DONATE NOW" 
-            size="large" 
-            variant="primary" 
-            onClick={handleDonate}
-            className="font-bold"
-          />
+      <section className={DESIGN_SYSTEM.spacing.sectionPadding}>
+        <div className={DESIGN_SYSTEM.spacing.container}>
+          <div className={`text-center ${DESIGN_SYSTEM.spacing.marginBottom}`}>
+            <h2 className={DESIGN_SYSTEM.typography.sectionTitle}>
+              <span className={DESIGN_SYSTEM.colors.textPrimary}>From Emergency Response to </span>
+              <span className={DESIGN_SYSTEM.colors.primary}>Long-Term Recovery</span>
+            </h2>
+            <p className={DESIGN_SYSTEM.typography.subtitleText}>
+              {emergencyData.description}
+            </p>
+          </div>
+          <div className="text-center">
+            <DonateButton 
+              text="DONATE NOW" 
+              size="large" 
+              variant="primary" 
+              onClick={handleDonate}
+              className="font-bold"
+            />
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Responses to Protracted Humanitarian Crises */}
       <div className="max-w-7xl mx-auto px-4 py-16">

@@ -1,75 +1,92 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PageLayout from '../components/PageLayout';
+import PageHero from '../components/PageHero';
+import SubsectionTitle from '../components/SubsectionTitle';
+import StatsCard from '../components/StatsCard';
+import InfoCard from '../components/InfoCard';
+import SEOHead from '../components/SEOHead';
 import { Heart, Users, Leaf, BookOpen, Target, MapPin, Phone, Mail, Calendar, Award } from 'lucide-react';
 
 const About = () => {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
-              <span className="text-gray-800">About </span>
-              <span className="text-red-600">G.U.S.</span>
-            </h1>
-                          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
-            GraminUthanSamiti was established in the year 1979 in the Kumaon hills. This Himalayan region 
-            has witnessed a high level of migration due to unavailability of the employment option. Hence in 
-            order to provide people with the employment and Livelihood, a need was felt to make community 
-            aware about the possibilities which they have around them in nature. The main focus of the 
-            organization is creating ownership among the community. We have a firm belief that by following 
-            integrated Village development plan we can create make community self-aware and self-sustain. 
-            Our main focus is to make women a leader of the village by empowering them as they can be the 
-            catalyst of change in the rural Kumaon. 
-            </p>
-          </div>
+  // Structured Data for SEO (FREE!)
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Gramin Utthan Samiti",
+    "alternateName": "G.U.S.",
+    "description": "Rural development NGO working in Uttarakhand since 1979, focusing on women empowerment, education, and sustainable village development.",
+    "foundingDate": "1979",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kapkote",
+      "addressLocality": "Bageshwar",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263679",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-5963-3043",
+      "email": "contact@gusindia.org",
+      "contactType": "customer service"
+    },
+    "url": "https://gusindia.org",
+    "logo": "https://gusindia.org/logo.png",
+    "sameAs": [
+      "https://facebook.com/gusindia",
+      "https://twitter.com/gusindia"
+    ],
+    "knowsAbout": ["Rural Development", "Women Empowerment", "Education", "Sustainable Development"],
+    "areaServed": {
+      "@type": "State",
+      "name": "Uttarakhand"
+    }
+  };
 
-                     {/* Organization Details */}
-           <div className="mb-16">
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-               <div>
-                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">1979</div>
-                 <div className="text-gray-600">Established</div>
-               </div>
-               <div>
-                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">2407/1982-83</div>
-                 <div className="text-gray-600">Registration</div>
-               </div>
-               <div>
-                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">150+</div>
-                 <div className="text-gray-600">Villages Served</div>
-               </div>
-               <div>
-                                   <div className="text-2xl sm:text-3xl font-normal text-gray-800 mb-2">80%</div>
-                 <div className="text-gray-600">Women Workers</div>
-               </div>
+  return (
+    <PageLayout>
+      <SEOHead
+        title="About G.U.S - Rural Development NGO Since 1979"
+        description="Learn about Gramin Utthan Samiti (G.U.S.), a trusted NGO working in Uttarakhand since 1979. We focus on rural development, women empowerment, and education in 150+ villages across Kumaon hills."
+        keywords="NGO Uttarakhand, rural development, women empowerment, education NGO, Gramin Utthan Samiti, village development, Kumaon hills, Bageshwar NGO"
+        canonicalUrl="/about"
+        structuredData={organizationSchema}
+      />
+      <PageHero 
+        title="About G.U.S."
+        subtitle="GraminUthanSamiti was established in the year 1979 in the Kumaon hills. This Himalayan region has witnessed a high level of migration due to unavailability of the employment option. Hence in order to provide people with the employment and Livelihood, a need was felt to make community aware about the possibilities which they have around them in nature. The main focus of the organization is creating ownership among the community. We have a firm belief that by following integrated Village development plan we can create make community self-aware and self-sustain. Our main focus is to make women a leader of the village by empowering them as they can be the catalyst of change in the rural Kumaon."
+      />
+      
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           {/* Organization Details */}
+           <div className="mb-12">
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+               <StatsCard value="1979" label="Established" />
+               <StatsCard value="2407/1982-83" label="Registration" />
+               <StatsCard value="150+" label="Villages Served" />
+               <StatsCard value="80%" label="Women Workers" />
              </div>
            </div>
 
-                     {/* Mission and Vision */}
-			<div className="mb-16">
-				<div className="max-w-4xl mx-auto">
-					            <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Mission & Approach</h2>
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-						<div className="bg-gray-50 rounded-2xl p-8 shadow">
-							            <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Our Mission</h3>
-							<p className="text-lg text-gray-600 leading-relaxed">
-								G.U.S. takes a holistic approach to Development Work, focusing on the people's ecological, social, cultural and economic needs. We help the local people identify their problems and work together, mobilising local resources to achieve their goals and take control of their lives.
-							</p>
-						</div>
-						<div className="bg-gray-50 rounded-2xl p-8 shadow">
-							            <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Our Method of Rural Awakening</h3>
-							<p className="text-lg text-gray-600 leading-relaxed">
-								G.U.S.'s method of rural awakening is to support Village and Women's Groups. These organisations bring villagers of every sector together to discuss their problems and work collectively. We only conduct programs in villages where the women have formed Women's Groups and meet on a regular monthly basis to discuss the practical problems of their villages and lifestyles.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+           {/* Mission and Vision */}
+           <div className="mb-12">
+             <div className="max-w-4xl mx-auto">
+               <SubsectionTitle title="Our Mission & Approach" />
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 <InfoCard
+                   title="Our Mission"
+                   content="G.U.S. takes a holistic approach to Development Work, focusing on the people's ecological, social, cultural and economic needs. We help the local people identify their problems and work together, mobilising local resources to achieve their goals and take control of their lives."
+                   variant="highlighted"
+                 />
+                 <InfoCard
+                   title="Our Method of Rural Awakening"
+                   content="G.U.S.'s method of rural awakening is to support Village and Women's Groups. These organisations bring villagers of every sector together to discuss their problems and work collectively. We only conduct programs in villages where the women have formed Women's Groups and meet on a regular monthly basis to discuss the practical problems of their villages and lifestyles."
+                   variant="highlighted"
+                 />
+               </div>
+             </div>
+           </div>
 
                      {/* Geographic Coverage */}
            <div className="mb-16">
@@ -206,11 +223,9 @@ const About = () => {
                </div>
             </div>
           </div>
-        </div>
+                </div>
       </section>
-      
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

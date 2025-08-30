@@ -1,44 +1,41 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PageLayout from '../components/PageLayout';
+import PageHero from '../components/PageHero';
+import SubsectionTitle from '../components/SubsectionTitle';
+import InfoCard from '../components/InfoCard';
+import SEOHead from '../components/SEOHead';
 
 const VisionPage = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <PageLayout>
+      <SEOHead
+        title="Vision, Mission & Goals - Gramin Utthan Samiti NGO"
+        description="Discover the vision, mission, and goals of Gramin Utthan Samiti. Learn about our commitment to rural development, women empowerment, and sustainable community transformation in Uttarakhand."
+        keywords="NGO vision mission, rural development goals, women empowerment mission, Gramin Utthan Samiti vision, community development goals, Uttarakhand NGO mission"
+        canonicalUrl="/vision"
+      />
+      <PageHero 
+        title="Vision, Mission & Goals"
+        subtitle="Our guiding principles that drive our work in rural development and community empowerment."
+      />
       
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
-              <span className="text-gray-800">Vision, Mission & </span>
-              <span className="text-red-600">Goals</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
-              Our guiding principles that drive our work in rural development and community empowerment.
-            </p>
-          </div>
-
           {/* Vision Section */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Vision</h2>
+              <SubsectionTitle title="Our Vision" />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="bg-gray-50 rounded-2xl p-8 shadow">
-                  <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Future We Envision</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    To create self-sustaining, empowered rural communities where every individual has access to 
-                    opportunities for growth, education, and dignified livelihoods while preserving the rich 
-                    cultural heritage and natural resources of the Kumaon region.
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-8 shadow">
-                  <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4">Community Empowerment</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    We envision empowered communities where every individual has access to opportunities for growth, education, and dignified livelihoods while preserving the rich cultural heritage and natural resources of the Kumaon region.
-                  </p>
-                </div>
+                <InfoCard
+                  title="Future We Envision"
+                  content="To create self-sustaining, empowered rural communities where every individual has access to opportunities for growth, education, and dignified livelihoods while preserving the rich cultural heritage and natural resources of the Kumaon region."
+                  variant="highlighted"
+                />
+                <InfoCard
+                  title="Community Empowerment"
+                  content="We envision empowered communities where every individual has access to opportunities for growth, education, and dignified livelihoods while preserving the rich cultural heritage and natural resources of the Kumaon region."
+                  variant="highlighted"
+                />
               </div>
             </div>
           </div>
@@ -217,11 +214,9 @@ const VisionPage = () => {
               </div>
             </div>
           </div>
-        </div>
+                </div>
       </section>
-      
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

@@ -1,10 +1,31 @@
 import React from 'react';
-import { Copy, Check, Heart, Building, CreditCard, Banknote } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Heart, Building, CreditCard, Banknote } from 'lucide-react';
+import PageLayout from '../components/PageLayout';
+import PageHero from '../components/PageHero';
+import SectionTitle from '../components/SectionTitle';
+import InfoCard from '../components/InfoCard';
+import CopyToClipboard from '../components/CopyToClipboard';
+import SEOHead from '../components/SEOHead';
 
 const Donate = () => {
-  const [copiedField, setCopiedField] = React.useState<string | null>(null);
+  // Donation page structured data
+  const donationSchema = {
+    "@context": "https://schema.org",
+    "@type": "DonateAction",
+    "recipient": {
+      "@type": "NGO",
+      "name": "Gramin Utthan Samiti",
+      "description": "Rural development NGO working in Uttarakhand since 1979"
+    },
+    "paymentMethod": [
+      "Bank Transfer",
+      "NEFT",
+      "RTGS", 
+      "Cheque",
+      "Demand Draft"
+    ],
+    "purpose": "Supporting rural development, women empowerment, and education programs in Uttarakhand villages"
+  };
 
   const bankDetails = {
     payeeName: "Gramin Utthan Samiti",
@@ -12,16 +33,6 @@ const Donate = () => {
     ifscCode: "UCBA0000870",
     bankName: "UCO Bank",
     branch: "Kapkote, Dist Bageshwar, Uttarakhand - 263679"
-  };
-
-  const copyToClipboard = async (text: string, field: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedField(field);
-      setTimeout(() => setCopiedField(null), 2000);
-    } catch (err) {
-      console.error('Failed to copy text: ', err);
-    }
   };
 
   const donationMethods = [
@@ -46,36 +57,26 @@ const Donate = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
-              <span className="text-gray-800">Make a </span>
-              <span className="text-red-600">Difference</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
-              Your donation helps us continue our mission of empowering rural communities through education, healthcare, and sustainable development programs.
-            </p>
-          </div>
-        </div>
-      </section>
+    <PageLayout>
+      <SEOHead
+        title="Donate to Rural Development - Gramin Utthan Samiti NGO"
+        description="Support rural development in Uttarakhand. Donate to Gramin Utthan Samiti (G.U.S.) and help transform lives through women empowerment, education, and village development programs."
+        keywords="donate NGO Uttarakhand, rural development donation, women empowerment donation, village development, NGO bank details, Gramin Utthan Samiti donate"
+        canonicalUrl="/donate"
+        structuredData={donationSchema}
+      />
+      <PageHero 
+        title="Make a Difference"
+        subtitle="Your donation helps us continue our mission of empowering rural communities through education, healthcare, and sustainable development programs."
+      />
 
       {/* Donation Methods Section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
-              <span className="text-gray-800">Ways to </span>
-              <span className="text-red-600">Donate</span>
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
-              Choose the most convenient way to support our cause and make a lasting impact in rural communities.
-            </p>
-          </div>
+          <SectionTitle 
+            title="Ways to Donate"
+            subtitle="Choose the most convenient way to support our cause and make a lasting impact in rural communities."
+          />
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {donationMethods.map((method, index) => (
@@ -125,16 +126,10 @@ const Donate = () => {
                       <div className="flex-1 bg-gray-50 rounded-lg px-4 py-3 border border-gray-200">
                         <span className="text-gray-900 font-medium text-lg">{bankDetails.payeeName}</span>
                       </div>
-                      <button
-                        onClick={() => copyToClipboard(bankDetails.payeeName, 'payeeName')}
-                        className="p-3 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                      >
-                        {copiedField === 'payeeName' ? (
-                          <Check className="h-6 w-6 text-green-600" />
-                        ) : (
-                          <Copy className="h-6 w-6" />
-                        )}
-                      </button>
+                      <CopyToClipboard 
+                        text={bankDetails.payeeName}
+                        className="p-3"
+                      />
                     </div>
                   </div>
 
@@ -144,16 +139,10 @@ const Donate = () => {
                       <div className="flex-1 bg-gray-50 rounded-lg px-4 py-3 border border-gray-200">
                         <span className="text-gray-900 font-mono font-medium text-lg">{bankDetails.accountNumber}</span>
                       </div>
-                      <button
-                        onClick={() => copyToClipboard(bankDetails.accountNumber, 'accountNumber')}
-                        className="p-3 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                      >
-                        {copiedField === 'accountNumber' ? (
-                          <Check className="h-6 w-6 text-green-600" />
-                        ) : (
-                          <Copy className="h-6 w-6" />
-                        )}
-                      </button>
+                      <CopyToClipboard 
+                        text={bankDetails.accountNumber}
+                        className="p-3"
+                      />
                     </div>
                   </div>
 
@@ -163,16 +152,10 @@ const Donate = () => {
                       <div className="flex-1 bg-gray-50 rounded-lg px-4 py-3 border border-gray-200">
                         <span className="text-gray-900 font-mono font-medium text-lg">{bankDetails.ifscCode}</span>
                       </div>
-                      <button
-                        onClick={() => copyToClipboard(bankDetails.ifscCode, 'ifscCode')}
-                        className="p-3 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                      >
-                        {copiedField === 'ifscCode' ? (
-                          <Check className="h-6 w-6 text-green-600" />
-                        ) : (
-                          <Copy className="h-6 w-6" />
-                        )}
-                      </button>
+                      <CopyToClipboard 
+                        text={bankDetails.ifscCode}
+                        className="p-3"
+                      />
                     </div>
                   </div>
 
@@ -330,8 +313,7 @@ const Donate = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 
