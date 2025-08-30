@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart, ChevronDown, Square, AlertTriangle } from 'lucide-react';
+import DonateButton from './DonateButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -128,10 +129,7 @@ const Header = () => {
 
           {/* Donate Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded font-bold transition-colors duration-200 shadow-sm hover:shadow-md flex items-center space-x-2 font-['Outfit']">
-              <span className="text-lg">♥︎</span>
-              <span>DONATE</span>
-            </button>
+            <DonateButton text="DONATE" size="small" variant="primary" className="font-['Outfit'] font-bold" />
             
             {/* Mobile menu button */}
             <button

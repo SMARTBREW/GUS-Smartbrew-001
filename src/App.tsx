@@ -9,6 +9,7 @@ import VisionPage from './pages/Vision';
 import ReportsPage from './pages/Reports';
 import EmergencyAppealPage from './pages/EmergencyAppeal';
 import ContactPage from './pages/Contact';
+import DonatePage from './pages/Donate';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import RefundPolicy from './pages/RefundPolicy';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/emergency-appeal" element={<EmergencyAppealPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/donate" element={<DonatePage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />

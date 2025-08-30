@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, Heart, Leaf, Users, Target, ArrowRight, Calendar, MapPin, Users2, X, DollarSign } from 'lucide-react';
+import DonateButton from './DonateButton';
 
 interface ProgramsProps {
   preview?: boolean;
@@ -288,10 +289,7 @@ const Programs = ({ preview = false }: ProgramsProps) => {
                   </button>
                 </div>
                 
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center space-x-2 group-hover:shadow-lg text-sm">
-                  <span className="text-lg">♥︎</span>
-                  <span>Donate Now</span>
-                </button>
+                <DonateButton text="Donate Now" size="small" variant="primary" className="w-full" />
               </div>
             </div>
           ))}
@@ -394,11 +392,7 @@ const Programs = ({ preview = false }: ProgramsProps) => {
 
               {/* Donate Button */}
               <div className="text-center">
-                <button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-lg font-medium text-lg transition-all duration-200 inline-flex items-center space-x-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  <span className="text-lg">♥︎</span>
-                  <span>Donate to This Program</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </button>
+                <DonateButton text="Donate to This Program" size="large" variant="primary" />
               </div>
             </div>
           </div>

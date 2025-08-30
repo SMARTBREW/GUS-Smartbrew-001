@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import DonateButton from './DonateButton';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -79,10 +80,7 @@ const Hero = () => {
 
           {/* Call to Action Button */}
           <div className="flex justify-center lg:justify-start">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-all duration-200 inline-flex items-center space-x-2">
-              <span className="text-lg">♥︎</span>
-              <span>Donate</span>
-            </button>
+            <DonateButton text="Donate" size="large" variant="primary" />
           </div>
         </div>
       </div>

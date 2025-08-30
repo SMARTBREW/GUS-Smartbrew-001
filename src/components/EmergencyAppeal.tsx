@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Heart, Phone, MapPin, Clock, Users, DollarSign, ArrowRight, Camera, Image, Globe, Shield, BookOpen } from 'lucide-react';
+import DonateButton from './DonateButton';
 
 const EmergencyAppeal = () => {
   const [donationAmount, setDonationAmount] = useState('');
@@ -134,12 +135,13 @@ const EmergencyAppeal = () => {
           {emergencyData.description}
         </p>
         <div className="text-center">
-          <button
+          <DonateButton 
+            text="DONATE NOW" 
+            size="large" 
+            variant="primary" 
             onClick={handleDonate}
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200 text-lg"
-          >
-            DONATE NOW
-          </button>
+            className="font-bold"
+          />
         </div>
       </div>
 
@@ -259,13 +261,13 @@ const EmergencyAppeal = () => {
           </p>
           
           {!showDonationForm ? (
-            <button
+            <DonateButton
+              text="DONATE NOW"
+              size="large"
+              variant="secondary"
               onClick={handleDonate}
-              className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg flex items-center space-x-2 mx-auto"
-            >
-              <DollarSign className="h-6 w-6" />
-              <span>DONATE NOW</span>
-            </button>
+              className="font-bold mx-auto"
+            />
           ) : (
             <form onSubmit={handleDonationSubmit} className="max-w-md mx-auto space-y-4">
               <div>
