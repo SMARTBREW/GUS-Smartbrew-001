@@ -16,37 +16,38 @@ const Header = () => {
       dropdownItems: [
         { name: 'About Us', href: '/about' },
         { name: 'Vision, Mission, Goal', href: '/vision' },
+        { name: 'TEAM', href: '/team' },
         // { name: 'Leadership Board', href: '/leadership' },
         // { name: 'Partners', href: '/partners' },
         // { name: 'Recognition', href: '/recognition' },
       ]
     },
     {
-      name: 'OUR INTERVENTIONS',
+      name: 'WHAT WE DO',
       href: '#',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Programs', href: '/programs' },
-        { name: 'Stories', href: '/stories' },
-        // { name: 'Vidya', href: '/vidya' },
-        // { name: 'Pragati', href: '/pragati' },
+        { name: 'Education', href: '/education' },
+        { name: 'Health', href: '/health' },
         { name: 'Emergency Response', href: '/emergency-appeal', isEmergency: true },
       ]
     },
-    // {
-    //   name: 'RESOURCES',
-    //   href: '#',
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     // { name: 'Information Desk', href: '/info-desk' },
-    //     { name: 'Reports', href: '/reports' },
-    //     // { name: 'Research and Publications', href: '/research' },
-    //     { name: 'Policies', href: '/policies' },
-    //   ]
-    // },
-    { name: 'Reports', href: '/reports', hasDropdown: false },
+    {
+      name: 'IMPACT STORIES',
+      href: '#',
+      hasDropdown: true,
+      dropdownItems: [
+        // { name: 'Information Desk', href: '/info-desk' },
+        { name: 'Success Stories', href: '/stories' },
+        // { name: 'Research and Publications', href: '/research' },
+        { name: 'Media/Press', href: '/policies' },
+      ]
+    },
+    
+    // { name: 'Reports', href: '/reports', hasDropdown: false },
     // { names: 'JOIN OUR TEAM', href: '/internship', hasDropdown: false },
-    { name: 'TEAM', href: '/team', hasDropdown: false },
+    { name: 'GALLERY', href: '/gallery', hasDropdown: false },
+    { name: 'CERTIFICATES', href: '/certificates', hasDropdown: false },
     { name: 'CONTACT', href: '/contact', hasDropdown: false },
   ];
 

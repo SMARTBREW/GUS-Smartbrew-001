@@ -49,27 +49,32 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-              <li>
-                <Link to="/stories" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
-                  Stories
-                </Link>
-              </li>
-              <li>
-                <Link to="/certificates" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
-                  Certificates
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
-                  Programs
-                </Link>
-              </li>
+                             <li>
+                 <Link to="/stories" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
+                   Stories
+                 </Link>
+               </li>
+               <li>
+                 <Link to="/gallery" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
+                   Gallery
+                 </Link>
+               </li>
+               <li>
+                 <Link to="/certificates" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
+                   Certificates
+                 </Link>
+               </li>
+               <li>
+                             <Link to="/what-we-do" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">
+               What We Do
+             </Link>
+               </li>
             </ul>
           </div>
 
-          {/* Programs */}
+                      {/* What We Do */}
           <div>
-            <h3 className="text-lg font-normal mb-6 text-white">Our Programs</h3>
+            <h3 className="text-lg font-normal mb-6 text-white">What We Do</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200">

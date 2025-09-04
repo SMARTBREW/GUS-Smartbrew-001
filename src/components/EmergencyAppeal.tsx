@@ -35,69 +35,6 @@ const EmergencyAppeal = () => {
     }
   };
 
-  // Image data for the emergency appeal
-  const images = {
-    hero: "/3.jpeg", // Helicopter/disaster response image
-    disaster: [
-      "/2.jpeg", // Damaged infrastructure
-      "/3.jpeg", // Flooded areas
-      "/4.jpeg", // Rescue operations
-    ],
-    relief: [
-      "/5.jpeg", // Relief distribution
-      "/6.jpeg", // Medical assistance
-    ],
-    impact: [
-      "/1.jpeg", // Before/after comparison
-      "/2.jpeg", // Community impact
-    ]
-  };
-
-  const protractedCrises = [
-    {
-      title: "The Global Hunger Crisis",
-      description: "As conflicts escalate, the climate crisis deepens and global inequality widens, more and more children face the ever-growing threat of hunger.",
-      image: "/1.jpeg",
-      linkText: "LEARN MORE"
-    },
-    {
-      title: "The Climate Crisis",
-      description: "The threat posed to children and their rights by the climate crisis is real, and it is urgent. Its impacts are built into children's futures, even if we are able to curb global emissions.",
-      image: "/2.jpeg",
-      linkText: "LEARN MORE"
-    },
-    {
-      title: "Afghanistan Humanitarian Crisis",
-      description: "As the United States begins welcoming newly arriving Afghan refugees, Save the Children has mobilized to meet their most urgent needs. We stand committed to the Afghan people and our commitment to stay and deliver in Afghanistan, where we've been working since 1976.",
-      image: "/3.jpeg",
-      linkText: "LEARN MORE"
-    }
-  ];
-
-  const currentEmergencies = [
-    {
-      title: "Chamoli Cloudburst Crisis",
-      location: "Uttarakhand, India",
-      description: "A devastating cloudburst has hit Chamoli district, causing widespread destruction and leaving hundreds of families in urgent need of assistance.",
-      image: "/1.jpeg",
-      status: "Active Response"
-    },
-    {
-      title: "Flood Relief Operations",
-      location: "Multiple States",
-      description: "Heavy monsoon rains have caused severe flooding across multiple states, affecting thousands of families and requiring immediate humanitarian assistance.",
-      image: "/2.jpeg",
-      status: "Ongoing"
-    },
-    {
-      title: "Cyclone Recovery",
-      location: "Coastal Regions",
-      description: "Post-cyclone recovery efforts continue as communities work to rebuild their lives and restore essential services.",
-      image: "/3.jpeg",
-      status: "Recovery Phase"
-    }
-  ];
-
   const handleDonate = () => {
     setShowDonationForm(true);
   };
@@ -112,223 +49,269 @@ const EmergencyAppeal = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Like Save the Children */}
+      {/* Hero Section */}
       <div className="relative h-96 lg:h-[500px] overflow-hidden">
         <img 
-          src={images.hero} 
-          alt="Emergency Response - Helicopter and Aid Workers" 
+          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Emergency Response - Disaster Relief Operations" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute bottom-8 left-8">
-          <h1 className={`${DESIGN_SYSTEM.typography.heroTitle} text-white leading-tight`}>
-            {emergencyData.title}
-          </h1>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-4xl lg:text-6xl font-normal mb-4">Emergency Response</h1>
+            <p className="text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+              Rapid response and long-term recovery for communities in crisis
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Content Section - Description and Donate Button */}
-      <section className={DESIGN_SYSTEM.spacing.sectionPadding}>
-        <div className={DESIGN_SYSTEM.spacing.container}>
-          <div className={`text-center ${DESIGN_SYSTEM.spacing.marginBottom}`}>
-            <h2 className={DESIGN_SYSTEM.typography.sectionTitle}>
-              <span className={DESIGN_SYSTEM.colors.textPrimary}>From Emergency Response to </span>
-              <span className={DESIGN_SYSTEM.colors.primary}>Long-Term Recovery</span>
-            </h2>
-            <p className={DESIGN_SYSTEM.typography.subtitleText}>
-              {emergencyData.description}
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Problem Statement */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Problem Statement
+          </h2>
+          <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                Natural disasters and humanitarian crises in Uttarakhand leave communities devastated, 
+                with families losing homes, livelihoods, and access to basic necessities. The mountainous 
+                terrain and remote locations make emergency response challenging, requiring immediate 
+                intervention to save lives and provide critical support.
+              </p>
+            </div>
           </div>
-          <div className="text-center">
+        </div>
+
+        {/* Rapid Response Operations */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Rapid Response Operations
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Rapid Response Team"
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-normal text-gray-800 mb-6">Immediate Crisis Intervention</h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Our emergency response teams are trained to deploy within hours of a disaster, 
+                providing immediate assistance to affected communities. We coordinate with local 
+                authorities, conduct rapid needs assessments, and establish emergency relief operations 
+                to ensure no community is left behind.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Our rapid response includes search and rescue operations, emergency medical care, 
+                immediate shelter provision, and distribution of essential supplies like food, water, 
+                and emergency kits. We work around the clock to stabilize crisis situations and 
+                prevent further loss of life.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                In 2024 alone, we responded to 112 emergency situations across 71 countries, 
+                reaching over 23.8 million people in need. Our teams are equipped with the latest 
+                emergency response technology and work in coordination with international relief networks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Relief Distribution and Support */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Relief Distribution and Support
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Relief Distribution"
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="lg:order-1">
+              <h3 className="text-2xl font-normal text-gray-800 mb-6">Comprehensive Relief Operations</h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Our relief operations focus on providing comprehensive support to disaster-affected 
+                communities. We establish distribution centers, coordinate with local partners, and 
+                ensure that relief materials reach the most vulnerable populations, including children, 
+                elderly, and people with disabilities.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                We provide emergency shelter materials, food and clean drinking water, medical supplies 
+                and first aid, clothing and blankets, and essential hygiene kits. Our relief packages 
+                are designed to meet immediate needs while supporting dignity and safety of affected families.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our relief operations have successfully supported over 500 families in recent disasters, 
+                providing immediate assistance and laying the foundation for long-term recovery and rehabilitation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Long-term Recovery and Rehabilitation */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Long-term Recovery and Rehabilitation
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Recovery and Rehabilitation"
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-normal text-gray-800 mb-6">Building Resilient Communities</h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Beyond immediate crisis response, we focus on long-term recovery and rehabilitation 
+                to help communities rebuild stronger and more resilient. Our recovery programs include 
+                infrastructure reconstruction, livelihood restoration, and community capacity building.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                We work with communities to rebuild homes, restore essential services, rehabilitate 
+                damaged infrastructure, and implement disaster preparedness programs. Our approach 
+                emphasizes community participation and local ownership to ensure sustainable recovery.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Through our long-term recovery programs, we help communities not only rebuild what was lost, 
+                but also develop better systems and infrastructure to withstand future disasters. 
+                We're committed to staying with communities until they're fully recovered and resilient.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Images and Content */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Our Emergency Response in Action
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <img 
+              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Search and Rescue"
+              className="w-full h-64 object-cover rounded-2xl shadow-lg"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Medical Assistance"
+              className="w-full h-64 object-cover rounded-2xl shadow-lg"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Community Support"
+              className="w-full h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+          <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Our emergency response programs have transformed how communities in Uttarakhand 
+                prepare for and recover from disasters. From immediate crisis intervention to 
+                long-term rehabilitation, we provide comprehensive support that saves lives 
+                and builds resilience.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The impact goes beyond individual disaster responses - we're building a culture 
+                of preparedness and resilience that will benefit communities for generations to come. 
+                Our emergency response, relief distribution, and recovery programs work together 
+                to create comprehensive disaster management solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Impact */}
+        <div className="mb-20">
+          <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+            Our Impact
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-4xl font-normal text-red-600 mb-2">112</div>
+              <div className="text-gray-600">Emergency Responses</div>
+            </div>
+            <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-4xl font-normal text-red-600 mb-2">23.8M</div>
+              <div className="text-gray-600">People Reached</div>
+            </div>
+            <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-4xl font-normal text-red-600 mb-2">71</div>
+              <div className="text-gray-600">Countries Served</div>
+            </div>
+            <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-4xl font-normal text-red-600 mb-2">24/7</div>
+              <div className="text-gray-600">Emergency Support</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
+            <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">
+              Support Our Emergency Response
+            </h3>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Your donation can help us provide immediate emergency relief, support long-term recovery, 
+              and build disaster-resilient communities across Uttarakhand and beyond.
+            </p>
             <DonateButton 
-              text="DONATE NOW" 
+              text="Donate Now" 
               size="large" 
               variant="primary" 
               onClick={handleDonate}
-              className="font-bold"
             />
           </div>
         </div>
-      </section>
-
-      {/* Responses to Protracted Humanitarian Crises */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-          Responses to Protracted Humanitarian Crises
-        </h2>
-        
-        <div className="space-y-16">
-          {protractedCrises.map((crisis, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{crisis.title}</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">{crisis.description}</p>
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 underline">
-                  {crisis.linkText}
-                </button>
-              </div>
-              <div className="order-1 lg:order-2">
-                <img 
-                  src={crisis.image} 
-                  alt={crisis.title}
-                  className="w-full h-64 lg:h-80 object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
-      {/* Current Emergency Responses */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-          Current Emergency Responses
-        </h2>
-        
-        <div className="space-y-16">
-          {currentEmergencies.map((emergency, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className={`order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                <div className="flex items-center space-x-3 mb-4">
-                  <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {emergency.status}
-                  </span>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2 text-red-600" />
-                    {emergency.location}
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{emergency.title}</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">{emergency.description}</p>
-                <button className="text-red-600 font-semibold hover:text-red-700 transition-colors duration-200 underline">
-                  LEARN MORE →
-                </button>
-              </div>
-              <div className={`order-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <img 
-                  src={emergency.image} 
-                  alt={emergency.title}
-                  className="w-full h-64 lg:h-80 object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-
-
-      {/* How We Help */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">How We Help in Emergencies</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive emergency response approach ensures we can meet the immediate and long-term needs of affected communities.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-8 w-8 text-red-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Immediate Response</h3>
-            <p className="text-gray-700">
-              We provide emergency shelter, food, water, and medical care within hours of a disaster.
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Heart className="h-8 w-8 text-red-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Recovery Support</h3>
-            <p className="text-gray-700">
-              We help communities rebuild their lives through long-term recovery programs and support.
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <BookOpen className="h-8 w-8 text-red-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Education & Protection</h3>
-            <p className="text-gray-700">
-              We ensure children continue their education and are protected during and after emergencies.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Donation Section */}
-      <div className="bg-red-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Your Support Makes a Difference</h2>
-          <p className="text-xl mb-8 text-red-100">
-            Every donation helps us respond quickly to emergencies and provide life-saving assistance to those in need.
-          </p>
-          
-          {!showDonationForm ? (
-            <DonateButton
-              text="DONATE NOW"
-              size="large"
-              variant="secondary"
-              onClick={handleDonate}
-              className="font-bold mx-auto"
-            />
-          ) : (
-            <form onSubmit={handleDonationSubmit} className="max-w-md mx-auto space-y-4">
+      {/* Donation Modal */}
+      {showDonationForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl max-w-md w-full p-8">
+            <h3 className="text-2xl font-normal text-gray-800 mb-6">Emergency Relief Donation</h3>
+            <form onSubmit={handleDonationSubmit} className="space-y-6">
               <div>
-                <label className="block text-red-100 text-sm font-medium mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Donation Amount (₹)
                 </label>
                 <input
                   type="number"
                   value={donationAmount}
                   onChange={(e) => setDonationAmount(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Enter amount"
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 font-semibold focus:outline-none focus:ring-2 focus:ring-white"
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full bg-white text-red-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-              >
-                Complete Donation
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowDonationForm(false)}
-                className="w-full text-red-100 hover:text-white transition-colors duration-200"
-              >
-                Cancel
-              </button>
+              <div className="flex space-x-4">
+                <button
+                  type="submit"
+                  className="flex-1 bg-red-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors duration-200"
+                >
+                  Donate
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowDonationForm(false)}
+                  className="flex-1 bg-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-400 transition-colors duration-200"
+                >
+                  Cancel
+                </button>
+              </div>
             </form>
-          )}
-        </div>
-      </div>
-
-      {/* Contact Information */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Emergency Contact</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-blue-600" />
-                <span className="text-gray-700">{emergencyData.contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span className="text-gray-700">{emergencyData.contactInfo.address}</span>
-              </div>
-            </div>
-            <div className="text-gray-700">
-              <p className="mb-2">For media inquiries and emergency coordination:</p>
-              <p className="font-semibold">{emergencyData.contactInfo.email}</p>
-            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

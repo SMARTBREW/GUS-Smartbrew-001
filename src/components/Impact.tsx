@@ -1,109 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { Users, Heart, Quote, MapPin, Globe } from 'lucide-react';
+import React from 'react';
+import { Users, Heart, Quote, MapPin, Globe, Award, Star, Target, CheckCircle } from 'lucide-react';
 
 const Impact = () => {
-  const [counters, setCounters] = useState({
-    villages: 0,
-    beneficiaries: 0,
-    healthCenters: 0,
-    womenWorkers: 0
-  });
-
-  const finalNumbers = {
-    villages: 150,
-    beneficiaries: 50000,
-    healthCenters: 5,
-    womenWorkers: 80
-  };
-
-  // Counter animation effect
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const interval = setInterval(() => {
-      setCounters(prev => ({
-        villages: Math.min(prev.villages + Math.ceil(finalNumbers.villages / steps), finalNumbers.villages),
-        beneficiaries: Math.min(prev.beneficiaries + Math.ceil(finalNumbers.beneficiaries / steps), finalNumbers.beneficiaries),
-        healthCenters: Math.min(prev.healthCenters + Math.ceil(finalNumbers.healthCenters / steps), finalNumbers.healthCenters),
-        womenWorkers: Math.min(prev.womenWorkers + Math.ceil(finalNumbers.womenWorkers / steps), finalNumbers.womenWorkers)
-      }));
-    }, stepDuration);
-
-    setTimeout(() => {
-      clearInterval(interval);
-      setCounters(finalNumbers);
-    }, duration + 100);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) {
-      return `${(num / 1000000).toFixed(1)}M+`;
-    } else if (num >= 1000) {
-      return `${(num / 1000).toFixed(0)}K+`;
+  const achievements = [
+    {
+      icon: <Award className="w-8 h-8 text-white" />,
+      title: "45+ Years of Service",
+      description: "Serving rural communities since 1979 with unwavering commitment to sustainable development"
+    },
+    {
+      icon: <Star className="w-8 h-8 text-white" />,
+      title: "Excellence in Rural Development",
+      description: "Recognized for innovative approaches to community empowerment and women's leadership"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-white" />,
+      title: "Holistic Approach",
+      description: "Integrated development covering health, education, environment, and economic empowerment"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      title: "Proven Results",
+      description: "Transformed lives in 150+ villages through community-driven development initiatives"
     }
-    return `${num}+`;
-  };
+  ];
 
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Left Side - Statistics */}
+          {/* Left Side - Key Achievements */}
           <div>
             <h2 className="text-5xl sm:text-6xl font-normal mb-16 text-center lg:text-left">
               <span className="text-gray-800">OUR </span>
               <span className="text-red-600">IMPACT</span>
             </h2>
             
-            {/* Statistics Grid */}
-            <div className="grid grid-cols-2 gap-x-16 gap-y-12">
-              {/* Villages */}
-              <div className="text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <MapPin className="w-8 h-8 text-white" />
+            {/* Key Achievements Grid */}
+            <div className="grid grid-cols-1 gap-8">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center flex-shrink-0">
+                    {achievement.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{achievement.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
                   </div>
                 </div>
-                <h3 className="text-lg font-normal text-gray-800 mb-2">VILLAGES</h3>
-                <p className="text-4xl font-normal text-gray-800">{counters.villages}+</p>
-              </div>
-
-              {/* Beneficiaries */}
-              <div className="text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-normal text-gray-800 mb-2">BENEFICIARIES</h3>
-                <p className="text-4xl font-normal text-gray-800">{formatNumber(counters.beneficiaries)}</p>
-              </div>
-
-              {/* Health Centers */}
-              <div className="text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-normal text-gray-800 mb-2">HEALTH CENTERS</h3>
-                <p className="text-4xl font-normal text-gray-800">{counters.healthCenters}</p>
-              </div>
-
-              {/* Women Workers */}
-              <div className="text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-normal text-gray-800 mb-2">WOMEN WORKERS</h3>
-                <p className="text-4xl font-normal text-gray-800">{counters.womenWorkers}%</p>
-              </div>
+              ))}
             </div>
           </div>
 

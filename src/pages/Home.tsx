@@ -3,11 +3,11 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import CTA from '../components/CTA';
 import Impact from '../components/Impact';
-import Programs from '../components/Programs';
 import Testimonials from '../components/Testimonials';
 import LocationMap from '../components/LocationMap';
 import SEOHead from '../components/SEOHead';
 import Footer from '../components/Footer';
+import ImpactStrip from '../components/ImpactStrip';
 
 const Home = () => {
   // Homepage structured data for SEO
@@ -55,20 +55,22 @@ const Home = () => {
       <section className="bg-white">
         <Hero />
       </section>
+
+      {/* Impact Strip under Hero */}
+      <ImpactStrip />
       
       {/* CTA Section - White Background */}
       <section className="bg-gray-50">
         <CTA />
       </section>
       
-      {/* Impact Section - Gray Background */}
-      <section className="bg-white">
+      {/* Impact Section - White Background */}
+      <section className="bg-gray-50">
         <Impact />
       </section>
-
-      {/* Programs Section - Gray Background */}
-      <Programs preview={true} />
-
+      
+      {/* What We Do Section - Gray Background */}
+      
       {/* Testimonials Section - White Background */}
       <section className="bg-white">
         <Testimonials />

@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import AboutPage from './pages/About';
 import StoriesPage from './pages/Stories';
 import TeamPage from './pages/Team';
-import ProgramsPage from './pages/Programs';
+import EducationPage from './pages/Education';
+import HealthPage from './pages/Health';
+import GalleryPage from './pages/Gallery';
 import VisionPage from './pages/Vision';
 import ReportsPage from './pages/Reports';
 import EmergencyAppealPage from './pages/EmergencyAppeal';
@@ -26,7 +28,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/stories" element={<StoriesPage />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/programs" element={<ProgramsPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/health" element={<HealthPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/vision" element={<VisionPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/emergency-appeal" element={<EmergencyAppealPage />} />
