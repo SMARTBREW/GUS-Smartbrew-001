@@ -52,7 +52,7 @@ const EmergencyAppeal = () => {
       {/* Hero Section */}
       <div className="relative h-96 lg:h-[500px] overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          src="/img/emgc6.jpeg"
           alt="Emergency Response - Disaster Relief Operations" 
           className="w-full h-full object-cover"
         />
@@ -93,7 +93,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/emgc2.jpeg"
                 alt="Rapid Response Team"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -129,7 +129,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2">
               <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/emgc1.jpeg"
                 alt="Relief Distribution"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -163,7 +163,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/emgc4.jpeg"
                 alt="Recovery and Rehabilitation"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -196,17 +196,17 @@ const EmergencyAppeal = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <img 
-              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src="/img/emgc3.jpeg"
               alt="Search and Rescue"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src="/img/emgc5.jpeg"
               alt="Medical Assistance"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img 
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src="/img/emgc1.jpeg"
               alt="Community Support"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />

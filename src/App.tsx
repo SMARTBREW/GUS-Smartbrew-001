@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutPage from './pages/About';
@@ -16,14 +15,21 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import RefundPolicy from './pages/RefundPolicy';
 import CertificatesPage from './pages/Certificates';
+import MediaPage from './pages/Media';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollProgress from './components/ScrollProgress';
+import ScrollToTopButton from './components/ScrollToTopButton';
+import LocomotiveProvider from './components/LocomotiveProvider';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <ScrollToTop />
-        <Routes>
+      <LocomotiveProvider>
+        <div className="App">
+          <ScrollProgress />
+          <ScrollToTop />
+          <ScrollToTopButton />
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/stories" element={<StoriesPage />} />
@@ -37,11 +43,13 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
+          <Route path="/media" element={<MediaPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
-        </Routes>
-      </div>
+          </Routes>
+        </div>
+      </LocomotiveProvider>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart, ChevronDown, Square, AlertTriangle } from 'lucide-react';
+import { Menu, X, Heart, ChevronDown, AlertTriangle } from 'lucide-react';
 import DonateButton from './DonateButton';
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
         // { name: 'Information Desk', href: '/info-desk' },
         { name: 'Success Stories', href: '/stories' },
         // { name: 'Research and Publications', href: '/research' },
-        { name: 'Media/Press', href: '/policies' },
+        { name: 'Media/Press', href: '/media' },
       ]
     },
     

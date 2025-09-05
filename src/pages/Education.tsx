@@ -1,7 +1,7 @@
-import React from 'react';
 import PageLayout from '../components/PageLayout';
 import SEOHead from '../components/SEOHead';
 import DonateButton from '../components/DonateButton';
+import OptimizedImage from '../components/OptimizedImage';
 
 const EducationPage = () => {
   return (
@@ -16,10 +16,11 @@ const EducationPage = () => {
       <div className="bg-white">
         {/* Hero Image */}
         <div className="relative h-96 lg:h-[500px] overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          <OptimizedImage 
+            src="/img/ed1.jpeg"
             alt="Education Programs"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -49,34 +50,35 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* How We're Solving - Digital Literacy */}
+          {/* How We're Solving - Creative Learning */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Digital Literacy Training
+              Creative Learning and Classroom Activities
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Digital Literacy Training"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                <OptimizedImage 
+                  src="/img/ed2.jpeg"
+                  alt="Creative Learning Activities"
+                  className="w-full h-80 rounded-2xl shadow-lg"
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-normal text-gray-800 mb-6">Bridging the Digital Divide</h3>
+                <h3 className="text-2xl font-normal text-gray-800 mb-6">Engaging Students Through Creative Education</h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our comprehensive digital literacy program addresses the critical gap between urban and rural digital access. 
-                  We provide hands-on computer training, internet skills, and digital tools education to empower rural youth 
-                  with the skills needed in today's technology-driven world.
+                  Our creative learning approach focuses on making education engaging and interactive for rural students. 
+                  We incorporate art, coloring activities, storytelling, and hands-on learning methods to help students 
+                  develop their creativity while mastering academic concepts.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  The program includes computer training workshops, internet and social media skills development, 
-                  digital tools and applications training, online safety and cybersecurity education, and comprehensive 
-                  career guidance and placement support.
+                  The program includes art and craft activities, interactive storytelling sessions, 
+                  creative writing workshops, visual learning tools, and collaborative classroom projects. 
+                  We believe that creative expression enhances learning and helps students retain information better.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Through this initiative, we've successfully trained over 5,000 youth, enabling them to access better 
-                  educational and employment opportunities while building confidence in using modern technology.
+                  Through these creative learning methods, we've seen improved student engagement and academic performance. 
+                  Students develop both artistic skills and critical thinking abilities, making learning a joyful experience 
+                  that they look forward to every day.
                 </p>
               </div>
             </div>
@@ -89,10 +91,10 @@ const EducationPage = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
-                <img 
-                  src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                <OptimizedImage 
+                  src="/img/ed20.jpeg"
                   alt="School Infrastructure"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-80 rounded-2xl shadow-lg"
                 />
               </div>
               <div className="lg:order-1">
@@ -115,35 +117,35 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Youth Leadership Development */}
+          {/* Environmental Education */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Youth Leadership Development
+              Environmental Education and Tree Planting
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Youth Leadership"
+                  src="/img/ed4.jpeg"
+                  alt="Environmental Education"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-normal text-gray-800 mb-6">Creating Future Community Leaders</h3>
+                <h3 className="text-2xl font-normal text-gray-800 mb-6">Teaching Environmental Stewardship</h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our leadership development program nurtures the potential of young people to become confident, 
-                  capable community leaders. We focus on developing essential skills including communication, 
-                  problem-solving, and civic engagement.
+                  Our environmental education program teaches students the importance of environmental conservation and 
+                  sustainable practices. Through hands-on tree planting activities and nature-based learning, we help 
+                  students develop a deep connection with their natural environment.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  The program features leadership workshops and camps, public speaking training, community project planning, 
-                  mentorship programs, and civic engagement activities. We believe that empowered youth are the key to 
-                  sustainable community development.
+                  The program includes tree planting initiatives, environmental awareness workshops, 
+                  nature conservation projects, sustainable living education, and community green initiatives. 
+                  Students learn about local ecosystems, climate change, and their role in protecting the environment.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Over 1,500 young people have participated in our leadership programs, implementing more than 100 
-                  community projects. Our mentors work closely with participants to ensure they develop the skills 
-                  and confidence needed to lead their communities forward.
+                  Over 2,000 students have participated in our environmental programs, planting more than 5,000 trees 
+                  across rural Uttarakhand. These young environmental stewards are now leading community efforts 
+                  to protect and preserve their natural heritage for future generations.
                 </p>
               </div>
             </div>
@@ -156,17 +158,17 @@ const EducationPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <img 
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/ed5.jpeg"
                 alt="Students in Computer Lab"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="https://images.unsplash.com/photo-1523240798131-8c6c2a8c3c8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/ed6.jpeg"
                 alt="Library Setup"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/ed7.jpeg"
                 alt="Leadership Workshop"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
@@ -194,20 +196,20 @@ const EducationPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">5,000+</div>
-                <div className="text-gray-600">Youth Trained in Digital Skills</div>
+                <div className="text-4xl font-normal text-red-600 mb-2">3,000+</div>
+                <div className="text-gray-600">Students in Creative Learning</div>
               </div>
               <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
                 <div className="text-4xl font-normal text-red-600 mb-2">25+</div>
                 <div className="text-gray-600">Schools Built/Renovated</div>
               </div>
               <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">1,500+</div>
-                <div className="text-gray-600">Leadership Program Participants</div>
+                <div className="text-4xl font-normal text-red-600 mb-2">2,000+</div>
+                <div className="text-gray-600">Environmental Program Participants</div>
               </div>
               <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">92%</div>
-                <div className="text-gray-600">Success Rate</div>
+                <div className="text-4xl font-normal text-red-600 mb-2">5,000+</div>
+                <div className="text-gray-600">Trees Planted</div>
               </div>
             </div>
           </div>
@@ -219,7 +221,7 @@ const EducationPage = () => {
                 Support Our Education Programs
               </h3>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Your donation can help us provide quality education, digital literacy, and leadership development opportunities to more rural youth in Uttarakhand.
+                Your donation can help us provide quality education, creative learning activities, and environmental education programs to more rural youth in Uttarakhand.
               </p>
               <DonateButton text="Donate Now" size="large" variant="primary" />
             </div>
