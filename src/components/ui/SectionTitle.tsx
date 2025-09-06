@@ -1,14 +1,14 @@
 import React from 'react';
-import { DESIGN_SYSTEM } from '../styles/designSystem';
+import { DESIGN_SYSTEM } from '../../styles/designSystem';
 
-interface SubsectionTitleProps {
+interface SectionTitleProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
   className?: string;
 }
 
-const SubsectionTitle: React.FC<SubsectionTitleProps> = ({
+const SectionTitle: React.FC<SectionTitleProps> = ({
   title,
   subtitle,
   centered = true,
@@ -17,10 +17,9 @@ const SubsectionTitle: React.FC<SubsectionTitleProps> = ({
   const containerClass = centered ? 'text-center' : '';
   
   return (
-    <div className={`${DESIGN_SYSTEM.spacing.marginBottomSmall} ${containerClass} ${className}`}>
-      <h2 className={DESIGN_SYSTEM.typography.subsectionTitle}>
+    <div className={`${DESIGN_SYSTEM.spacing.marginBottom} ${containerClass} ${className}`}>
+      <h2 className={DESIGN_SYSTEM.typography.sectionTitle}>
         {title.split(' ').map((word, index) => {
-          // Check if this word should be highlighted
           const shouldHighlight = word.includes('&') || 
                                 word.includes('.') || 
                                 word.includes(',') ||
@@ -34,7 +33,7 @@ const SubsectionTitle: React.FC<SubsectionTitleProps> = ({
         })}
       </h2>
       {subtitle && (
-        <p className={DESIGN_SYSTEM.typography.bodyText}>
+        <p className={DESIGN_SYSTEM.typography.subtitleText}>
           {subtitle}
         </p>
       )}
@@ -42,4 +41,4 @@ const SubsectionTitle: React.FC<SubsectionTitleProps> = ({
   );
 };
 
-export default SubsectionTitle;
+export default SectionTitle;

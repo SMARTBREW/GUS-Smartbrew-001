@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import Team from '../components/Team';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import Team from '../components/sections/Team';
+import SEOHead from '../components/seo/SEOHead';
 
 const TeamPage = () => {
   return (

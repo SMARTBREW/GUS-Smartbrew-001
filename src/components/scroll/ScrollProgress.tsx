@@ -12,7 +12,6 @@ const ScrollProgress = () => {
         const progress = (scroll.y / limit.y) * 100;
         setScrollProgress(progress);
       } else {
-        // Fallback for when Locomotive Scroll is not available
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = (scrollTop / docHeight) * 100;
@@ -20,7 +19,6 @@ const ScrollProgress = () => {
       }
     };
 
-    // Throttle scroll events for better performance
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {

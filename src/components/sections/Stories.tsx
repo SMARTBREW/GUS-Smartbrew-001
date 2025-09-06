@@ -5,7 +5,6 @@ const Stories = () => {
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-normal mb-6">
             <span className="text-gray-800">Our </span>
@@ -16,11 +15,9 @@ const Stories = () => {
             </p>
         </div>
 
-        {/* Real Testimonials Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Community Testimonials</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Emergency Relief Story */}
             <div className="bg-white rounded-2xl p-8 shadow">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
@@ -47,7 +44,6 @@ const Stories = () => {
               </div>
             </div>
 
-            {/* Historical Housing Story */}
             <div className="bg-white rounded-2xl p-8 shadow">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
@@ -76,7 +72,6 @@ const Stories = () => {
           </div>
         </div>
 
-        {/* Village Stories */}
         <div className="mb-16">
                       <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Village Success Stories</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -146,7 +141,6 @@ const Stories = () => {
           </div>
         </div>
 
-        {/* Community Development Projects */}
         <div className="mb-16">
                       <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Community Development Projects</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -182,7 +176,6 @@ const Stories = () => {
           </div>
         </div>
 
-        {/* Women's Role Story */}
         <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -222,7 +215,6 @@ const Stories = () => {
           </div>
         </div>
 
-        {/* Future Vision */}
         <div className="mb-16">
                       <h3 className="text-3xl font-normal text-gray-800 text-center mb-8">Future Plans</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

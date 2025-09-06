@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   base: './',
@@ -25,12 +24,10 @@ export default defineConfig({
         },
       },
     },
-    // Optimize images
-    assetsInlineLimit: 4096, // 4kb
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  // Add image optimization
   assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.gif', '**/*.svg'],
 });

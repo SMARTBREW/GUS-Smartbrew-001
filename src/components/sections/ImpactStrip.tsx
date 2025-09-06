@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MapPin, Heart, Stethoscope, Users } from 'lucide-react';
 
 const ImpactStrip = () => {
@@ -16,7 +16,7 @@ const ImpactStrip = () => {
     womenWorkers: 0,
   });
 
-  const durationMs = 1600; // total animation time
+  const durationMs = 3000; // total animation time
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -62,16 +62,16 @@ const ImpactStrip = () => {
   return (
     <div className="bg-white border-t border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-stretch justify-between divide-y md:divide-y-0 md:divide-x divide-gray-200">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
           {items.map((it) => (
-            <div key={it.label} className="flex-1 py-5 md:py-6">
-              <div className="flex items-center justify-between md:justify-center md:space-x-3">
-                <div className="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-red-600 text-white">
+            <div key={it.label} className="flex-1 py-4 sm:py-5 lg:py-6">
+              <div className="flex items-center justify-center space-x-2 lg:space-x-3">
+                <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-red-600 text-white flex-shrink-0">
                   {it.icon}
                 </div>
-                <div className="text-right md:text-left">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 leading-none">{it.value}</div>
-                  <div className="text-xs md:text-sm uppercase tracking-wide text-gray-600">{it.label}</div>
+                <div className="text-center lg:text-left min-w-0">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 leading-none">{it.value}</div>
+                  <div className="text-xs sm:text-sm md:text-base uppercase tracking-wide text-gray-600 truncate">{it.label}</div>
                 </div>
               </div>
             </div>

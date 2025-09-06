@@ -16,10 +16,10 @@ import TermsOfUse from './pages/TermsOfUse';
 import RefundPolicy from './pages/RefundPolicy';
 import CertificatesPage from './pages/Certificates';
 import MediaPage from './pages/Media';
-import ScrollToTop from './components/ScrollToTop';
-import ScrollProgress from './components/ScrollProgress';
-import ScrollToTopButton from './components/ScrollToTopButton';
-import LocomotiveProvider from './components/LocomotiveProvider';
+import ScrollToTop from './components/scroll/ScrollToTop';
+import ScrollProgress from './components/scroll/ScrollProgress';
+import ScrollToTopButton from './components/scroll/ScrollToTopButton';
+import LocomotiveProvider from './components/scroll/LocomotiveProvider';
 
 function App() {
   return (
@@ -51,7 +51,7 @@ function App() {
         </div>
       </LocomotiveProvider>
     </Router>
-  );
+  );  
 }
 
 export default App;

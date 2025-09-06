@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Quote } from 'lucide-react';
 
 const Testimonials = () => {
@@ -52,41 +52,76 @@ const Testimonials = () => {
   }, [currentIndex, testimonials.length]);
 
   return (
-    <div className="py-20">
+    <div className="py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-4 sm:mb-6">
             <span className="text-gray-800">Voices of </span>
             <span className="text-red-600">Change</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light px-4 sm:px-0">
             Hear from champions, NGO partners, and community members whose lives have been transformed
             through our circle of giving.
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="relative">
+        <div className="block sm:hidden">
+          <div className="grid grid-cols-1 gap-6">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-white rounded-2xl shadow-lg p-6">
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
+                    <Quote className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+                
+                <div className="flex justify-center mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-20 h-20 rounded-full object-cover shadow-lg border-4 border-white"
+                  />
+                </div>
+                
+                <div className="text-center">
+                  <blockquote className="text-base text-gray-700 italic leading-relaxed mb-4 font-light">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  
+                  <div className="space-y-2">
+                    <div className="font-normal text-gray-800 text-lg">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-red-600 font-medium text-base">
+                      {testimonial.role}
+                    </div>
+                    <div className="text-gray-500 text-sm">
+                      {testimonial.organization}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden sm:block relative">
           <div className="max-w-4xl mx-auto overflow-hidden">
             <div className="h-[400px] md:h-[350px]">
               <div 
                 className="flex transition-transform duration-1000 ease-in-out h-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {testimonials.map((testimonial, index) => (
+                {testimonials.map((testimonial) => (
                   <div key={testimonial.id} className="min-w-full px-4 flex-shrink-0 flex items-center">
                     <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 relative mx-auto max-w-3xl w-full">
-                      {/* Quote Icon */}
                       <div className="absolute top-6 left-6 md:top-8 md:left-8">
                         <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
                           <Quote className="w-6 h-6 text-white" />
                         </div>
                       </div>
                       
-                      {/* Testimonial Content */}
-                      <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 pt-8 md:pt-0">
-                        {/* Profile Image */}
+                      <div className="flex flex-row items-center space-x-8 pt-0">
                         <div className="flex-shrink-0">
                           <img
                             src={testimonial.image}
@@ -95,8 +130,7 @@ const Testimonials = () => {
                           />
                         </div>
                         
-                        {/* Quote and Details */}
-                        <div className="flex-1 text-center md:text-left">
+                        <div className="flex-1 text-left">
                           <blockquote className="text-lg md:text-xl text-gray-700 italic leading-relaxed mb-6 font-light">
                             "{testimonial.quote}"
                           </blockquote>
@@ -121,7 +155,6 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation Dots */}
           <div className="flex justify-center mt-8">
             <div className="flex space-x-3">
               {testimonials.map((_, index) => (

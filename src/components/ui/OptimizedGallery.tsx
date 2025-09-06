@@ -24,20 +24,23 @@ const OptimizedGallery = ({
   const [hasMore, setHasMore] = useState(true);
   const observerRef = useRef<HTMLDivElement>(null);
 
-  // Load initial batch of images
   useEffect(() => {
     const initialImages = images.slice(0, imagesPerLoad);
     setLoadedImages(initialImages);
     setHasMore(images.length > imagesPerLoad);
+    
+    if (typeof window !== 'undefined' && (window as any).locomotiveScroll) {
+      setTimeout(() => {
+        (window as any).locomotiveScroll.update();
+      }, 100);
+    }
   }, [images, imagesPerLoad]);
 
-  // Load more images function
   const loadMoreImages = useCallback(() => {
     if (isLoading || !hasMore) return;
     
     setIsLoading(true);
     
-    // Simulate a small delay for better UX
     setTimeout(() => {
       const currentCount = loadedImages.length;
       const nextBatch = images.slice(currentCount, currentCount + imagesPerLoad);
@@ -45,10 +48,15 @@ const OptimizedGallery = ({
       setLoadedImages(prev => [...prev, ...nextBatch]);
       setHasMore(currentCount + imagesPerLoad < images.length);
       setIsLoading(false);
+      
+      if (typeof window !== 'undefined' && (window as any).locomotiveScroll) {
+        setTimeout(() => {
+          (window as any).locomotiveScroll.update();
+        }, 100);
+      }
     }, 300);
   }, [isLoading, hasMore, loadedImages.length, images, imagesPerLoad]);
 
-  // Intersection Observer for infinite scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -72,7 +80,6 @@ const OptimizedGallery = ({
 
   return (
     <div className={className}>
-      {/* Gallery Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {loadedImages.map((image) => (
           <div key={image.id} className="group cursor-pointer">
@@ -93,7 +100,6 @@ const OptimizedGallery = ({
         ))}
       </div>
 
-      {/* Loading indicator and trigger */}
       {hasMore && (
         <div ref={observerRef} className="mt-12 text-center">
           {isLoading ? (
@@ -109,7 +115,6 @@ const OptimizedGallery = ({
         </div>
       )}
 
-      {/* End of gallery message */}
       {!hasMore && loadedImages.length > 0 && (
         <div className="mt-12 text-center text-gray-500">
           <div className="text-sm">You've reached the end! 🎉</div>

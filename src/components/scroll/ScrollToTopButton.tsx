@@ -25,7 +25,6 @@ const ScrollToTopButton = () => {
         easing: [0.25, 0.0, 0.35, 1.0]
       });
     } else {
-      // Fallback for when Locomotive Scroll is not available
       window.scrollTo({
         top: 0,
         behavior: 'smooth'

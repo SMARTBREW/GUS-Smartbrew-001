@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import SEOHead from '../components/SEOHead';
-import DonateButton from '../components/DonateButton';
+import PageLayout from '../components/layout/PageLayout';
+import SEOHead from '../components/seo/SEOHead';
+import DonateButton from '../components/ui/DonateButton';
 
 const HealthPage = () => {
   return (
@@ -14,7 +14,6 @@ const HealthPage = () => {
       />
       
       <div className="bg-white">
-        {/* Hero Image */}
         <div className="relative h-96 lg:h-[500px] overflow-hidden">
           <img 
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
@@ -33,7 +32,6 @@ const HealthPage = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Problem Statement */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Problem Statement
@@ -49,7 +47,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Mobile Health Clinics */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Mobile Health Clinics
@@ -82,7 +79,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Mental Health Support */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Mental Health Support
@@ -116,7 +112,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Health Awareness Programs */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Community Health Awareness
@@ -149,7 +144,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Additional Images and Content */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Our Healthcare Impact in Action
@@ -187,7 +181,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Our Impact */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Our Impact
@@ -212,7 +205,6 @@ const HealthPage = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="text-center">
             <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
               <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">

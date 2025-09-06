@@ -1,7 +1,7 @@
-import PageLayout from '../components/PageLayout';
-import SEOHead from '../components/SEOHead';
-import DonateButton from '../components/DonateButton';
-import OptimizedImage from '../components/OptimizedImage';
+import PageLayout from '../components/layout/PageLayout';
+import SEOHead from '../components/seo/SEOHead';
+import DonateButton from '../components/ui/DonateButton';
+import OptimizedImage from '../components/ui/OptimizedImage';
 
 const EducationPage = () => {
   return (
@@ -14,7 +14,6 @@ const EducationPage = () => {
       />
       
       <div className="bg-white">
-        {/* Hero Image */}
         <div className="relative h-96 lg:h-[500px] overflow-hidden">
           <OptimizedImage 
             src="/img/ed1.jpeg"
@@ -34,7 +33,6 @@ const EducationPage = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Problem Statement */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Problem Statement
@@ -50,7 +48,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* How We're Solving - Creative Learning */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Creative Learning and Classroom Activities
@@ -84,7 +81,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* School Infrastructure Development */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               School Infrastructure Development
@@ -117,7 +113,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Environmental Education */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Environmental Education and Tree Planting
@@ -151,7 +146,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Additional Images and Content */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Our Educational Impact in Action
@@ -189,7 +183,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Our Impact */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Our Impact
@@ -214,7 +207,6 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="text-center">
             <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
               <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Heart, Building, CreditCard, Banknote } from 'lucide-react';
-import PageLayout from '../components/PageLayout';
-import PageHero from '../components/PageHero';
-import SectionTitle from '../components/SectionTitle';
-import InfoCard from '../components/InfoCard';
-import CopyToClipboard from '../components/CopyToClipboard';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import PageHero from '../components/sections/PageHero';
+import SectionTitle from '../components/ui/SectionTitle';
+import InfoCard from '../components/ui/InfoCard';
+import CopyToClipboard from '../components/ui/CopyToClipboard';
+import SEOHead from '../components/seo/SEOHead';
 
 const Donate = () => {
-  // Donation page structured data
   const donationSchema = {
     "@context": "https://schema.org",
     "@type": "DonateAction",
@@ -70,7 +69,6 @@ const Donate = () => {
         subtitle="Your donation helps us continue our mission of empowering rural communities through education, healthcare, and sustainable development programs."
       />
 
-      {/* Donation Methods Section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
@@ -95,7 +93,6 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Bank Details Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -118,7 +115,6 @@ const Donate = () => {
             
             <div className="p-8">
               <div className="grid lg:grid-cols-2 gap-12">
-                {/* Left Column - Bank Details */}
                 <div className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-3">Payee Name</label>
@@ -174,7 +170,6 @@ const Donate = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Instructions */}
                 <div className="space-y-6">
                   <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
                     <h3 className="text-xl font-normal text-blue-900 mb-4">How to Transfer</h3>
@@ -247,7 +242,6 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Alternative Donation Methods */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -286,7 +280,6 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-700 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6">

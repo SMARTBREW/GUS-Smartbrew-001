@@ -1,10 +1,5 @@
-// Image optimization script
-// Run this with: node scripts/optimize-images.js
-
 const fs = require('fs');
 const path = require('path');
-
-// This script helps you identify large images that need optimization
 const publicDir = path.join(__dirname, '../public');
 const imgDir = path.join(publicDir, 'img');
 
@@ -25,7 +20,7 @@ function scanDirectory(dir) {
       largeFiles.push(...scanDirectory(filePath));
     } else if (file.match(/\.(jpg|jpeg|png|gif)$/i)) {
       const sizeInMB = parseFloat(getFileSizeInMB(filePath));
-      if (sizeInMB > 0.5) { // Files larger than 500KB
+      if (sizeInMB > 0.5) {
         largeFiles.push({
           path: filePath.replace(publicDir, ''),
           size: sizeInMB,

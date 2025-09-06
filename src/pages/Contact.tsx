@@ -1,15 +1,14 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import PageHero from '../components/PageHero';
-import ContactInfoCard from '../components/ContactInfoCard';
-import SectionTitle from '../components/SectionTitle';
-import InfoCard from '../components/InfoCard';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import PageHero from '../components/sections/PageHero';
+import ContactInfoCard from '../components/sections/ContactInfoCard';
+import SectionTitle from '../components/ui/SectionTitle';
+import InfoCard from '../components/ui/InfoCard';
+import SEOHead from '../components/seo/SEOHead';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import LocationMap from '../components/LocationMap';
+import LocationMap from '../components/sections/LocationMap';
 
 const Contact = () => {
-  // Contact page structured data
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -60,7 +59,6 @@ const Contact = () => {
         subtitle="Get in touch with us to learn more about our programs, volunteer opportunities, or to support our mission."
       />
 
-             {/* Contact Information */}
        <section className="py-8 bg-gray-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -90,12 +88,10 @@ const Contact = () => {
          </div>
        </section>
 
-                           {/* Google Map Section */}
         <section className="py-8 bg-white">
          <LocationMap />
        </section>
 
-             {/* Additional Contact Information */}
        <section className="py-8 bg-gray-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <SectionTitle 

@@ -1,55 +1,11 @@
-import React, { useState } from 'react';
-import { AlertTriangle, Heart, Phone, MapPin, Clock, Users, DollarSign, ArrowRight, Camera, Image, Globe, Shield, BookOpen } from 'lucide-react';
-import DonateButton from './DonateButton';
-import { DESIGN_SYSTEM } from '../styles/designSystem';
+import React from 'react';
+import DonateButton from '../ui/DonateButton';
 
 const EmergencyAppeal = () => {
-  const [donationAmount, setDonationAmount] = useState('');
-  const [showDonationForm, setShowDonationForm] = useState(false);
 
-  const emergencyData = {
-    title: "EMERGENCY RESPONSE",
-    subtitle: "From Emergency Response to Long-Term Recovery",
-    description: "Gramin Utthan Samity does whatever it takes to be there for communities in crisis. We work with communities to prepare for and mitigate the impact of disasters. We partner with governments and local organizations to provide immediate assistance when an emergency hits. In 2024, together, we responded to 112 emergency situations. Through our Children's Emergency Fund, we reached 23.8 million people – across 71 countries. Learn more about our history of emergency response.",
-    stats: {
-      emergencies: "112",
-      peopleReached: "23.8M",
-      countries: "71"
-    },
-    location: "Chamoli District, Uttarakhand",
-    affectedPeople: "500+ families affected",
-    casualties: "Several feared missing",
-    urgency: "CRITICAL - Immediate response required",
-    crisisDescription: "A devastating cloudburst has hit Chamoli district in Uttarakhand, causing widespread destruction. Multiple villages have been cut off, roads damaged, and several people are feared missing. The situation is critical and requires immediate humanitarian assistance.",
-    needs: [
-      "Emergency shelter and relief materials",
-      "Food and clean drinking water",
-      "Medical supplies and first aid",
-      "Search and rescue operations",
-      "Rehabilitation support for affected families"
-    ],
-    contactInfo: {
-      phone: "+91-98765-43210",
-      email: "contact@gusindia.org",
-      address: "Gramin Utthan Samity, Emergency Response Unit"
-    }
-  };
-
-  const handleDonate = () => {
-    setShowDonationForm(true);
-  };
-
-  const handleDonationSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle donation submission logic here
-    alert(`Thank you for your donation of ₹${donationAmount}. We will process this immediately for emergency relief.`);
-    setShowDonationForm(false);
-    setDonationAmount('');
-  };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <div className="relative h-96 lg:h-[500px] overflow-hidden">
         <img 
           src="/img/emgc6.jpeg"
@@ -68,7 +24,6 @@ const EmergencyAppeal = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Problem Statement */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Problem Statement
@@ -85,7 +40,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Rapid Response Operations */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Rapid Response Operations
@@ -121,7 +75,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Relief Distribution and Support */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Relief Distribution and Support
@@ -155,7 +108,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Long-term Recovery and Rehabilitation */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Long-term Recovery and Rehabilitation
@@ -189,7 +141,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Additional Images and Content */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Our Emergency Response in Action
@@ -229,7 +180,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Our Impact */}
         <div className="mb-20">
           <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
             Our Impact
@@ -254,7 +204,6 @@ const EmergencyAppeal = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
           <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">
@@ -267,51 +216,12 @@ const EmergencyAppeal = () => {
             <DonateButton 
               text="Donate Now" 
               size="large" 
-              variant="primary" 
-              onClick={handleDonate}
+              variant="primary"
             />
           </div>
         </div>
       </div>
 
-      {/* Donation Modal */}
-      {showDonationForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl max-w-md w-full p-8">
-            <h3 className="text-2xl font-normal text-gray-800 mb-6">Emergency Relief Donation</h3>
-            <form onSubmit={handleDonationSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Donation Amount (₹)
-                </label>
-                <input
-                  type="number"
-                  value={donationAmount}
-                  onChange={(e) => setDonationAmount(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Enter amount"
-                  required
-                />
-              </div>
-              <div className="flex space-x-4">
-                <button
-                  type="submit"
-                  className="flex-1 bg-red-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors duration-200"
-                >
-                  Donate
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowDonationForm(false)}
-                  className="flex-1 bg-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-400 transition-colors duration-200"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

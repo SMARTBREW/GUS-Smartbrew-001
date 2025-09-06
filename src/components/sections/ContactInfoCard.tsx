@@ -1,5 +1,5 @@
 import React from 'react';
-import { DESIGN_SYSTEM } from '../styles/designSystem';
+import { DESIGN_SYSTEM } from '../../styles/designSystem';
 
 interface ContactInfoCardProps {
   title: string;

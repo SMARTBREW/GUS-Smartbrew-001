@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import EmergencyAppeal from '../components/EmergencyAppeal';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import EmergencyAppeal from '../components/sections/EmergencyAppeal';
+import SEOHead from '../components/seo/SEOHead';
 
 const EmergencyAppealPage = () => {
   return (

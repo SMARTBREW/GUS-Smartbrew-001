@@ -5,7 +5,6 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Wait for Locomotive Scroll to initialize
     const timer = setTimeout(() => {
       const locomotiveScroll = (window as any).locomotiveScroll;
       if (locomotiveScroll) {
@@ -14,7 +13,6 @@ const ScrollToTop = () => {
           disableLerp: true
         });
       } else {
-        // Fallback for when Locomotive Scroll is not available
         window.scrollTo({
           top: 0,
           left: 0,

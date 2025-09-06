@@ -1,11 +1,23 @@
-import { useState } from 'react';
-import PageLayout from '../components/PageLayout';
-import SEOHead from '../components/SEOHead';
-import OptimizedGallery from '../components/OptimizedGallery';
-import LocomotiveScroll from '../components/LocomotiveScroll';
+import { useState, useEffect } from 'react';
+import PageLayout from '../components/layout/PageLayout';
+import SEOHead from '../components/seo/SEOHead';
+import OptimizedGallery from '../components/ui/OptimizedGallery';
+import LocomotiveScroll from '../components/scroll/LocomotiveScroll';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Health');
+
+  useEffect(() => {
+    const updateScroll = () => {
+      if (typeof window !== 'undefined' && (window as any).locomotiveScroll) {
+        setTimeout(() => {
+          (window as any).locomotiveScroll.update();
+        }, 100);
+      }
+    };
+
+    updateScroll();
+  }, [activeTab]);
 
   const galleryData = {
     Health: [
@@ -305,8 +317,7 @@ const Gallery = () => {
         canonicalUrl="/gallery"
       />
       
-      <div className="bg-white">
-        {/* Hero Section */}
+      <div className="bg-white gallery-content">
         <div className="bg-gradient-to-br from-red-50 to-blue-50 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl lg:text-6xl font-normal mb-6">
@@ -320,7 +331,6 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Gallery Navigation Tabs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {tabs.map((tab) => (
@@ -338,15 +348,13 @@ const Gallery = () => {
             ))}
           </div>
 
-          {/* Optimized Gallery Grid with Infinite Scroll */}
-          <LocomotiveScroll dataScroll dataScrollSpeed="0.5">
+          <LocomotiveScroll dataScroll="true" dataScrollSpeed="0.5">
             <OptimizedGallery 
               images={galleryData[activeTab as keyof typeof galleryData] || []}
               imagesPerLoad={9}
             />
           </LocomotiveScroll>
 
-          {/* Gallery Info */}
           <div className="mt-16 text-center">
             <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
               <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">

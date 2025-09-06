@@ -33,6 +33,7 @@
 
   .has-scroll-smooth [data-scroll-container] {
     min-height: 100vh;
+    height: auto;
   }
 
   [data-scroll-direction="horizontal"] [data-scroll-container] {
@@ -116,5 +117,11 @@
   /* Smooth fallback for browsers that don't support Locomotive Scroll */
   html:not(.has-scroll-smooth) {
     scroll-behavior: smooth;
+  }
+
+  /* Ensure gallery content is fully accessible */
+  [data-scroll-container] .gallery-content {
+    min-height: 100vh;
+    padding-bottom: 2rem;
   }
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
-import DonateButton from './DonateButton';
+import DonateButton from '../ui/DonateButton';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,8 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[80vh] bg-gray-900 overflow-hidden">
-      {/* Background Image Carousel */}
+    <section className="relative h-[70vh] sm:h-[75vh] lg:h-[80vh] bg-gray-900 overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <div 
           className="flex transition-transform duration-1000 ease-in-out h-full"
@@ -56,36 +55,32 @@ const Hero = () => {
                 style={{ objectPosition: index === 2 || index === 3 ? 'center 30%' : 'center' }}
                 loading="lazy"
               />
-              {/* Overlay for better text readability */}
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Content overlaid on the image */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div className="text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight drop-shadow-lg">
+        <div className="text-center lg:text-left w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
             <span className="block">Working for the Better</span>
             <span className="block">Future of Mother</span>
             <span className="block">and Child</span>
           </h1>
           
-          <div className="mb-6">
-            <p className="text-lg sm:text-xl text-white leading-relaxed drop-shadow-lg font-light">
+          <div className="mb-4 sm:mb-6">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed drop-shadow-lg font-light px-2 sm:px-0">
               SERVING RURAL COMMUNITIES SINCE 1979 | 150+ VILLAGES | HOLISTIC DEVELOPMENT
             </p>
           </div>
 
-          {/* Call to Action Button */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start px-2 sm:px-0">
             <DonateButton text="Donate" size="large" variant="primary" />
           </div>
         </div>
       </div>
 
-      {/* Slide indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
           <button

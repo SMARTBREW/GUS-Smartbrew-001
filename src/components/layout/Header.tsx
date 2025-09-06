@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart, ChevronDown, AlertTriangle } from 'lucide-react';
-import DonateButton from './DonateButton';
+import DonateButton from '../ui/DonateButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +17,6 @@ const Header = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Vision, Mission, Goal', href: '/vision' },
         { name: 'TEAM', href: '/team' },
-        // { name: 'Leadership Board', href: '/leadership' },
-        // { name: 'Partners', href: '/partners' },
-        // { name: 'Recognition', href: '/recognition' },
       ]
     },
     {
@@ -37,15 +34,10 @@ const Header = () => {
       href: '#',
       hasDropdown: true,
       dropdownItems: [
-        // { name: 'Information Desk', href: '/info-desk' },
         { name: 'Success Stories', href: '/stories' },
-        // { name: 'Research and Publications', href: '/research' },
         { name: 'Media/Press', href: '/media' },
       ]
     },
-    
-    // { name: 'Reports', href: '/reports', hasDropdown: false },
-    // { names: 'JOIN OUR TEAM', href: '/internship', hasDropdown: false },
     { name: 'GALLERY', href: '/gallery', hasDropdown: false },
     { name: 'CERTIFICATES', href: '/certificates', hasDropdown: false },
     { name: 'CONTACT', href: '/contact', hasDropdown: false },
@@ -56,21 +48,19 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+    <header className="bg-white shadow-md sticky top-0 z-[60] border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+        <div className="flex justify-between items-center h-14 sm:h-16">
           <Link to="/" className="flex items-center space-x-2 ml-0">
             <div className="flex items-center space-x-1">
-              <Heart className="h-8 w-8 text-red-600" />
-              <div className="text-2xl font-normal">
+              <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-red-600" />
+              <div className="text-lg sm:text-2xl font-normal">
                 <span className="text-gray-800">G.U.S.</span>
-                <span className="text-gray-600 text-base block -mt-1 font-light">Gramin Utthan Samity</span>
+                <span className="text-gray-600 text-xs sm:text-base block -mt-1 font-light">Gramin Utthan Samity</span>
               </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 ml-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
@@ -101,11 +91,9 @@ const Header = () => {
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
                 {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
                   <div className="absolute top-full -left-4 mt-0 w-64 bg-white border border-gray-300 shadow-lg z-50 rounded-lg">
                     <div className="py-1 relative">
-                      {/* Continuous red line from navigation button through dropdown */}
                       <div className="absolute left-0 -top-8 w-1 bg-red-600 h-[calc(100%+2rem)]"></div>
                                              {item.dropdownItems.map((dropdownItem) => (
                          <Link
@@ -128,11 +116,9 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Donate Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <DonateButton text="DONATE" size="small" variant="primary" className="font-['Outfit'] font-bold" />
             
-            {/* Mobile menu button */}
             <button
               className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -146,11 +132,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-              {/* Emergency Appeal Link for Mobile */}
               <Link
                 to="/emergency-appeal"
                 className="block px-3 py-3 rounded-md bg-red-600 text-white font-bold text-sm uppercase tracking-wide font-['Outfit'] text-center"
@@ -193,7 +177,6 @@ const Header = () => {
                     </Link>
                   )}
                   
-                                     {/* Mobile Dropdown */}
                    {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
                      <div className="ml-4 mt-1 space-y-1">
                                                {item.dropdownItems.map((dropdownItem) => (
@@ -219,7 +202,6 @@ const Header = () => {
         )}
       </div>
 
-      {/* Close dropdown when clicking outside */}
       {activeDropdown && (
         <div 
           className="fixed inset-0 z-40" 

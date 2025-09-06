@@ -5,7 +5,6 @@ const Contact = () => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal mb-6">
             <span className="text-gray-800">Contact </span>
@@ -16,7 +15,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Form */}
         <div className="mb-16">
           <div className="max-w-4xl mx-auto">
             <ContactForm />

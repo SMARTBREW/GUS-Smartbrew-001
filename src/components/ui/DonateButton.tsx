@@ -1,6 +1,4 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 interface DonateButtonProps {
   text?: string;
@@ -17,7 +15,6 @@ const DonateButton: React.FC<DonateButtonProps> = ({
   size = 'medium',
   variant = 'primary'
 }) => {
-  const navigate = useNavigate();
   const baseClasses = "inline-flex items-center justify-center space-x-2 font-medium transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-1";
   
   const sizeClasses = {
@@ -38,7 +35,7 @@ const DonateButton: React.FC<DonateButtonProps> = ({
     if (onClick) {
       onClick();
     } else {
-      navigate('/donate');
+      window.open('https://give.gusindia.org/donate/save-vulnerable-famil-4zuya1tg', '_blank');
     }
   };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DESIGN_SYSTEM, getConsistentStyles } from '../styles/designSystem';
+import { DESIGN_SYSTEM, getConsistentStyles } from '../../styles/designSystem';
 
 interface InfoCardProps {
   title: string;

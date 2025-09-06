@@ -1,9 +1,9 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import PageHero from '../components/PageHero';
-import SubsectionTitle from '../components/SubsectionTitle';
-import InfoCard from '../components/InfoCard';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import PageHero from '../components/sections/PageHero';
+import SubsectionTitle from '../components/ui/SubsectionTitle';
+import InfoCard from '../components/ui/InfoCard';
+import SEOHead from '../components/seo/SEOHead';
 
 const VisionPage = () => {
   return (
@@ -21,7 +21,6 @@ const VisionPage = () => {
       
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Vision Section */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <SubsectionTitle title="Our Vision" />
@@ -40,7 +39,6 @@ const VisionPage = () => {
             </div>
           </div>
 
-          {/* Mission Section */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="bg-gray-50 rounded-3xl p-8 shadow">
@@ -69,7 +67,6 @@ const VisionPage = () => {
             </div>
           </div>
 
-          {/* Goals Section */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Goals</h2>
@@ -105,17 +102,13 @@ const VisionPage = () => {
             </div>
           </div>
 
-          {/* Historical Timeline */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Our Journey</h2>
               <div className="relative">
-                {/* Timeline Line */}
                 <div className="absolute left-[42%] transform -translate-x-1/2 w-1 bg-red-200 top-0 bottom-0 z-0"></div>
                 
-                {/* Timeline Items */}
                 <div className="space-y-12 relative">
-                  {/* 1979 - Foundation */}
                   <div className="relative flex items-center">
                     <div className="absolute left-[42%] transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                     <div className="w-5/12 pr-8 text-right relative z-20">
@@ -133,7 +126,6 @@ const VisionPage = () => {
                     </div>
                   </div>
 
-                  {/* 1982-83 - Registration */}
                   <div className="relative flex items-center">
                     <div className="absolute left-[42%] transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                     <div className="w-5/12 pr-8 text-right relative z-20">
@@ -151,7 +143,6 @@ const VisionPage = () => {
                     </div>
                   </div>
 
-                  {/* 1989 - Housing Project */}
                   <div className="relative flex items-center">
                     <div className="absolute left-[42%] transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                     <div className="w-5/12 pr-8 text-right relative z-20">
@@ -171,7 +162,6 @@ const VisionPage = () => {
                     </div>
                   </div>
 
-                  {/* Recent - Emergency Relief */}
                   <div className="relative flex items-center">
                     <div className="absolute left-[42%] transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                     <div className="w-5/12 pr-8 text-right relative z-20">
@@ -191,7 +181,6 @@ const VisionPage = () => {
                     </div>
                   </div>
 
-                  {/* Present - Ongoing Impact */}
                   <div className="relative flex items-center">
                     <div className="absolute left-[42%] transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                     <div className="w-5/12 pr-8 text-right relative z-20">

@@ -4,8 +4,6 @@ export const useLocomotiveScroll = () => {
   const scrollRef = useRef<LocomotiveScroll | null>(null);
 
   useEffect(() => {
-    // This will be handled by the LocomotiveProvider
-    // This hook is for accessing scroll instance if needed
   }, []);
 
   const scrollTo = (target: string | number, options?: any) => {

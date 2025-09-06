@@ -1,14 +1,11 @@
-import React from 'react';
-import PageLayout from '../components/PageLayout';
-import PageHero from '../components/PageHero';
-import SubsectionTitle from '../components/SubsectionTitle';
-import StatsCard from '../components/StatsCard';
-import InfoCard from '../components/InfoCard';
-import SEOHead from '../components/SEOHead';
-import { Heart, Users, Leaf, BookOpen, Target, MapPin, Phone, Mail, Calendar, Award } from 'lucide-react';
+import PageLayout from '../components/layout/PageLayout';
+import PageHero from '../components/sections/PageHero';
+import SubsectionTitle from '../components/ui/SubsectionTitle';
+import StatsCard from '../components/ui/StatsCard';
+import InfoCard from '../components/ui/InfoCard';
+import SEOHead from '../components/seo/SEOHead';
 
 const About = () => {
-  // Structured Data for SEO (FREE!)
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "NGO",
@@ -59,7 +56,6 @@ const About = () => {
       
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           {/* Organization Details */}
            <div className="mb-12">
              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                <StatsCard value="1979" label="Established" />
@@ -69,7 +65,6 @@ const About = () => {
              </div>
            </div>
 
-           {/* Mission and Vision */}
            <div className="mb-12">
              <div className="max-w-4xl mx-auto">
                <SubsectionTitle title="Our Mission & Approach" />
@@ -88,7 +83,6 @@ const About = () => {
              </div>
            </div>
 
-                     {/* Geographic Coverage */}
            <div className="mb-16">
              <div className="max-w-4xl mx-auto">
                <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Geographic Coverage</h2>
@@ -127,12 +121,10 @@ const About = () => {
              </div>
            </div>
 
-          {/* Community Testimonials */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Community Impact Stories</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Historical Impact Story */}
                 <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
@@ -163,33 +155,32 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Leadership Recognition */}
                 <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">UJ</span>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-normal text-gray-800">Umesh Joshi</h3>
-                      <p className="text-gray-600">Secretary & Coordinator</p>
+                      <h3 className="text-2xl font-normal text-gray-800">Mr. Umesh Joshi</h3>
+                      <p className="text-gray-600">Founder, Secretary & Coordinator</p>
                     </div>
                   </div>
                   <div className="bg-white rounded-2xl p-6 mb-6">
                     <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
-                      "The president of G.U.S., Umesh Joshi, personally visited the shop and distributed ration to the local people. All the attendees expressed their gratitude to the founder and secretary of the Gramin Utthan Samity (G.U.S.), Umesh Joshi, for acting like a friend and continuously helping for the last 10–15 days."
+                      "Born in 1957 in Didkot village, Mr. Umesh Joshi founded G.U.S. in 1979 with a vision to transform rural communities through education and social development. His early work as a postman earning ₹75 per month didn't deter his commitment to social service."
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed italic">
-                      "Under his guidance, relief materials were delivered across not only the Kapkot constituency but also various places in the Bageshwar district, with the involvement of Nagar Panchayat presidents, former MLAs, workers of different political parties, and local residents."
+                      "Under his leadership, the first modern school was established in Didkot in 1982, providing free education to underprivileged children. Today, he continues to lead initiatives in child welfare, women empowerment, and environmental protection, earning recognition through the Bachpan Award and Dr. Bhairav Vats Medal."
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white rounded-xl p-4 text-center">
-                      <div className="text-2xl font-bold text-gray-600">58</div>
-                      <div className="text-sm text-gray-600">Families Helped</div>
+                      <div className="text-2xl font-bold text-gray-600">1979</div>
+                      <div className="text-sm text-gray-600">Founded G.U.S.</div>
                     </div>
                     <div className="bg-white rounded-xl p-4 text-center">
-                      <div className="text-2xl font-bold text-gray-600">15</div>
-                      <div className="text-sm text-gray-600">Days Support</div>
+                      <div className="text-2xl font-bold text-gray-600">45+</div>
+                      <div className="text-sm text-gray-600">Years of Service</div>
                     </div>
                   </div>
                 </div>
@@ -197,7 +188,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Financial Information */}
           <div className="bg-gradient-to-br from-gray-300 to-gray-300 rounded-3xl p-8 text-black mb-16">
             <h2 className="text-2xl sm:text-3xl font-normal mb-6">Key Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -222,6 +212,21 @@ const About = () => {
                  </ul>
                </div>
             </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <h3 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4">
+              Want to know more about our leadership?
+            </h3>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Meet our dedicated team of leaders, including our founder Mr. Umesh Joshi, who have been driving rural development and social transformation for over four decades.
+            </p>
+            <a 
+              href="/team" 
+              className="inline-flex items-center px-8 py-4 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors duration-200"
+            >
+              Meet Our Team
+            </a>
           </div>
                 </div>
       </section>

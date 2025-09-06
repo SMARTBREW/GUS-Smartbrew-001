@@ -1,5 +1,5 @@
-import PageLayout from '../components/PageLayout';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import SEOHead from '../components/seo/SEOHead';
 
 const MediaPage = () => {
   return (
@@ -12,7 +12,6 @@ const MediaPage = () => {
       />
       
       <div className="bg-white">
-        {/* Hero Section */}
         <div className="relative h-96 lg:h-[500px] overflow-hidden">
           <img 
             src="/img/media.jpeg"
@@ -31,7 +30,6 @@ const MediaPage = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Featured News Article */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Featured News Coverage
@@ -69,7 +67,6 @@ const MediaPage = () => {
             </div>
           </div>
 
-          {/* Media Impact */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Our Media Impact
@@ -94,7 +91,6 @@ const MediaPage = () => {
             </div>
           </div>
 
-          {/* Media Categories */}
           <div className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
               Media Coverage Areas

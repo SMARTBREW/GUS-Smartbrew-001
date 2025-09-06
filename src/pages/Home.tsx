@@ -1,16 +1,14 @@
-import React from 'react';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import CTA from '../components/CTA';
-import Impact from '../components/Impact';
-import Testimonials from '../components/Testimonials';
-import LocationMap from '../components/LocationMap';
-import SEOHead from '../components/SEOHead';
-import Footer from '../components/Footer';
-import ImpactStrip from '../components/ImpactStrip';
+import Header from '../components/layout/Header';
+import Hero from '../components/sections/Hero';
+import CTA from '../components/sections/CTA';
+import Impact from '../components/sections/Impact';
+import Testimonials from '../components/sections/Testimonials';
+import LocationMap from '../components/sections/LocationMap';
+import SEOHead from '../components/seo/SEOHead';
+import Footer from '../components/layout/Footer';
+import ImpactStrip from '../components/sections/ImpactStrip';
 
 const Home = () => {
-  // Homepage structured data for SEO
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "NGO",
@@ -51,32 +49,25 @@ const Home = () => {
       />
       <Header />
       
-      {/* Hero Section - White Background */}
       <section className="bg-white">
         <Hero />
       </section>
 
-      {/* Impact Strip under Hero */}
       <ImpactStrip />
       
-      {/* CTA Section - White Background */}
       <section className="bg-gray-50">
         <CTA />
       </section>
       
-      {/* Impact Section - White Background */}
       <section className="bg-gray-50">
         <Impact />
       </section>
       
-      {/* What We Do Section - Gray Background */}
       
-      {/* Testimonials Section - White Background */}
       <section className="bg-white">
         <Testimonials />
       </section>
 
-      {/* Google Map Section */}
       <section className="py-16 bg-gray-50">
         <LocationMap />
       </section>

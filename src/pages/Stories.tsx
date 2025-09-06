@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import Stories from '../components/Stories';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import Stories from '../components/sections/Stories';
+import SEOHead from '../components/seo/SEOHead';
 
 const StoriesPage = () => {
   return (

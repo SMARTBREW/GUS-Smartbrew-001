@@ -34,19 +34,23 @@ const LocomotiveProvider = ({ children }: LocomotiveProviderProps) => {
               gestureDirection: 'vertical',
             },
             reloadOnContextChange: true,
+            resetNativeScroll: true,
           });
 
-          // Expose scroll instance globally for other components
           (window as any).locomotiveScroll = scrollRef.current;
+          
+          (window as any).updateScrollHeight = () => {
+            if (scrollRef.current) {
+              scrollRef.current.update();
+            }
+          };
         }
       } catch (error) {
         console.warn('Locomotive Scroll failed to initialize:', error);
-        // Fallback to native smooth scrolling
         document.documentElement.style.scrollBehavior = 'smooth';
       }
     };
 
-    // Initialize after a short delay to ensure DOM is ready
     const timer = setTimeout(initLocomotiveScroll, 100);
 
     return () => {
@@ -59,6 +63,7 @@ const LocomotiveProvider = ({ children }: LocomotiveProviderProps) => {
         }
         scrollRef.current = null;
         (window as any).locomotiveScroll = null;
+        (window as any).updateScrollHeight = null;
       }
     };
   }, []);

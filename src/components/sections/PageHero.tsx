@@ -1,5 +1,5 @@
 import React from 'react';
-import { DESIGN_SYSTEM } from '../styles/designSystem';
+import { DESIGN_SYSTEM } from '../../styles/designSystem';
 
 interface PageHeroProps {
   title: string;
@@ -22,7 +22,6 @@ const PageHero: React.FC<PageHeroProps> = ({
         <div className={`text-center ${DESIGN_SYSTEM.spacing.marginBottom}`}>
           <h1 className={DESIGN_SYSTEM.typography.heroTitle}>
             {title.split(' ').map((word, index) => {
-              // Check if this word should be highlighted (contains special characters or is the last word)
               const shouldHighlight = word.includes('&') || 
                                     word.includes('.') || 
                                     word.includes(',') ||

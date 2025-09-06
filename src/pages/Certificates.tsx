@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 import { FileText } from 'lucide-react';
 
 const Certificates = () => {
@@ -68,7 +68,6 @@ const Certificates = () => {
       <Header />
       
       <div className="bg-gray-50">
-        {/* Header */}
         <div className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
@@ -82,9 +81,7 @@ const Certificates = () => {
           </div>
         </div>
 
-        {/* Certificates Display */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* First Row - 3 Certificates */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             {certificates.slice(0, 3).map((certificate, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -110,7 +107,6 @@ const Certificates = () => {
             ))}
           </div>
 
-          {/* Second Row - 3 Certificates */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {certificates.slice(3, 6).map((certificate, index) => (
               <div key={index + 3} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -136,7 +132,6 @@ const Certificates = () => {
             ))}
           </div>
 
-          {/* Additional Information */}
           <div className="mt-16 bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               About Our Certifications

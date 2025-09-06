@@ -56,7 +56,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setSubmitStatus('idle');
 
     try {
-      // Create form data for submission
       const formDataToSend = new FormData();
       formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
       formDataToSend.append('email', formData.email);
@@ -66,7 +65,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       formDataToSend.append('_template', 'table');
       formDataToSend.append('_captcha', 'false');
 
-             // Submit to FormSubmit service
        const response = await fetch('https://formsubmit.co/contact@gusindia.org', {
         method: 'POST',
         body: formDataToSend,
@@ -76,7 +74,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       });
 
       if (response.ok) {
-        // Reset form
         setFormData({
           firstName: '',
           lastName: '',
@@ -87,7 +84,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
         
         setSubmitStatus('success');
         
-        // Reset success message after 5 seconds
         setTimeout(() => {
           setSubmitStatus('idle');
         }, 5000);
@@ -99,7 +95,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
       
-      // Reset error message after 5 seconds
       setTimeout(() => {
         setSubmitStatus('idle');
       }, 5000);
@@ -112,7 +107,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
     <div className={`bg-white rounded-3xl p-8 shadow-sm ${className}`}>
       <h2 className="text-3xl font-normal text-gray-800 mb-8 text-center">{title}</h2>
       
-      {/* Success/Error Messages */}
       {submitStatus === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800 text-center">

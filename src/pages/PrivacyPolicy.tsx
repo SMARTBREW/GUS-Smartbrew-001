@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section with consistent styling */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -22,7 +21,6 @@ const PrivacyPolicy = () => {
         </div>
       </section>
       
-      {/* Content Section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-sm p-8">

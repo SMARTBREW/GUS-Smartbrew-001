@@ -1,9 +1,9 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import PageHero from '../components/PageHero';
-import SubsectionTitle from '../components/SubsectionTitle';
-import InfoCard from '../components/InfoCard';
-import SEOHead from '../components/SEOHead';
+import PageLayout from '../components/layout/PageLayout';
+import PageHero from '../components/sections/PageHero';
+import SubsectionTitle from '../components/ui/SubsectionTitle';
+import InfoCard from '../components/ui/InfoCard';
+import SEOHead from '../components/seo/SEOHead';
 
 const ReportsPage = () => {
   return (
@@ -22,12 +22,10 @@ const ReportsPage = () => {
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Report Categories */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
               <SubsectionTitle title="Report Categories" />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Annual Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">📊</span>
@@ -53,7 +51,6 @@ const ReportsPage = () => {
                   </ul>
                 </div>
 
-                {/* Impact Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">📈</span>
@@ -79,7 +76,6 @@ const ReportsPage = () => {
                   </ul>
                 </div>
 
-                {/* Financial Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">💰</span>
@@ -105,7 +101,6 @@ const ReportsPage = () => {
                   </ul>
                 </div>
 
-                {/* Program Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">📋</span>
@@ -131,7 +126,6 @@ const ReportsPage = () => {
                   </ul>
                 </div>
 
-                {/* Research Reports */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">🔬</span>
@@ -157,7 +151,6 @@ const ReportsPage = () => {
                   </ul>
                 </div>
 
-                {/* Case Studies */}
                 <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
                   <div className="w-16 h-16 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl">📖</span>
@@ -186,7 +179,6 @@ const ReportsPage = () => {
             </div>
           </div>
 
-          {/* Featured Reports */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white">
@@ -215,12 +207,10 @@ const ReportsPage = () => {
             </div>
           </div>
 
-          {/* Case Studies */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-800 mb-8 text-center">Documented Case Studies</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Emergency Relief Case Study */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
@@ -256,7 +246,6 @@ const ReportsPage = () => {
                   </div>
                 </div>
 
-                {/* Historical Housing Case Study */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
@@ -295,7 +284,6 @@ const ReportsPage = () => {
             </div>
           </div>
 
-          {/* Report Request */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="bg-gray-50 rounded-3xl p-8 shadow">
