@@ -44,14 +44,14 @@ const FounderProfile = () => {
             
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-6">
-                Born on 10 May 1957 in the village of Didkot, Mr. Umesh Joshi is the visionary founder of Gramin Utthan Samiti. 
+                Born on 10 May 1957 in the village of Kapkot, Mr. Umesh Joshi is the visionary founder of Gramin Utthan Samiti. 
                 From a young age, he was deeply inclined toward social service and helping the underprivileged, dedicating his 
                 life to transforming rural communities in the Kumaon hills.
               </p>
               
               <p className="mb-6">
                 Despite limited educational opportunities in his region, Mr. Joshi recognized that development was impossible 
-                without proper education. This realization led him to establish the first modern school in Didkot on 15 August 1982, 
+                without proper education. This realization led him to establish the first modern school in Kapkot on 15 August 1982, 
                 providing free education to underprivileged children with support from 25 local families.
               </p>
               
@@ -91,7 +91,7 @@ const FounderProfile = () => {
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0 mt-2"></div>
-                  <span>Born on 10 May 1957 in Didkot village</span>
+                  <span>Born on 10 May 1957 in Kapkot village</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0 mt-2"></div>
@@ -99,11 +99,11 @@ const FounderProfile = () => {
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0 mt-2"></div>
-                  <span>Completed schooling up to high school in Didkot</span>
+                  <span>Completed schooling up to high school in Kapkot</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0 mt-2"></div>
-                  <span>Worked as junior and postman in Didkot post office</span>
+                  <span>Worked as junior and postman in Kapkot post office</span>
                 </li>
               </ul>
             </div>
@@ -229,7 +229,7 @@ const FounderProfile = () => {
                 <h5 className="font-normal text-gray-700 mb-3">Position</h5>
                 <p className="text-gray-600 mb-4">Secretary/Coordinator, Rural Development Committee</p>
                 <h5 className="font-normal text-gray-700 mb-3">Location</h5>
-                <p className="text-gray-600">Didkot, Chakrata, Uttarakhand</p>
+                <p className="text-gray-600">Kapkot, Uttarakhand</p>
               </div>
               <div>
                 <h5 className="font-normal text-gray-700 mb-3">Contact</h5>

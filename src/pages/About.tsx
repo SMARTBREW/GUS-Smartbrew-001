@@ -167,10 +167,10 @@ const About = () => {
                   </div>
                   <div className="bg-white rounded-2xl p-6 mb-6">
                     <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
-                      "Born in 1957 in Didkot village, Mr. Umesh Joshi founded G.U.S. in 1979 with a vision to transform rural communities through education and social development. His early work as a postman earning ₹75 per month didn't deter his commitment to social service."
+                      "Born in 1957 in Kapkot village, Mr. Umesh Joshi founded G.U.S. in 1979 with a vision to transform rural communities through education and social development. His early work as a postman earning ₹75 per month didn't deter his commitment to social service."
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed italic">
-                      "Under his leadership, the first modern school was established in Didkot in 1982, providing free education to underprivileged children. Today, he continues to lead initiatives in child welfare, women empowerment, and environmental protection, earning recognition through the Bachpan Award and Dr. Bhairav Vats Medal."
+                      "Under his leadership, the first modern school was established in Kapkot in 1982, providing free education to underprivileged children. Today, he continues to lead initiatives in child welfare, women empowerment, and environmental protection, earning recognition through the Bachpan Award and Dr. Bhairav Vats Medal."
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-4">

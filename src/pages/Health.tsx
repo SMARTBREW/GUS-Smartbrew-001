@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../components/layout/PageLayout';
 import SEOHead from '../components/seo/SEOHead';
 import DonateButton from '../components/ui/DonateButton';
@@ -16,7 +15,7 @@ const HealthPage = () => {
       <div className="bg-white">
         <div className="relative h-96 lg:h-[500px] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            src="/img/health1.jpg"
             alt="Health Programs"
             className="w-full h-full object-cover"
           />
@@ -54,7 +53,7 @@ const HealthPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/img/health2.jpg"
                   alt="Mobile Health Clinic"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -86,7 +85,7 @@ const HealthPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/img/health3.jpg"
                   alt="Mental Health Support"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -119,7 +118,7 @@ const HealthPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/img/health4.jpg"
                   alt="Health Awareness"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -150,18 +149,52 @@ const HealthPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/health5.jpg"
                 alt="Vaccination Drive"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/health6.jpg"
                 alt="Health Check-up"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="/img/health7.jpg"
                 alt="Community Workshop"
+                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+              <img 
+                src="/img/health8.jpg"
+                alt="Medical Support"
+                className="w-full h-48 object-cover rounded-xl shadow-lg"
+              />
+              <img 
+                src="/img/health9.jpg"
+                alt="Healthcare Team"
+                className="w-full h-48 object-cover rounded-xl shadow-lg"
+              />
+              <img 
+                src="/img/health10.jpg"
+                alt="Health Education"
+                className="w-full h-48 object-cover rounded-xl shadow-lg"
+              />
+              <img 
+                src="/img/health11.jpg"
+                alt="Medical Camp"
+                className="w-full h-48 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <img 
+                src="/img/health12.jpg"
+                alt="Health Initiative"
+                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
+              <img 
+                src="/img/health1.jpg"
+                alt="Community Health Program"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
             </div>

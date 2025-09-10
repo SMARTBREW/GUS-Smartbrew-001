@@ -23,39 +23,75 @@ const Gallery = () => {
     Health: [
       {
         id: 1,
-        src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health1.jpg",
         alt: "Mobile Health Clinic",
         description: "Mobile health clinic providing healthcare services to remote villages"
       },
       {
         id: 2,
-        src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health2.jpg",
         alt: "Health Check-up",
         description: "Community health check-up and vaccination drive"
       },
       {
         id: 3,
-        src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health3.jpg",
         alt: "Health Awareness Workshop",
         description: "Community health awareness and education program"
       },
       {
         id: 4,
-        src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health4.jpg",
         alt: "Medical Camp",
         description: "Free medical camp for rural communities"
       },
       {
         id: 5,
-        src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health5.jpg",
         alt: "Child Vaccination",
         description: "Child vaccination program in rural areas"
       },
       {
         id: 6,
-        src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        src: "/img/health6.jpg",
         alt: "Health Education",
         description: "Health education and awareness session"
+      },
+      {
+        id: 7,
+        src: "/img/health7.jpg",
+        alt: "Medical Support",
+        description: "Medical support and healthcare assistance"
+      },
+      {
+        id: 8,
+        src: "/img/health8.jpg",
+        alt: "Healthcare Team",
+        description: "Healthcare team providing medical services"
+      },
+      {
+        id: 9,
+        src: "/img/health9.jpg",
+        alt: "Health Education Program",
+        description: "Health education and awareness program"
+      },
+      {
+        id: 10,
+        src: "/img/health10.jpg",
+        alt: "Medical Camp Setup",
+        description: "Setting up medical camp for rural communities"
+      },
+      {
+        id: 11,
+        src: "/img/health11.jpg",
+        alt: "Community Health Initiative",
+        description: "Community health initiative and outreach program"
+      },
+      {
+        id: 12,
+        src: "/img/health12.jpg",
+        alt: "Health Program",
+        description: "Comprehensive health program for rural areas"
       }
     ],
     Education: [
@@ -350,6 +386,7 @@ const Gallery = () => {
 
           <LocomotiveScroll dataScroll="true" dataScrollSpeed="0.5">
             <OptimizedGallery 
+              key={activeTab}
               images={galleryData[activeTab as keyof typeof galleryData] || []}
               imagesPerLoad={9}
             />
