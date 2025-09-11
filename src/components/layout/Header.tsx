@@ -36,6 +36,7 @@ const Header = () => {
       dropdownItems: [
         { name: 'Success Stories', href: '/stories' },
         { name: 'Media/Press', href: '/media' },
+        { name: 'Reports', href: '/reports' },
       ]
     },
     { name: 'GALLERY', href: '/gallery', hasDropdown: false },
@@ -133,7 +134,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden">
+          <div className="lg:hidden relative z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               <Link
                 to="/emergency-appeal"
@@ -179,20 +180,23 @@ const Header = () => {
                   
                    {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
                      <div className="ml-4 mt-1 space-y-1">
-                                               {item.dropdownItems.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
-                              dropdownItem.isEmergency 
-                                ? 'text-red-600 hover:bg-red-50 font-semibold' 
-                                : 'text-gray-600 hover:text-red-600 hover:bg-red-50'
-                            }`}
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
+                       {item.dropdownItems.map((dropdownItem) => (
+                         <Link
+                           key={dropdownItem.name}
+                           to={dropdownItem.href}
+                           className={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
+                             dropdownItem.isEmergency 
+                               ? 'text-red-600 hover:bg-red-50 font-semibold' 
+                               : 'text-gray-600 hover:text-red-600 hover:bg-red-50'
+                           }`}
+                           onClick={() => {
+                             setIsMenuOpen(false);
+                             setActiveDropdown(null);
+                           }}
+                         >
+                           {dropdownItem.name}
+                         </Link>
+                       ))}
                      </div>
                    )}
                 </div>
@@ -202,10 +206,13 @@ const Header = () => {
         )}
       </div>
 
-      {activeDropdown && (
+      {(activeDropdown || isMenuOpen) && (
         <div 
           className="fixed inset-0 z-40" 
-          onClick={() => setActiveDropdown(null)}
+          onClick={() => {
+            setActiveDropdown(null);
+            setIsMenuOpen(false);
+          }}
         />
       )}
     </header>

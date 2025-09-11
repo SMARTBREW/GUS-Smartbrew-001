@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../components/layout/PageLayout';
 import PageHero from '../components/sections/PageHero';
 import ContactInfoCard from '../components/sections/ContactInfoCard';
@@ -59,9 +58,9 @@ const Contact = () => {
         subtitle="Get in touch with us to learn more about our programs, volunteer opportunities, or to support our mission."
       />
 
-       <section className="py-8 bg-gray-50">
+       <section className="py-8 sm:py-12 lg:py-16 bg-gray-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
              <ContactInfoCard
                title="Email Us"
                value="contact@gusindia.org"
@@ -88,33 +87,33 @@ const Contact = () => {
          </div>
        </section>
 
-        <section className="py-8 bg-white">
+        <section className="py-8 sm:py-12 lg:py-16 bg-white">
          <LocationMap />
        </section>
 
-       <section className="py-8 bg-gray-50">
+       <section className="py-8 sm:py-12 lg:py-16 bg-gray-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <SectionTitle 
              title="Get in Touch"
              subtitle="We're here to help and answer any questions you may have about our programs and initiatives."
            />
 
-           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
              <InfoCard
                title="For General Inquiries"
                content={
                  <>
-                   <p className="text-gray-600 mb-4">
+                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                      Have questions about our programs, volunteer opportunities, or general information? We'd love to hear from you.
                    </p>
                    <div className="space-y-2">
                      <p className="flex items-center space-x-3">
-                       <Mail className="h-5 w-5 text-red-600" />
-                       <span className="text-gray-600">contact@gusindia.org</span>
+                       <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
+                       <span className="text-sm sm:text-base text-gray-600">contact@gusindia.org</span>
                      </p>
                      <p className="flex items-center space-x-3">
-                       <Phone className="h-5 w-5 text-red-600" />
-                       <span className="text-gray-600">(05963) 3043</span>
+                       <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
+                       <span className="text-sm sm:text-base text-gray-600">(05963) 3043</span>
                      </p>
                    </div>
                  </>
@@ -124,15 +123,15 @@ const Contact = () => {
                title="For Donations"
                content={
                  <>
-                   <p className="text-gray-600 mb-4">
+                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                      Interested in supporting our cause? Learn about donation options and how your contribution makes a difference.
                    </p>
                    <div className="space-y-2">
                      <p className="flex items-center space-x-3">
-                       <Mail className="h-5 w-5 text-red-600" />
-                       <span className="text-gray-600">contact@gusindia.org</span>
+                       <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
+                       <span className="text-sm sm:text-base text-gray-600">contact@gusindia.org</span>
                      </p>
-                     <p className="text-gray-600 text-sm">
+                     <p className="text-xs sm:text-sm text-gray-600">
                        Visit our <a href="/donate" className="text-red-600 hover:text-red-700 underline">donation page</a> for more information.
                      </p>
                    </div>

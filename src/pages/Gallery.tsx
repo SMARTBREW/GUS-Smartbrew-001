@@ -22,76 +22,58 @@ const Gallery = () => {
   const galleryData = {
     Health: [
       {
-        id: 1,
-        src: "/img/health1.jpg",
-        alt: "Mobile Health Clinic",
-        description: "Mobile health clinic providing healthcare services to remote villages"
+        id: 20,
+        src: "/img/health20.jpg",
+        alt: "Health Capacity Building",
+        description: "Health capacity building and skill development"
       },
       {
-        id: 2,
-        src: "/img/health2.jpg",
-        alt: "Health Check-up",
-        description: "Community health check-up and vaccination drive"
-      },
-      {
-        id: 3,
-        src: "/img/health3.jpg",
-        alt: "Health Awareness Workshop",
-        description: "Community health awareness and education program"
-      },
-      {
-        id: 4,
-        src: "/img/health4.jpg",
-        alt: "Medical Camp",
-        description: "Free medical camp for rural communities"
-      },
-      {
-        id: 5,
-        src: "/img/health5.jpg",
-        alt: "Child Vaccination",
-        description: "Child vaccination program in rural areas"
-      },
-      {
-        id: 6,
-        src: "/img/health6.jpg",
-        alt: "Health Education",
-        description: "Health education and awareness session"
-      },
-      {
-        id: 7,
-        src: "/img/health7.jpg",
-        alt: "Medical Support",
-        description: "Medical support and healthcare assistance"
-      },
-      {
-        id: 8,
-        src: "/img/health8.jpg",
-        alt: "Healthcare Team",
-        description: "Healthcare team providing medical services"
-      },
-      {
-        id: 9,
-        src: "/img/health9.jpg",
-        alt: "Health Education Program",
-        description: "Health education and awareness program"
-      },
-      {
-        id: 10,
-        src: "/img/health10.jpg",
-        alt: "Medical Camp Setup",
-        description: "Setting up medical camp for rural communities"
-      },
-      {
-        id: 11,
-        src: "/img/health11.jpg",
+        id: 21,
+        src: "/img/health21.jpg",
         alt: "Community Health Initiative",
-        description: "Community health initiative and outreach program"
+        description: "Community health initiative and empowerment program"
       },
       {
-        id: 12,
-        src: "/img/health12.jpg",
-        alt: "Health Program",
-        description: "Comprehensive health program for rural areas"
+        id: 22,
+        src: "/img/helth22.jpg",
+        alt: "Health Program Implementation",
+        description: "Health program implementation and monitoring"
+      },
+      {
+        id: 23,
+        src: "/img/health23.jpg",
+        alt: "Health Training Workshop",
+        description: "Health training workshop for community members"
+      },
+      {
+        id: 24,
+        src: "/img/health24.jpg",
+        alt: "Healthcare Service Delivery",
+        description: "Healthcare service delivery in rural areas"
+      },
+      {
+        id: 25,
+        src: "/img/health25.jpg",
+        alt: "Medical Support Program",
+        description: "Medical support program for vulnerable communities"
+      },
+      {
+        id: 26,
+        src: "/img/health26.jpg",
+        alt: "Health Development Program",
+        description: "Health development program and community engagement"
+      },
+      {
+        id: 26,
+        src: "/img/help1.jpg",
+        alt: "Health Development Program",
+        description: "Health development program and community engagement"
+      },
+      {
+        id: 26,
+        src: "/img/healp2.jpg",
+        alt: "Health Development Program",
+        description: "Health development program and community engagement"
       }
     ],
     Education: [
@@ -102,7 +84,7 @@ const Gallery = () => {
         description: "Students engaged in classroom learning activities"
       },
       {
-        id: 8,
+        id: 8, 
         src: "/img/ed2.jpeg",
         alt: "Creative Learning Activities",
         description: "Students engaged in creative learning and classroom activities"
@@ -338,6 +320,120 @@ const Gallery = () => {
         src: "/img/emgc5.jpeg",
         alt: "Emergency Team",
         description: "Emergency response team in action"
+      },
+      {
+        id: 1,
+        src: "/img/health1.jpg",
+        alt: "Mobile Health Clinic",
+        description: "Mobile health clinic providing healthcare services to remote villages"
+      },
+      {
+        id: 2,
+        src: "/img/health2.jpg",
+        alt: "Health Check-up",
+        description: "Community health check-up and vaccination drive"
+      },
+      {
+        id: 3,
+        src: "/img/health3.jpg",
+        alt: "Health Awareness Workshop",
+        description: "Community health awareness and education program"
+      },
+      {
+        id: 4,
+        src: "/img/health4.jpg",
+        alt: "Medical Camp",
+        description: "Free medical camp for rural communities"
+      },
+      {
+        id: 5,
+        src: "/img/health5.jpg",
+        alt: "Child Vaccination",
+        description: "Child vaccination program in rural areas"
+      },
+      {
+        id: 6,
+        src: "/img/health6.jpg",
+        alt: "Health Education",
+        description: "Health education and awareness session"
+      },
+      {
+        id: 7,
+        src: "/img/health7.jpg",
+        alt: "Medical Support",
+        description: "Medical support and healthcare assistance"
+      },
+      {
+        id: 8,
+        src: "/img/health8.jpg",
+        alt: "Healthcare Team",
+        description: "Healthcare team providing medical services"
+      },
+      {
+        id: 9,
+        src: "/img/health9.jpg",
+        alt: "Health Education Program",
+        description: "Health education and awareness program"
+      },
+      {
+        id: 10,
+        src: "/img/health10.jpg",
+        alt: "Medical Camp Setup",
+        description: "Setting up medical camp for rural communities"
+      },
+      {
+        id: 11,
+        src: "/img/health11.jpg",
+        alt: "Community Health Initiative",
+        description: "Community health initiative and outreach program"
+      },
+      {
+        id: 12,
+        src: "/img/health12.jpg",
+        alt: "Health Program",
+        description: "Comprehensive health program for rural areas"
+      },
+      {
+        id: 13,
+        src: "/img/health13.jpg",
+        alt: "Community Health Workshop",
+        description: "Community health workshop and training session"
+      },
+      {
+        id: 14,
+        src: "/img/health14.jpg",
+        alt: "Health Awareness Campaign",
+        description: "Health awareness campaign in rural communities"
+      },
+      {
+        id: 15,
+        src: "/img/health15.jpg",
+        alt: "Medical Training Program",
+        description: "Medical training program for community health workers"
+      },
+      {
+        id: 16,
+        src: "/img/health16.jpg",
+        alt: "Health Education Session",
+        description: "Health education session for women and children"
+      },
+      {
+        id: 17,
+        src: "/img/health17.jpg",
+        alt: "Community Health Meeting",
+        description: "Community health meeting and consultation"
+      },
+      {
+        id: 18,
+        src: "/img/health18.jpg",
+        alt: "Health Care Delivery",
+        description: "Healthcare delivery and support services"
+      },
+      {
+        id: 19,
+        src: "/img/health19.jpg",
+        alt: "Medical Outreach Program",
+        description: "Medical outreach program in remote areas"
       }
     ]
   };
@@ -354,26 +450,26 @@ const Gallery = () => {
       />
       
       <div className="bg-white gallery-content">
-        <div className="bg-gradient-to-br from-red-50 to-blue-50 py-20">
+        <div className="bg-gradient-to-br from-red-50 to-blue-50 py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl lg:text-6xl font-normal mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-4 sm:mb-6">
               <span className="text-gray-800">Memories</span>
               <br />
               <span className="text-red-600">Gallery</span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
               Explore our work through images that capture the impact of our programs across rural communities in Uttarakhand
             </p>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 text-lg font-medium rounded-lg transition-all duration-200 ${
+                className={`px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-medium rounded-lg transition-all duration-200 ${
                   activeTab === tab
                     ? 'text-red-600 border-b-2 border-red-600 bg-red-50'
                     : 'text-gray-600 hover:text-red-600 hover:bg-gray-50'
@@ -392,17 +488,17 @@ const Gallery = () => {
             />
           </LocomotiveScroll>
 
-          <div className="mt-16 text-center">
-            <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
-              <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">
+          <div className="mt-12 sm:mt-16 text-center">
+            <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 lg:p-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-normal text-gray-800 mb-3 sm:mb-4">
                 Capturing Our Impact
               </h3>
-              <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6 max-w-3xl mx-auto leading-relaxed">
                 Each image in our gallery tells a story of transformation, hope, and community development. 
                 From healthcare initiatives to educational programs, from menstrual hygiene awareness to emergency response efforts, 
                 these photographs document the real impact of our work across rural Uttarakhand.
               </p>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Our gallery showcases the faces behind our programs - the children learning new skills, 
                 the women gaining confidence, the communities coming together, and the volunteers making it all possible. 
                 These memories inspire us to continue our mission of rural development and women empowerment.

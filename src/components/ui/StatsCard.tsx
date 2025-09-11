@@ -19,7 +19,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
   
   const variantClasses = {
     default: "",
-    highlighted: "bg-gray-50 rounded-2xl p-6 shadow-sm"
+    highlighted: "bg-gray-50 rounded-2xl p-4 sm:p-6 shadow-sm"
   };
 
   const cardClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
@@ -27,14 +27,14 @@ const StatsCard: React.FC<StatsCardProps> = ({
   return (
     <div className={cardClasses}>
       {icon && (
-        <div className="mb-4 flex justify-center">
+        <div className="mb-3 sm:mb-4 flex justify-center">
           {icon}
         </div>
       )}
-      <div className="text-3xl sm:text-4xl font-normal text-gray-800 mb-2">
+      <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-gray-800 mb-2">
         {value}
       </div>
-      <div className="text-gray-600">
+      <div className="text-sm sm:text-base text-gray-600">
         {label}
       </div>
     </div>

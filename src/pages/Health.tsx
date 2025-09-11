@@ -11,33 +11,36 @@ const HealthPage = () => {
         keywords="healthcare programs, mobile health clinics, rural healthcare, mental health support, health awareness, Gramin Utthan Samiti health, Uttarakhand healthcare"
         canonicalUrl="/health"
       />
+
       
       <div className="bg-white">
-        <div className="relative h-96 lg:h-[500px] overflow-hidden">
+        {/* Hero */}
+        <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
           <img 
-            src="/img/health1.jpg"
+            src="/img/health24.jpg"
             alt="Health Programs"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white">
-              <h1 className="text-4xl lg:text-6xl font-normal mb-4">Health</h1>
-              <p className="text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+            <div className="text-center text-white px-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-3 sm:mb-4">Health</h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
                 Bringing quality healthcare services to remote villages and communities
               </p>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          {/* Problem Statement */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
               Problem Statement
             </h2>
-            <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
+            <div className="bg-red-50 rounded-2xl p-6 sm:p-8 lg:p-12">
               <div className="max-w-4xl mx-auto text-center">
-                <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
                   Rural communities in Uttarakhand face severe healthcare challenges including limited access to medical facilities, 
                   lack of qualified healthcare professionals, inadequate maternal and child care, and poor health awareness. 
                   Many villagers have to travel long distances for basic medical care, leading to delayed treatment and preventable health issues.
@@ -46,205 +49,275 @@ const HealthPage = () => {
             </div>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Mobile Health Clinics
+          {/* National Health Mission Programs */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
+              National Health Mission Programs
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <img 
-                  src="/img/health2.jpg"
-                  alt="Mobile Health Clinic"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  src="/img/health23.jpg"
+                  alt="National Health Mission Training"
+                  className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-normal text-gray-800 mb-6">Bringing Healthcare to Your Doorstep</h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our mobile health clinics are specially equipped medical units that travel to remote villages, 
-                  ensuring that no community is left behind when it comes to essential healthcare services. 
-                  These clinics bring medical professionals, equipment, and medicines directly to the people who need them most.
+                <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4 sm:mb-6">Training Healthcare Workers & Community Leaders</h3>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  In partnership with the National Health Mission, District Nainital, we conduct comprehensive training 
+                  programs for ASHA workers (Accredited Social Health Activists) and community health coordinators. 
+                  These programs focus on building local healthcare capacity and improving health service delivery in rural areas.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Each mobile clinic is staffed with qualified healthcare workers and equipped with essential medical equipment. 
-                  We provide basic health check-ups and screenings, vaccination drives for children, maternal and child care services, 
-                  emergency medical support, and medicine distribution.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  Our training sessions cover essential topics including maternal and child health, nutrition awareness, 
+                  disease prevention, first aid, and community health promotion. We work closely with government health 
+                  officials to ensure standardized and effective healthcare practices across all participating villages.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Currently, we operate 10 mobile clinics that serve over 50 villages across Uttarakhand, 
-                  reaching more than 15,000 people who otherwise would have limited or no access to healthcare services.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                  Through these capacity building programs, we have trained over 200 community health workers who now 
+                  serve as the backbone of healthcare delivery in their respective communities, reaching thousands of families.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Mental Health Support
+          {/* Women's Health */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
+              Women's Health & Community Training
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div className="lg:order-2">
                 <img 
-                  src="/img/health3.jpg"
-                  alt="Mental Health Support"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  src="/img/help1.jpg"
+                  alt="Women's Health Training Session"
+                  className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
               <div className="lg:order-1">
-                <h3 className="text-2xl font-normal text-gray-800 mb-6">Comprehensive Mental Health Care</h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Mental health is a critical component of overall well-being, yet it's often overlooked in rural areas. 
-                  Our mental health program provides comprehensive support services including individual counseling sessions, 
-                  group therapy programs, family support services, and crisis intervention.
+                <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4 sm:mb-6">Empowering Women Through Health Education</h3>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  Our women's health programs focus on empowering women with knowledge and skills to improve their own 
+                  and their families' health outcomes. We conduct regular training sessions covering maternal health, 
+                  child nutrition, family planning, and preventive healthcare practices.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  We work with trained counselors and mental health professionals who understand the unique challenges 
-                  faced by rural communities. Our approach is culturally sensitive and community-oriented, ensuring that 
-                  mental health support is accessible and effective for everyone who needs it.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  Working closely with Self Help Groups (SHGs) and women's collectives, we create safe spaces for women 
+                  to discuss health concerns, learn from each other, and access quality healthcare information. 
+                  Our approach emphasizes community participation and peer-to-peer learning.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  To date, we've conducted over 2,000 mental health sessions, helping individuals and families 
-                  overcome challenges and build resilience. We also conduct mental health awareness campaigns to 
-                  reduce stigma and encourage people to seek help when needed.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                  Through these programs, we have reached over 1,500 women across multiple districts, creating a network 
+                  of informed health advocates who continue to spread awareness in their communities and support other 
+                  women in accessing healthcare services.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Community Health Awareness
+          {/* Community Health Camps */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
+              Community Health Camps & Outreach
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <img 
-                  src="/img/health4.jpg"
-                  alt="Health Awareness"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  src="/img/health24.jpg"
+                  alt="Community Health Camp"
+                  className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-normal text-gray-800 mb-6">Building Healthier Communities</h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Prevention is better than cure, and our health awareness programs focus on educating communities 
-                  about preventive healthcare practices. We conduct regular workshops on hygiene and sanitation, 
-                  disease prevention, nutrition and wellness, and first aid training.
+                <h3 className="text-xl sm:text-2xl font-normal text-gray-800 mb-4 sm:mb-6">Celebrating Health Achievements Together</h3>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  Our community health camps bring together participants from multiple villages to celebrate health 
+                  achievements, share best practices, and strengthen the network of health advocates. These gatherings 
+                  create opportunities for peer learning and community bonding around health initiatives.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our health educators work closely with community leaders, schools, and women's groups to ensure 
-                  that health information reaches every household. We use interactive methods including demonstrations, 
-                  workshops, and community meetings to make health education engaging and effective.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                  During these events, we recognize outstanding contributions from community health workers, present 
+                  health education materials, and provide platforms for participants to share their success stories. 
+                  The camps also serve as venues for distributing health supplies and conducting group health screenings.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  These programs have led to significant improvements in community health practices, with reduced 
-                  incidence of preventable diseases and better hygiene practices in the villages we serve.
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                  These community gatherings have become powerful tools for motivation and sustained engagement, 
+                  helping to build a strong culture of health consciousness across all participating villages 
+                  in the mountainous regions of Uttarakhand.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
-              Our Healthcare Impact in Action
+          {/* Galleries */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
+              Health Programs & Community Engagement
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+            {/* Mobile: horizontal image row */}
+            <div className="block md:hidden">
+              <div className="flex overflow-x-auto gap-4 pb-2 px-4 scrollbar-hide snap-x snap-mandatory mb-8">
+                <img 
+                  src="/img/health20.jpg"
+                  alt="Vaccination Drive"
+                  className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
+                />
+                <img 
+                  src="/img/health21.jpg"
+                  alt="Health Check-up"
+                  className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
+                />
+                <img 
+                  src="/img/helth22.jpg"
+                  alt="Community Workshop"
+                  className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
+                />
+              </div>
+            </div>
+
+            {/* Desktop: grids unchanged */}
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <img 
-                src="/img/health5.jpg"
+                src="/img/health20.jpg"
                 alt="Vaccination Drive"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="/img/health6.jpg"
+                src="/img/health21.jpg"
                 alt="Health Check-up"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
               <img 
-                src="/img/health7.jpg"
+                src="/img/helth22.jpg"
                 alt="Community Workshop"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+
+            {/* Second row */}
+            <div className="block md:hidden">
+              <div className="flex overflow-x-auto gap-4 pb-2 px-4 scrollbar-hide snap-x snap-mandatory">
+                <img 
+                  src="/img/health23.jpg"
+                  alt="Medical Support"
+                  className="flex-shrink-0 w-72 h-44 object-cover rounded-xl shadow-lg snap-center"
+                />
+                <img 
+                  src="/img/health24.jpg"
+                  alt="Healthcare Team"
+                  className="flex-shrink-0 w-72 h-44 object-cover rounded-xl shadow-lg snap-center"
+                />
+                <img 
+                  src="/img/help1.jpg"
+                  alt="Health Education"
+                  className="flex-shrink-0 w-72 h-44 object-cover rounded-xl shadow-lg snap-center"
+                />
+                <img 
+                  src="/img/healp2.jpg"
+                  alt="Medical Camp"
+                  className="flex-shrink-0 w-72 h-44 object-cover rounded-xl shadow-lg snap-center"
+                />
+              </div>
+            </div>
+
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <img 
-                src="/img/health8.jpg"
+                src="/img/health23.jpg"
                 alt="Medical Support"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
               <img 
-                src="/img/health9.jpg"
+                src="/img/health24.jpg"
                 alt="Healthcare Team"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
               <img 
-                src="/img/health10.jpg"
+                src="/img/help1.jpg"
                 alt="Health Education"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
               <img 
-                src="/img/health11.jpg"
+                src="/img/healp2.jpg"
                 alt="Medical Camp"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <img 
-                src="/img/health12.jpg"
-                alt="Health Initiative"
-                className="w-full h-64 object-cover rounded-2xl shadow-lg"
-              />
-              <img 
-                src="/img/health1.jpg"
-                alt="Community Health Program"
-                className="w-full h-64 object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
+
+            <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 lg:p-12">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Our healthcare programs have transformed the health landscape in rural Uttarakhand. Villages that once 
-                  had no access to medical care now receive regular health services, and communities that were unaware 
-                  of basic health practices now practice preventive healthcare.
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                  Through our partnership with the National Health Mission and collaborative efforts with local communities, 
+                  we have successfully established a robust network of trained health workers and informed community leaders. 
+                  Our programs focus on capacity building, women's health empowerment, and creating sustainable health practices.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The impact goes beyond individual health improvements - we're building a culture of health consciousness 
-                  that will benefit future generations. Our mobile clinics, mental health support, and health awareness 
-                  programs work together to create comprehensive healthcare solutions for rural communities.
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  The true impact lies in the empowered communities where women have become health advocates, trained ASHA workers 
+                  provide essential services, and regular health camps strengthen community bonds. Together, we're building 
+                  a foundation for long-term health improvement across the mountainous regions of Uttarakhand.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-normal text-gray-800 mb-8 text-center">
+          {/* Stats */}
+          <div className="mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-800 mb-6 sm:mb-8 text-center">
               Our Impact
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">15,000+</div>
-                <div className="text-gray-600">People Served</div>
+
+            {/* Mobile: horizontal stats */}
+            <div className="block lg:hidden">
+              <div className="flex overflow-x-auto gap-4 pb-2 px-4 scrollbar-hide snap-x snap-mandatory">
+                <div className="flex-shrink-0 w-64 snap-center text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                  <div className="text-2xl sm:text-3xl font-normal text-red-600 mb-1">200+</div>
+                  <div className="text-sm text-gray-600">ASHA Workers Trained</div>
+                </div>
+                <div className="flex-shrink-0 w-64 snap-center text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                  <div className="text-2xl sm:text-3xl font-normal text-red-600 mb-1">1,500+</div>
+                  <div className="text-sm text-gray-600">Women Empowered</div>
+                </div>
+                <div className="flex-shrink-0 w-64 snap-center text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                  <div className="text-2xl sm:text-3xl font-normal text-red-600 mb-1">25+</div>
+                  <div className="text-sm text-gray-600">Health Camps Organized</div>
+                </div>
+                <div className="flex-shrink-0 w-64 snap-center text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                  <div className="text-2xl sm:text-3xl font-normal text-red-600 mb-1">50+</div>
+                  <div className="text-sm text-gray-600">Training Sessions</div>
+                </div>
               </div>
-              <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">50+</div>
-                <div className="text-gray-600">Villages Covered</div>
+            </div>
+
+            {/* Desktop: grid stats unchanged */}
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <div className="text-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-red-600 mb-1 sm:mb-2">200+</div>
+                <div className="text-sm sm:text-base text-gray-600">ASHA Workers Trained</div>
               </div>
-              <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">10</div>
-                <div className="text-gray-600">Mobile Clinics</div>
+              <div className="text-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-red-600 mb-1 sm:mb-2">1,500+</div>
+                <div className="text-sm sm:text-base text-gray-600">Women Empowered</div>
               </div>
-              <div className="text-center bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="text-4xl font-normal text-red-600 mb-2">2,000+</div>
-                <div className="text-gray-600">Mental Health Sessions</div>
+              <div className="text-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-red-600 mb-1 sm:mb-2">25+</div>
+                <div className="text-sm sm:text-base text-gray-600">Health Camps Organized</div>
+              </div>
+              <div className="text-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-red-600 mb-1 sm:mb-2">50+</div>
+                <div className="text-sm sm:text-base text-gray-600">Training Sessions</div>
               </div>
             </div>
           </div>
 
+          {/* CTA */}
           <div className="text-center">
-            <div className="bg-red-50 rounded-2xl p-8 lg:p-12">
-              <h3 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-4">
-                Support Our Health Programs
+            <div className="bg-red-50 rounded-2xl p-6 sm:p-8 lg:p-12">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-normal text-gray-800 mb-3 sm:mb-4">
+                Support Community Health Empowerment
               </h3>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Your donation can help us provide essential healthcare services, mental health support, and health awareness programs to more rural communities in Uttarakhand.
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
+                Your support enables us to train more ASHA workers, empower women with health knowledge, and organize community health camps that strengthen the healthcare network in rural Uttarakhand.
               </p>
               <DonateButton text="Donate Now" size="large" variant="primary" />
             </div>

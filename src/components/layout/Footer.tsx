@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
@@ -44,59 +43,64 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  About
+                  About Us
                 </Link>
               </li>
-                             <li>
-                 <Link to="/stories" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                   Stories
-                 </Link>
-               </li>
-               <li>
-                 <Link to="/gallery" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                   Gallery
-                 </Link>
-               </li>
-               <li>
-                 <Link to="/certificates" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                   Certificates
-                 </Link>
-               </li>
-               <li>
-                             <Link to="/what-we-do" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-               What We Do
-             </Link>
-               </li>
+              <li>
+                <Link to="/vision" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Vision & Mission
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/certificates" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Certificates
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
-                      <div>
-            <h3 className="text-base sm:text-lg font-normal mb-4 sm:mb-6 text-white">What We Do</h3>
+          <div>
+            <h3 className="text-base sm:text-lg font-normal mb-4 sm:mb-6 text-white">Our Programs</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  Education Initiatives
-                </a>
+                <Link to="/education" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Education Programs
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  Healthcare Access
-                </a>
+                <Link to="/health" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Healthcare Services
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  Environmental Conservation
-                </a>
+                <Link to="/emergency-appeal" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Emergency Response
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  Livelihood Development
-                </a>
+                <Link to="/stories" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Success Stories
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
-                  Community Empowerment
-                </a>
+                <Link to="/media" className="text-gray-300 hover:text-gray-200 transition-colors duration-200 text-sm sm:text-base">
+                  Media & Press
+                </Link>
               </li>
             </ul>
           </div>
