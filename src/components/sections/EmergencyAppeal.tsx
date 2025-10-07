@@ -1,4 +1,5 @@
 import DonateButton from '../ui/DonateButton';
+import { cdnImage } from '../../utils/cdn';
 
 const EmergencyAppeal = () => {
 
@@ -7,7 +8,7 @@ const EmergencyAppeal = () => {
     <div className="min-h-screen bg-white">
       <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
         <img 
-          src="/img/emgc6.jpeg"
+          src={cdnImage('gus/img/emgc6.jpeg', 'f_auto,q_auto,w_1600')}
           alt="Emergency Response - Disaster Relief Operations" 
           className="w-full h-full object-cover"
         />
@@ -46,7 +47,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <img 
-                src="/img/emgc2.jpeg"
+                src={cdnImage('gus/img/emgc2.jpeg', 'f_auto,q_auto,w_1200')}
                 alt="Rapid Response Team"
                 className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -81,7 +82,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="lg:order-2">
               <img 
-                src="/img/emgc1.jpeg"
+                src={cdnImage('gus/img/emgc1.jpeg', 'f_auto,q_auto,w_1200')}
                 alt="Relief Distribution"
                 className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -114,7 +115,7 @@ const EmergencyAppeal = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <img 
-                src="/img/emgc4.jpeg"
+                src={cdnImage('gus/img/emgc4.jpeg', 'f_auto,q_auto,w_1200')}
                 alt="Recovery and Rehabilitation"
                 className="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -149,17 +150,17 @@ const EmergencyAppeal = () => {
           <div className="block md:hidden">
             <div className="flex overflow-x-auto gap-4 pb-2 px-4 scrollbar-hide snap-x snap-mandatory mb-8">
               <img 
-                src="/img/emgc3.jpeg"
+                src={cdnImage('gus/img/emgc3.jpeg', 'f_auto,q_auto,w_800')}
                 alt="Search and Rescue"
                 className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
               />
               <img 
-                src="/img/emgc5.jpeg"
+                src={cdnImage('gus/img/emgc5.jpeg', 'f_auto,q_auto,w_800')}
                 alt="Medical Assistance"
                 className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
               />
               <img 
-                src="/img/emgc1.jpeg"
+                src={cdnImage('gus/img/emgc1.jpeg', 'f_auto,q_auto,w_800')}
                 alt="Community Support"
                 className="flex-shrink-0 w-80 h-48 object-cover rounded-2xl shadow-lg snap-center"
               />
@@ -169,17 +170,17 @@ const EmergencyAppeal = () => {
           {/* Desktop: grid images unchanged */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             <img 
-              src="/img/emgc3.jpeg"
+              src={cdnImage('gus/img/emgc3.jpeg', 'f_auto,q_auto,w_1200')}
               alt="Search and Rescue"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img 
-              src="/img/emgc5.jpeg"
+              src={cdnImage('gus/img/emgc5.jpeg', 'f_auto,q_auto,w_1200')}
               alt="Medical Assistance"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img 
-              src="/img/emgc1.jpeg"
+              src={cdnImage('gus/img/emgc1.jpeg', 'f_auto,q_auto,w_1200')}
               alt="Community Support"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />

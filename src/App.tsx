@@ -16,6 +16,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import RefundPolicy from './pages/RefundPolicy';
 import CertificatesPage from './pages/Certificates';
 import MediaPage from './pages/Media';
+import MyPeriodMySchoolPage from './pages/MyPeriodMySchool';
 import ScrollToTop from './components/scroll/ScrollToTop';
 import ScrollProgress from './components/scroll/ScrollProgress';
 import ScrollToTopButton from './components/scroll/ScrollToTopButton';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/media" element={<MediaPage />} />
+          <Route path="/my-period-my-school" element={<MyPeriodMySchoolPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />

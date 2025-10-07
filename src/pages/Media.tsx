@@ -1,5 +1,6 @@
 import PageLayout from '../components/layout/PageLayout';
 import SEOHead from '../components/seo/SEOHead';
+import { cdnImage } from '../utils/cdn';
 
 const MediaPage = () => {
   return (
@@ -14,7 +15,7 @@ const MediaPage = () => {
       <div className="bg-white">
         <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
           <img 
-            src="/img/media.jpeg"
+            src={cdnImage('gus/img/media.jpeg', 'f_auto,q_auto,w_1600')}
             alt="Media Coverage - Gramin Utthan Samiti in News"
             className="w-full h-full object-cover"
           />
@@ -40,7 +41,7 @@ const MediaPage = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="mb-6 sm:mb-8">
                   <img 
-                    src="/img/media.jpeg"
+                    src={cdnImage('gus/img/media.jpeg', 'f_auto,q_auto,w_1200')}
                     alt="Newspaper Article about Akashganga Hostel"
                     className="w-full h-auto rounded-2xl shadow-lg"
                   />
@@ -73,7 +74,7 @@ const MediaPage = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="mb-6 sm:mb-8">
                   <img 
-                    src="/img/press3.jpg"
+                    src={cdnImage('gus/img/press3.jpg', 'f_auto,q_auto,w_1600')}
                     alt="Latest Press Coverage - Community Development Initiative"
                     className="w-full h-64 sm:h-80 md:h-96 lg:h-[600px] rounded-2xl shadow-lg object-cover"
                   />

@@ -39,8 +39,15 @@ const Header = () => {
         { name: 'Reports', href: '/reports' },
       ]
     },
+    {
+      name: 'CAUSES',
+      href: '#',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'My Period My School', href: '/my-period-my-school' },
+      ]
+    },
     { name: 'GALLERY', href: '/gallery', hasDropdown: false },
-    { name: 'CERTIFICATES', href: '/certificates', hasDropdown: false },
     { name: 'CONTACT', href: '/contact', hasDropdown: false },
   ];
 
